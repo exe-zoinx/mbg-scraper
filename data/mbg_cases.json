@@ -56,7 +56,8 @@
         "Papua": 1,
         "Papua Pegunungan": 1,
         "Papua Selatan": 1
-      }
+      },
+      "geocoded": 688
     }
   },
   "cases": [
@@ -75,7 +76,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 4.991569,
+      "lng": 97.157298
     },
     {
       "date": "24 Januari 2026",
@@ -92,7 +95,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 4.701728,
+      "lng": 97.645248
     },
     {
       "date": "11 Februari 2026",
@@ -111,7 +116,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": 2.375611,
+      "lng": 97.923246
     },
     {
       "date": "11 Februari 2026",
@@ -127,7 +134,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": 2.374098,
+      "lng": 97.92115
     },
     {
       "date": "26 Februari 2026",
@@ -144,7 +153,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "warga"
+      "unit": "warga",
+      "lat": 5.083347,
+      "lng": 96.59316
     },
     {
       "date": "26 Februari 2026",
@@ -162,7 +173,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": 3.068633,
+      "lng": 97.467704
     },
     {
       "date": "26 Februari 2026",
@@ -178,7 +191,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": 3.065941,
+      "lng": 97.468951
     },
     {
       "date": "15 Oktober 2025",
@@ -196,7 +211,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 60
+      "symptomatic_per_school": 60,
+      "lat": 2.382982,
+      "lng": 99.327591
     },
     {
       "date": "15 Oktober 2025",
@@ -212,7 +229,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 60
+      "symptomatic_per_school": 60,
+      "lat": 2.383271,
+      "lng": 99.33198
     },
     {
       "date": "31 Oktober 2025",
@@ -229,7 +248,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 1.374939,
+      "lng": 97.146413
     },
     {
       "date": "9 Februari 2026",
@@ -247,7 +268,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 136
+      "symptomatic_per_school": 136,
+      "lat": 2.836696,
+      "lng": 98.283701
     },
     {
       "date": "9 Februari 2026",
@@ -263,7 +286,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 136
+      "symptomatic_per_school": 136,
+      "lat": 2.83787,
+      "lng": 98.281599
     },
     {
       "date": "24 Februari 2026",
@@ -280,7 +305,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.066144,
+      "lng": 98.263037
     },
     {
       "date": "1 April 2026",
@@ -298,7 +325,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": 2.238932,
+      "lng": 98.600143
     },
     {
       "date": "1 April 2026",
@@ -314,7 +343,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": 2.24156,
+      "lng": 98.598474
     },
     {
       "date": "28 April 2026",
@@ -331,7 +362,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 3.473391,
+      "lng": 98.714442
     },
     {
       "date": "1 Oktober 2025",
@@ -349,7 +382,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -0.253101,
+      "lng": 100.171219
     },
     {
       "date": "1 Oktober 2025",
@@ -365,7 +400,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -0.254909,
+      "lng": 100.166669
     },
     {
       "date": "1 Oktober 2025",
@@ -381,7 +418,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -0.258904,
+      "lng": 100.169224
     },
     {
       "date": "1 Oktober 2025",
@@ -397,7 +436,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -0.25029,
+      "lng": 100.163001
     },
     {
       "date": "1 Oktober 2025",
@@ -413,7 +454,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -0.263744,
+      "lng": 100.176074
     },
     {
       "date": "7 Oktober 2025",
@@ -431,7 +474,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 5
+      "symptomatic_per_school": 5,
+      "lat": -0.466396,
+      "lng": 100.394222
     },
     {
       "date": "7 Oktober 2025",
@@ -447,7 +492,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 5
+      "symptomatic_per_school": 5,
+      "lat": -0.463441,
+      "lng": 100.392728
     },
     {
       "date": "7 Oktober 2025",
@@ -463,7 +510,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 5
+      "symptomatic_per_school": 5,
+      "lat": -0.464574,
+      "lng": 100.399147
     },
     {
       "date": "7 Oktober 2025",
@@ -479,7 +528,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 5
+      "symptomatic_per_school": 5,
+      "lat": -0.462725,
+      "lng": 100.395696
     },
     {
       "date": "7 Oktober 2025",
@@ -495,7 +546,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 5
+      "symptomatic_per_school": 5,
+      "lat": -0.458052,
+      "lng": 100.395201
     },
     {
       "date": "7 Oktober 2025",
@@ -511,7 +564,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 5
+      "symptomatic_per_school": 5,
+      "lat": -0.463072,
+      "lng": 100.396328
     },
     {
       "date": "4 Februari 2026",
@@ -529,7 +584,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 110
+      "symptomatic_per_school": 110,
+      "lat": -1.256894,
+      "lng": 101.578655
     },
     {
       "date": "4 Februari 2026",
@@ -545,7 +602,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 110
+      "symptomatic_per_school": 110,
+      "lat": -1.26084,
+      "lng": 101.580831
     },
     {
       "date": "18 Februari 2025",
@@ -563,7 +622,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -3.715451,
+      "lng": 102.932225
     },
     {
       "date": "5 Mei 2025",
@@ -581,7 +642,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.212818,
+      "lng": 104.006754
     },
     {
       "date": "5 Mei 2025",
@@ -597,7 +660,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.214714,
+      "lng": 104.008815
     },
     {
       "date": "5 Mei 2025",
@@ -613,7 +678,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.217455,
+      "lng": 104.012575
     },
     {
       "date": "5 Mei 2025",
@@ -629,7 +696,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.20899,
+      "lng": 104.006633
     },
     {
       "date": "5 Mei 2025",
@@ -645,7 +714,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.206347,
+      "lng": 104.006412
     },
     {
       "date": "5 Mei 2025",
@@ -661,7 +732,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.202715,
+      "lng": 104.015391
     },
     {
       "date": "5 Mei 2025",
@@ -677,7 +750,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.225791,
+      "lng": 104.008823
     },
     {
       "date": "5 Mei 2025",
@@ -693,7 +768,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.205558,
+      "lng": 103.993212
     },
     {
       "date": "5 Mei 2025",
@@ -709,7 +786,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.198791,
+      "lng": 103.992678
     },
     {
       "date": "5 Mei 2025",
@@ -725,7 +804,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.225659,
+      "lng": 104.020029
     },
     {
       "date": "5 Mei 2025",
@@ -741,7 +822,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.234982,
+      "lng": 103.998456
     },
     {
       "date": "5 Mei 2025",
@@ -757,7 +840,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.207943,
+      "lng": 104.018418
     },
     {
       "date": "5 Mei 2025",
@@ -773,7 +858,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.189295,
+      "lng": 103.996221
     },
     {
       "date": "5 Mei 2025",
@@ -789,7 +876,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -3.210207,
+      "lng": 104.033371
     },
     {
       "date": "2 September 2025",
@@ -807,7 +896,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.327418,
+      "lng": 105.399047
     },
     {
       "date": "2 September 2025",
@@ -823,7 +914,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.327737,
+      "lng": 105.402849
     },
     {
       "date": "2 September 2025",
@@ -839,7 +932,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.329404,
+      "lng": 105.396718
     },
     {
       "date": "3 September 2025",
@@ -856,7 +951,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -2.490587,
+      "lng": 103.704357
     },
     {
       "date": "23 September 2025",
@@ -873,7 +970,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.110347,
+      "lng": 104.007092
     },
     {
       "date": "25 September 2025",
@@ -890,7 +989,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -2.988635,
+      "lng": 104.758079
     },
     {
       "date": "5 November 2025",
@@ -907,7 +1008,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -2.985928,
+      "lng": 104.754774
     },
     {
       "date": "26 November 2025",
@@ -925,7 +1028,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -2.985679,
+      "lng": 104.753924
     },
     {
       "date": "30 Januari 2026",
@@ -942,7 +1047,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -2.982296,
+      "lng": 104.752664
     },
     {
       "date": "9 Februari 2026",
@@ -959,7 +1066,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -3.399425,
+      "lng": 104.653055
     },
     {
       "date": "22 Agustus 2025",
@@ -978,7 +1087,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -0.270037,
+      "lng": 103.331188
     },
     {
       "date": "22 Agustus 2025",
@@ -994,7 +1105,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -0.267991,
+      "lng": 103.329219
     },
     {
       "date": "22 Agustus 2025",
@@ -1010,7 +1123,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -0.266703,
+      "lng": 103.334148
     },
     {
       "date": "22 Agustus 2025",
@@ -1026,7 +1141,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -0.272774,
+      "lng": 103.338534
     },
     {
       "date": "22 Agustus 2025",
@@ -1042,7 +1159,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -0.276648,
+      "lng": 103.323794
     },
     {
       "date": "28 Agustus 2025",
@@ -1059,7 +1178,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.319921,
+      "lng": 101.062912
     },
     {
       "date": "23 Januari 2026",
@@ -1076,7 +1197,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.82721,
+      "lng": 101.846428
     },
     {
       "date": "25 September 2025",
@@ -1093,7 +1216,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.766014,
+      "lng": 103.427873
     },
     {
       "date": "29 September 2025",
@@ -1110,7 +1235,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 1.104799,
+      "lng": 104.039759
     },
     {
       "date": "11 November 2025",
@@ -1127,7 +1254,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 1.099401,
+      "lng": 104.036441
     },
     {
       "date": "29 April 2026",
@@ -1144,7 +1273,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 1.097342,
+      "lng": 104.040407
     },
     {
       "date": "15 April 2026",
@@ -1162,7 +1293,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 53
+      "symptomatic_per_school": 53,
+      "lat": 2.937241,
+      "lng": 105.758671
     },
     {
       "date": "15 April 2026",
@@ -1178,7 +1311,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 53
+      "symptomatic_per_school": 53,
+      "lat": 2.940862,
+      "lng": 105.757052
     },
     {
       "date": "15 April 2026",
@@ -1194,7 +1329,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 53
+      "symptomatic_per_school": 53,
+      "lat": 2.937609,
+      "lng": 105.755326
     },
     {
       "date": "28 Agustus 2025",
@@ -1212,7 +1349,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.055314,
+      "lng": 102.210308
     },
     {
       "date": "28 Agustus 2025",
@@ -1228,7 +1367,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.051064,
+      "lng": 102.208182
     },
     {
       "date": "28 Agustus 2025",
@@ -1244,7 +1385,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.051794,
+      "lng": 102.212408
     },
     {
       "date": "28 Agustus 2025",
@@ -1260,7 +1403,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.058131,
+      "lng": 102.216447
     },
     {
       "date": "28 Agustus 2025",
@@ -1276,7 +1421,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.049674,
+      "lng": 102.213295
     },
     {
       "date": "28 Agustus 2025",
@@ -1292,7 +1439,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.048822,
+      "lng": 102.216353
     },
     {
       "date": "28 Agustus 2025",
@@ -1308,7 +1457,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.051514,
+      "lng": 102.212093
     },
     {
       "date": "28 Agustus 2025",
@@ -1324,7 +1475,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.040379,
+      "lng": 102.216547
     },
     {
       "date": "28 Agustus 2025",
@@ -1340,7 +1493,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.046011,
+      "lng": 102.219818
     },
     {
       "date": "28 Agustus 2025",
@@ -1356,7 +1511,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.062207,
+      "lng": 102.222713
     },
     {
       "date": "28 Agustus 2025",
@@ -1372,7 +1529,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.033108,
+      "lng": 102.219113
     },
     {
       "date": "28 Agustus 2025",
@@ -1388,7 +1547,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 45
+      "symptomatic_per_school": 45,
+      "lat": -3.065148,
+      "lng": 102.204292
     },
     {
       "date": "26 Februari 2026",
@@ -1406,7 +1567,9 @@
       ],
       "deaths_count": 1.0,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -3.187923,
+      "lng": 101.857604
     },
     {
       "date": "23 April 2026",
@@ -1423,7 +1586,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -3.67089,
+      "lng": 102.386622
     },
     {
       "date": "30 Januari 2026",
@@ -1441,7 +1606,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 38
+      "symptomatic_per_school": 38,
+      "lat": -1.70886,
+      "lng": 103.785549
     },
     {
       "date": "30 Januari 2026",
@@ -1457,7 +1624,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 38
+      "symptomatic_per_school": 38,
+      "lat": -1.708099,
+      "lng": 103.788351
     },
     {
       "date": "30 Januari 2026",
@@ -1473,7 +1642,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 38
+      "symptomatic_per_school": 38,
+      "lat": -1.71141,
+      "lng": 103.789872
     },
     {
       "date": "30 Januari 2026",
@@ -1489,7 +1660,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 38
+      "symptomatic_per_school": 38,
+      "lat": -1.701747,
+      "lng": 103.790956
     },
     {
       "date": "9 April 2026",
@@ -1506,7 +1679,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -1.630503,
+      "lng": 103.608951
     },
     {
       "date": "Agustus 2025",
@@ -1523,7 +1698,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -2.916516,
+      "lng": 108.004685
     },
     {
       "date": "4 Mei 2026",
@@ -1541,7 +1718,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 15
+      "symptomatic_per_school": 15,
+      "lat": -2.882693,
+      "lng": 107.66172
     },
     {
       "date": "4 Mei 2026",
@@ -1557,7 +1736,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 15
+      "symptomatic_per_school": 15,
+      "lat": -2.881641,
+      "lng": 107.666293
     },
     {
       "date": "15 Juli 2025",
@@ -1575,7 +1756,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 25
+      "symptomatic_per_school": 25,
+      "lat": -4.807318,
+      "lng": 104.863657
     },
     {
       "date": "15 Juli 2025",
@@ -1591,7 +1774,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 25
+      "symptomatic_per_school": 25,
+      "lat": -4.809118,
+      "lng": 104.863572
     },
     {
       "date": "29 Agustus 2025",
@@ -1608,7 +1793,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.810234,
+      "lng": 104.865085
     },
     {
       "date": "29 September 2025",
@@ -1625,7 +1812,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.803657,
+      "lng": 104.865642
     },
     {
       "date": "12 Januari 2026",
@@ -1640,7 +1829,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.810564,
+      "lng": 104.865932
     },
     {
       "date": "6 Agustus 2025",
@@ -1657,7 +1848,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.513803,
+      "lng": 104.778337
     },
     {
       "date": "26 Agustus 2025",
@@ -1674,7 +1867,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -5.119665,
+      "lng": 105.593625
     },
     {
       "date": "26 September 2025",
@@ -1692,7 +1887,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -5.116764,
+      "lng": 105.592984
     },
     {
       "date": "26 September 2025",
@@ -1708,7 +1905,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -5.119065,
+      "lng": 105.590613
     },
     {
       "date": "26 September 2025",
@@ -1724,7 +1923,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -5.11356,
+      "lng": 105.592455
     },
     {
       "date": "26 September 2025",
@@ -1740,7 +1941,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -5.111729,
+      "lng": 105.599413
     },
     {
       "date": "26 September 2025",
@@ -1756,7 +1959,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -5.118145,
+      "lng": 105.586931
     },
     {
       "date": "28 Januari 2026",
@@ -1774,7 +1979,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -5.112768,
+      "lng": 105.607222
     },
     {
       "date": "28 Januari 2026",
@@ -1790,7 +1997,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -5.110747,
+      "lng": 105.60521
     },
     {
       "date": "28 Januari 2026",
@@ -1806,7 +2015,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -5.124358,
+      "lng": 105.58911
     },
     {
       "date": "27 Februari 2026",
@@ -1823,7 +2034,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -5.123668,
+      "lng": 105.598155
     },
     {
       "date": "29 Agustus 2025",
@@ -1841,7 +2054,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 62
+      "symptomatic_per_school": 62,
+      "lat": -5.446381,
+      "lng": 105.265512
     },
     {
       "date": "29 Agustus 2025",
@@ -1857,7 +2072,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 62
+      "symptomatic_per_school": 62,
+      "lat": -5.449293,
+      "lng": 105.261584
     },
     {
       "date": "29 Agustus 2025",
@@ -1873,7 +2090,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 62
+      "symptomatic_per_school": 62,
+      "lat": -5.448884,
+      "lng": 105.267995
     },
     {
       "date": "29 Agustus 2025",
@@ -1889,7 +2108,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 62
+      "symptomatic_per_school": 62,
+      "lat": -5.446452,
+      "lng": 105.268163
     },
     {
       "date": "11 Februari 2026",
@@ -1907,7 +2128,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -5.440146,
+      "lng": 105.256492
     },
     {
       "date": "11 Februari 2026",
@@ -1922,7 +2145,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -5.455265,
+      "lng": 105.255833
     },
     {
       "date": "11 Februari 2026",
@@ -1937,7 +2162,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -5.442537,
+      "lng": 105.253336
     },
     {
       "date": "22 April 2026",
@@ -1954,7 +2181,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -5.43898,
+      "lng": 105.265635
     },
     {
       "date": "Tidak Disebutkan",
@@ -1971,7 +2200,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.541331,
+      "lng": 105.51001
     },
     {
       "date": "3 Desember 2025",
@@ -1988,7 +2219,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.543615,
+      "lng": 105.51456
     },
     {
       "date": "4 September 2025",
@@ -2007,7 +2240,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.106594,
+      "lng": 105.306859
     },
     {
       "date": "29 September 2025",
@@ -2024,7 +2259,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.431255,
+      "lng": 105.143531
     },
     {
       "date": "6 Oktober 2025",
@@ -2041,7 +2278,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.873229,
+      "lng": 105.326738
     },
     {
       "date": "3 Desember 2025",
@@ -2058,7 +2297,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -4.568912,
+      "lng": 104.5165
     },
     {
       "date": "24 Februari 2026",
@@ -2076,7 +2317,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.398568,
+      "lng": 105.554439
     },
     {
       "date": "25 Februari 2025",
@@ -2093,7 +2336,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.370348,
+      "lng": 109.512841
     },
     {
       "date": "24 April 2026",
@@ -2110,7 +2355,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.367038,
+      "lng": 109.509574
     },
     {
       "date": "23 September 2025",
@@ -2127,7 +2374,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -1.681626,
+      "lng": 110.466038
     },
     {
       "date": "5 Februari 2026",
@@ -2145,7 +2394,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 139
+      "symptomatic_per_school": 139,
+      "lat": -1.680682,
+      "lng": 110.461817
     },
     {
       "date": "5 Februari 2026",
@@ -2161,7 +2412,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 139
+      "symptomatic_per_school": 139,
+      "lat": -1.681097,
+      "lng": 110.470553
     },
     {
       "date": "5 Februari 2026",
@@ -2177,7 +2430,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 139
+      "symptomatic_per_school": 139,
+      "lat": -1.687465,
+      "lng": 110.467544
     },
     {
       "date": "25 September 2025",
@@ -2194,7 +2449,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.350774,
+      "lng": 110.548294
     },
     {
       "date": "29 September 2025",
@@ -2211,7 +2468,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -1.04405,
+      "lng": 110.059719
     },
     {
       "date": "4 November 2025",
@@ -2230,7 +2489,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 10
+      "symptomatic_per_school": 10,
+      "lat": 0.827173,
+      "lng": 112.796065
     },
     {
       "date": "4 November 2025",
@@ -2246,7 +2507,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 10
+      "symptomatic_per_school": 10,
+      "lat": 0.826593,
+      "lng": 112.795865
     },
     {
       "date": "19 November 2025",
@@ -2264,7 +2527,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": 0.502873,
+      "lng": 109.70643
     },
     {
       "date": "19 November 2025",
@@ -2280,7 +2545,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": 0.508583,
+      "lng": 109.703668
     },
     {
       "date": "19 November 2025",
@@ -2296,7 +2563,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": 0.503832,
+      "lng": 109.710384
     },
     {
       "date": "5 Februari 2026",
@@ -2313,7 +2582,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.905038,
+      "lng": 108.990157
     },
     {
       "date": "29 September 2025",
@@ -2330,7 +2601,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -2.205321,
+      "lng": 113.918337
     },
     {
       "date": "5 Februari 2026",
@@ -2347,7 +2620,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "warga"
+      "unit": "warga",
+      "lat": -2.207793,
+      "lng": 113.918001
     },
     {
       "date": "13 Januari 2025",
@@ -2365,7 +2640,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 3.907171,
+      "lng": 117.040586
     },
     {
       "date": "13 Januari 2025",
@@ -2383,7 +2660,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 3.907718,
+      "lng": 117.044344
     },
     {
       "date": "30 September 2025",
@@ -2401,7 +2680,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 36
+      "symptomatic_per_school": 36,
+      "lat": 3.906762,
+      "lng": 117.040107
     },
     {
       "date": "30 September 2025",
@@ -2417,7 +2698,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 36
+      "symptomatic_per_school": 36,
+      "lat": 3.913608,
+      "lng": 117.048558
     },
     {
       "date": "30 September 2025",
@@ -2433,7 +2716,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 36
+      "symptomatic_per_school": 36,
+      "lat": 3.915521,
+      "lng": 117.050094
     },
     {
       "date": "30 September 2025",
@@ -2449,7 +2734,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 36
+      "symptomatic_per_school": 36,
+      "lat": 3.91245,
+      "lng": 117.036704
     },
     {
       "date": "22 September 2025",
@@ -2466,7 +2753,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 2.762732,
+      "lng": 117.075334
     },
     {
       "date": "25 September 2025",
@@ -2483,7 +2772,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -1.240637,
+      "lng": 116.857794
     },
     {
       "date": "12 Februari 2026",
@@ -2501,7 +2792,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 13
+      "symptomatic_per_school": 13,
+      "lat": -1.198678,
+      "lng": 116.566651
     },
     {
       "date": "12 Februari 2026",
@@ -2517,7 +2810,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 13
+      "symptomatic_per_school": 13,
+      "lat": -1.193638,
+      "lng": 116.571147
     },
     {
       "date": "9 Oktober 2025",
@@ -2535,7 +2830,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.278316,
+      "lng": 115.029568
     },
     {
       "date": "9 Oktober 2025",
@@ -2551,7 +2848,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.275407,
+      "lng": 115.026597
     },
     {
       "date": "9 Oktober 2025",
@@ -2567,7 +2866,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.279119,
+      "lng": 115.030816
     },
     {
       "date": "9 Oktober 2025",
@@ -2583,7 +2884,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.277408,
+      "lng": 115.033375
     },
     {
       "date": "9 Oktober 2025",
@@ -2599,7 +2902,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 27
+      "symptomatic_per_school": 27,
+      "lat": -3.269777,
+      "lng": 115.028951
     },
     {
       "date": "21 Oktober 2025",
@@ -2616,7 +2921,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -3.318287,
+      "lng": 114.593254
     },
     {
       "date": "23 April 2026",
@@ -2633,7 +2940,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -2.423794,
+      "lng": 115.15784
     },
     {
       "date": "19 Januari 2025",
@@ -2651,7 +2960,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.547642,
+      "lng": 105.798607
     },
     {
       "date": "2 September 2025",
@@ -2668,7 +2979,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.107221,
+      "lng": 105.989549
     },
     {
       "date": "September 2025",
@@ -2685,7 +2998,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -6.322138,
+      "lng": 106.707319
     },
     {
       "date": "8 April 2026",
@@ -2703,7 +3018,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 33
+      "symptomatic_per_school": 33,
+      "lat": -6.174921,
+      "lng": 106.637108
     },
     {
       "date": "8 April 2026",
@@ -2719,7 +3036,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 33
+      "symptomatic_per_school": 33,
+      "lat": -6.175092,
+      "lng": 106.639549
     },
     {
       "date": "8 April 2026",
@@ -2735,7 +3054,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 33
+      "symptomatic_per_school": 33,
+      "lat": -6.175874,
+      "lng": 106.633648
     },
     {
       "date": "16 April 2026",
@@ -2752,7 +3073,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.016166,
+      "lng": 106.054256
     },
     {
       "date": "20 April 2026",
@@ -2769,7 +3092,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.015527,
+      "lng": 106.052633
     },
     {
       "date": "22 April 2026",
@@ -2786,7 +3111,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.013081,
+      "lng": 106.04805
     },
     {
       "date": "29 April 2026",
@@ -2803,7 +3130,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.165479,
+      "lng": 106.465946
     },
     {
       "date": "29 Agustus 2025",
@@ -2820,7 +3149,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.281997,
+      "lng": 106.806405
     },
     {
       "date": "8 September 2025",
@@ -2835,7 +3166,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.135778,
+      "lng": 106.901052
     },
     {
       "date": "8 September 2025",
@@ -2852,7 +3185,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.137259,
+      "lng": 106.89921
     },
     {
       "date": "Tidak Disebutkan",
@@ -2869,7 +3204,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.135659,
+      "lng": 106.897937
     },
     {
       "date": "23 September 2025",
@@ -2886,7 +3223,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.133984,
+      "lng": 106.896542
     },
     {
       "date": "25 September 2025",
@@ -2903,7 +3242,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.261483,
+      "lng": 106.881515
     },
     {
       "date": "30 September 2025",
@@ -2920,7 +3261,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.259086,
+      "lng": 106.880087
     },
     {
       "date": "3 April 2026",
@@ -2939,7 +3282,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 34
+      "symptomatic_per_school": 34,
+      "lat": -6.267835,
+      "lng": 106.877268
     },
     {
       "date": "3 April 2026",
@@ -2955,7 +3300,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 34
+      "symptomatic_per_school": 34,
+      "lat": -6.257326,
+      "lng": 106.879462
     },
     {
       "date": "3 April 2026",
@@ -2971,7 +3318,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 34
+      "symptomatic_per_school": 34,
+      "lat": -6.259243,
+      "lng": 106.878273
     },
     {
       "date": "3 April 2026",
@@ -2987,7 +3336,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 34
+      "symptomatic_per_school": 34,
+      "lat": -6.266767,
+      "lng": 106.893269
     },
     {
       "date": "8 Mei 2026",
@@ -3005,7 +3356,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 84
+      "symptomatic_per_school": 84,
+      "lat": -6.249024,
+      "lng": 106.875831
     },
     {
       "date": "8 Mei 2026",
@@ -3021,7 +3374,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 84
+      "symptomatic_per_school": 84,
+      "lat": -6.253672,
+      "lng": 106.897715
     },
     {
       "date": "8 Mei 2026",
@@ -3037,7 +3392,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 84
+      "symptomatic_per_school": 84,
+      "lat": -6.25176,
+      "lng": 106.874552
     },
     {
       "date": "29 Oktober 2025",
@@ -3054,7 +3411,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.162693,
+      "lng": 106.744629
     },
     {
       "date": "1 April 2026",
@@ -3071,7 +3430,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.183929,
+      "lng": 106.841414
     },
     {
       "date": "14 Januari 2025",
@@ -3088,7 +3449,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.442254,
+      "lng": 108.177062
     },
     {
       "date": "22 Agustus 2025",
@@ -3103,7 +3466,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.441495,
+      "lng": 108.172542
     },
     {
       "date": "21 April 2025",
@@ -3121,7 +3486,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.053134,
+      "lng": 107.070684
     },
     {
       "date": "21 April 2025",
@@ -3140,7 +3507,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.054391,
+      "lng": 107.065937
     },
     {
       "date": "20 Agustus 2025",
@@ -3157,7 +3526,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -7.058577,
+      "lng": 107.070052
     },
     {
       "date": "3 September 2025",
@@ -3174,7 +3545,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.046697,
+      "lng": 107.073791
     },
     {
       "date": "11 September 2025",
@@ -3192,7 +3565,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": -7.056494,
+      "lng": 107.077861
     },
     {
       "date": "11 September 2025",
@@ -3208,7 +3583,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": -7.061892,
+      "lng": 107.064263
     },
     {
       "date": "25 September 2025",
@@ -3225,7 +3602,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.043984,
+      "lng": 107.078841
     },
     {
       "date": "9 Oktober 2025",
@@ -3242,7 +3621,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.052041,
+      "lng": 107.055835
     },
     {
       "date": "27 Januari 2026",
@@ -3261,7 +3642,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 150
+      "symptomatic_per_school": 150,
+      "lat": -7.064004,
+      "lng": 107.060544
     },
     {
       "date": "27 Januari 2026",
@@ -3277,7 +3660,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 150
+      "symptomatic_per_school": 150,
+      "lat": -7.038035,
+      "lng": 107.065865
     },
     {
       "date": "17 April 2026",
@@ -3296,7 +3681,9 @@
       "deaths_count": 1.0,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -7.033118,
+      "lng": 107.05214
     },
     {
       "date": "17 April 2026",
@@ -3313,7 +3700,9 @@
       "deaths_count": 1.0,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -7.069468,
+      "lng": 107.085133
     },
     {
       "date": "13 Mei 2026",
@@ -3330,7 +3719,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.052232,
+      "lng": 107.088844
     },
     {
       "date": "29 April 2025",
@@ -3349,7 +3740,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -6.923196,
+      "lng": 107.606463
     },
     {
       "date": "1 Mei 2025",
@@ -3368,7 +3761,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 100
+      "symptomatic_per_school": 100,
+      "lat": -7.428491,
+      "lng": 108.068431
     },
     {
       "date": "1 Mei 2025",
@@ -3384,7 +3779,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 100
+      "symptomatic_per_school": 100,
+      "lat": -7.429767,
+      "lng": 108.070747
     },
     {
       "date": "1 Mei 2025",
@@ -3400,7 +3797,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 100
+      "symptomatic_per_school": 100,
+      "lat": -7.430258,
+      "lng": 108.067973
     },
     {
       "date": "1 Mei 2025",
@@ -3416,7 +3815,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 100
+      "symptomatic_per_school": 100,
+      "lat": -7.419754,
+      "lng": 108.071028
     },
     {
       "date": "18 September 2025",
@@ -3434,7 +3835,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.431061,
+      "lng": 108.06416
     },
     {
       "date": "18 September 2025",
@@ -3450,7 +3853,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.43588,
+      "lng": 108.070576
     },
     {
       "date": "18 September 2025",
@@ -3466,7 +3871,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.439048,
+      "lng": 108.069592
     },
     {
       "date": "2 Oktober 2025",
@@ -3484,7 +3891,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 38
+      "symptomatic_per_school": 38,
+      "lat": -7.420923,
+      "lng": 108.080636
     },
     {
       "date": "2 Oktober 2025",
@@ -3500,7 +3909,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 38
+      "symptomatic_per_school": 38,
+      "lat": -7.439282,
+      "lng": 108.055835
     },
     {
       "date": "2 Oktober 2025",
@@ -3516,7 +3927,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 38
+      "symptomatic_per_school": 38,
+      "lat": -7.415138,
+      "lng": 108.076692
     },
     {
       "date": "13 Oktober 2025",
@@ -3533,7 +3946,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "balita"
+      "unit": "balita",
+      "lat": -7.44447,
+      "lng": 108.068552
     },
     {
       "date": "17 Oktober 2025",
@@ -3550,7 +3965,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.428766,
+      "lng": 108.056656
     },
     {
       "date": "8 April 2026",
@@ -3567,7 +3984,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.415186,
+      "lng": 108.044828
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3584,7 +4003,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.595702,
+      "lng": 106.798386
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3599,7 +4020,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.596846,
+      "lng": 106.795929
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3614,7 +4037,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.593531,
+      "lng": 106.793557
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3629,7 +4054,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.598717,
+      "lng": 106.796301
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3644,7 +4071,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.589712,
+      "lng": 106.80248
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3659,7 +4088,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.605221,
+      "lng": 106.79086
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3674,7 +4105,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.590391,
+      "lng": 106.810642
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3689,7 +4122,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.596748,
+      "lng": 106.797308
     },
     {
       "date": "7 S/d 9 Mei 2025",
@@ -3704,7 +4139,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.610392,
+      "lng": 106.808347
     },
     {
       "date": "14 November 2025",
@@ -3722,7 +4159,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -6.615933,
+      "lng": 106.802111
     },
     {
       "date": "14 November 2025",
@@ -3738,7 +4177,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -6.618115,
+      "lng": 106.816978
     },
     {
       "date": "14 November 2025",
@@ -3754,7 +4195,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -6.584684,
+      "lng": 106.781744
     },
     {
       "date": "14 November 2025",
@@ -3770,7 +4213,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -6.61737,
+      "lng": 106.811176
     },
     {
       "date": "31 Juli 2025",
@@ -3787,7 +4232,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.988551,
+      "lng": 108.555001
     },
     {
       "date": "3 Oktober 2025",
@@ -3804,7 +4251,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.987421,
+      "lng": 108.552807
     },
     {
       "date": "3 Oktober 2025",
@@ -3819,7 +4268,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.985022,
+      "lng": 108.55266
     },
     {
       "date": "28 November 2025",
@@ -3836,7 +4287,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.981782,
+      "lng": 108.548184
     },
     {
       "date": "6 Agustus 2025",
@@ -3854,7 +4307,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -7.076561,
+      "lng": 106.733906
     },
     {
       "date": "6 Agustus 2025",
@@ -3870,7 +4325,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -7.078595,
+      "lng": 106.733126
     },
     {
       "date": "6 Agustus 2025",
@@ -3886,7 +4343,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -7.076122,
+      "lng": 106.728965
     },
     {
       "date": "6 Agustus 2025",
@@ -3902,7 +4361,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -7.072196,
+      "lng": 106.727326
     },
     {
       "date": "22 Agustus 2025",
@@ -3919,7 +4380,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.069292,
+      "lng": 106.743396
     },
     {
       "date": "11 September 2025",
@@ -3936,7 +4399,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.085812,
+      "lng": 106.741615
     },
     {
       "date": "24 September 2025",
@@ -3953,7 +4418,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.088854,
+      "lng": 106.744747
     },
     {
       "date": "28 Januari 2026",
@@ -3971,7 +4438,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.079368,
+      "lng": 106.745182
     },
     {
       "date": "28 Januari 2026",
@@ -3987,7 +4456,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.060776,
+      "lng": 106.737743
     },
     {
       "date": "28 Januari 2026",
@@ -4003,7 +4474,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.082183,
+      "lng": 106.737121
     },
     {
       "date": "28 Januari 2026",
@@ -4019,7 +4492,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.07125,
+      "lng": 106.713263
     },
     {
       "date": "28 Januari 2026",
@@ -4035,7 +4510,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.057176,
+      "lng": 106.745597
     },
     {
       "date": "28 Januari 2026",
@@ -4051,7 +4528,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.068825,
+      "lng": 106.747003
     },
     {
       "date": "28 Januari 2026",
@@ -4067,7 +4546,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.102836,
+      "lng": 106.7481
     },
     {
       "date": "6 Maret 2026",
@@ -4084,7 +4565,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.054799,
+      "lng": 106.757639
     },
     {
       "date": "14 Agustus 2025",
@@ -4099,7 +4582,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.266491,
+      "lng": 107.429532
     },
     {
       "date": "17 April 2026",
@@ -4117,7 +4602,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 23
+      "symptomatic_per_school": 23,
+      "lat": -6.267835,
+      "lng": 107.426145
     },
     {
       "date": "17 April 2026",
@@ -4133,7 +4620,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 23
+      "symptomatic_per_school": 23,
+      "lat": -6.264701,
+      "lng": 107.432492
     },
     {
       "date": "21 Agustus 2025",
@@ -4150,7 +4639,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.060741,
+      "lng": 107.632508
     },
     {
       "date": "17 September 2025",
@@ -4168,7 +4659,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 131
+      "symptomatic_per_school": 131,
+      "lat": -7.217463,
+      "lng": 107.90336
     },
     {
       "date": "17 September 2025",
@@ -4184,7 +4677,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 131
+      "symptomatic_per_school": 131,
+      "lat": -7.219609,
+      "lng": 107.89758
     },
     {
       "date": "17 September 2025",
@@ -4200,7 +4695,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 131
+      "symptomatic_per_school": 131,
+      "lat": -7.218925,
+      "lng": 107.906715
     },
     {
       "date": "17 September 2025",
@@ -4216,7 +4713,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 131
+      "symptomatic_per_school": 131,
+      "lat": -7.218196,
+      "lng": 107.894543
     },
     {
       "date": "17 September 2025",
@@ -4232,7 +4731,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 131
+      "symptomatic_per_school": 131,
+      "lat": -7.207216,
+      "lng": 107.893758
     },
     {
       "date": "30 September 2025",
@@ -4250,7 +4751,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 77
+      "symptomatic_per_school": 77,
+      "lat": -7.211649,
+      "lng": 107.912764
     },
     {
       "date": "30 September 2025",
@@ -4266,7 +4769,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 77
+      "symptomatic_per_school": 77,
+      "lat": -7.220659,
+      "lng": 107.889275
     },
     {
       "date": "30 September 2025",
@@ -4282,7 +4787,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 77
+      "symptomatic_per_school": 77,
+      "lat": -7.218972,
+      "lng": 107.887803
     },
     {
       "date": "30 September 2025",
@@ -4298,7 +4805,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 77
+      "symptomatic_per_school": 77,
+      "lat": -7.212228,
+      "lng": 107.893586
     },
     {
       "date": "22 September 2025",
@@ -4316,7 +4825,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.897732,
+      "lng": 107.412656
     },
     {
       "date": "22 September 2025",
@@ -4332,7 +4843,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.894198,
+      "lng": 107.415239
     },
     {
       "date": "22 September 2025",
@@ -4348,7 +4861,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.902201,
+      "lng": 107.412379
     },
     {
       "date": "24 September 2025",
@@ -4364,7 +4879,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.901376,
+      "lng": 107.40642
     },
     {
       "date": "24 September 2025",
@@ -4380,7 +4897,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.899093,
+      "lng": 107.414653
     },
     {
       "date": "24 September 2025",
@@ -4396,7 +4915,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.892163,
+      "lng": 107.41332
     },
     {
       "date": "24 September 2025",
@@ -4412,7 +4933,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.907427,
+      "lng": 107.421244
     },
     {
       "date": "24 September 2025",
@@ -4428,7 +4951,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.889631,
+      "lng": 107.425907
     },
     {
       "date": "24 September 2025",
@@ -4444,7 +4969,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.882469,
+      "lng": 107.397164
     },
     {
       "date": "24 September 2025",
@@ -4460,7 +4987,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.904801,
+      "lng": 107.428034
     },
     {
       "date": "24 September 2025",
@@ -4476,7 +5005,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 121
+      "symptomatic_per_school": 121,
+      "lat": -6.898582,
+      "lng": 107.413471
     },
     {
       "date": "14 Oktober 2025",
@@ -4494,7 +5025,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 74
+      "symptomatic_per_school": 74,
+      "lat": -6.900039,
+      "lng": 107.403173
     },
     {
       "date": "15 Oktober 2025",
@@ -4510,7 +5043,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 74
+      "symptomatic_per_school": 74,
+      "lat": -6.881433,
+      "lng": 107.41021
     },
     {
       "date": "15 Oktober 2025",
@@ -4526,7 +5061,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 74
+      "symptomatic_per_school": 74,
+      "lat": -6.87046,
+      "lng": 107.396116
     },
     {
       "date": "15 Oktober 2025",
@@ -4542,7 +5079,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 74
+      "symptomatic_per_school": 74,
+      "lat": -6.901784,
+      "lng": 107.416829
     },
     {
       "date": "15 Oktober 2025",
@@ -4558,7 +5097,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 74
+      "symptomatic_per_school": 74,
+      "lat": -6.897915,
+      "lng": 107.434739
     },
     {
       "date": "15 Oktober 2025",
@@ -4574,7 +5115,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 74
+      "symptomatic_per_school": 74,
+      "lat": -6.885556,
+      "lng": 107.418296
     },
     {
       "date": "15 Oktober 2025",
@@ -4590,7 +5133,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 74
+      "symptomatic_per_school": 74,
+      "lat": -6.866395,
+      "lng": 107.427762
     },
     {
       "date": "23 Oktober 2025",
@@ -4607,7 +5152,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.934766,
+      "lng": 107.428122
     },
     {
       "date": "28 Oktober 2025",
@@ -4626,7 +5173,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 39
+      "symptomatic_per_school": 39,
+      "lat": -6.882085,
+      "lng": 107.376705
     },
     {
       "date": "28 Oktober 2025",
@@ -4642,7 +5191,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 39
+      "symptomatic_per_school": 39,
+      "lat": -6.874333,
+      "lng": 107.413167
     },
     {
       "date": "28 Oktober 2025",
@@ -4658,7 +5209,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 39
+      "symptomatic_per_school": 39,
+      "lat": -6.936425,
+      "lng": 107.433503
     },
     {
       "date": "28 Oktober 2025",
@@ -4674,7 +5227,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 39
+      "symptomatic_per_school": 39,
+      "lat": -6.933593,
+      "lng": 107.377771
     },
     {
       "date": "28 Oktober 2025",
@@ -4690,7 +5245,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 39
+      "symptomatic_per_school": 39,
+      "lat": -6.884864,
+      "lng": 107.459463
     },
     {
       "date": "28 Oktober 2025",
@@ -4706,7 +5263,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 39
+      "symptomatic_per_school": 39,
+      "lat": -6.861571,
+      "lng": 107.418141
     },
     {
       "date": "11 November 2025",
@@ -4723,7 +5282,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.934422,
+      "lng": 107.40082
     },
     {
       "date": "25 September 2025",
@@ -4740,7 +5301,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.497347,
+      "lng": 107.735086
     },
     {
       "date": "25 September 2025",
@@ -4758,7 +5321,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 55
+      "symptomatic_per_school": 55,
+      "lat": -6.809772,
+      "lng": 107.982198
     },
     {
       "date": "25 September 2025",
@@ -4774,7 +5339,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 55
+      "symptomatic_per_school": 55,
+      "lat": -6.809076,
+      "lng": 107.981371
     },
     {
       "date": "25 September 2025",
@@ -4790,7 +5357,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 55
+      "symptomatic_per_school": 55,
+      "lat": -6.810852,
+      "lng": 107.980686
     },
     {
       "date": "26 September 2025",
@@ -4807,7 +5376,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.544702,
+      "lng": 107.001444
     },
     {
       "date": "1 Oktober 2025",
@@ -4824,7 +5395,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.543638,
+      "lng": 107.005069
     },
     {
       "date": "16 Oktober 2025",
@@ -4841,7 +5414,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.544558,
+      "lng": 107.007637
     },
     {
       "date": "6 April 2026",
@@ -4859,7 +5434,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -6.540363,
+      "lng": 107.002073
     },
     {
       "date": "29 September 2025",
@@ -4876,7 +5453,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.312318,
+      "lng": 108.403994
     },
     {
       "date": "3 Oktober 2025",
@@ -4893,7 +5472,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.316222,
+      "lng": 108.401255
     },
     {
       "date": "1 Oktober 2025",
@@ -4910,7 +5491,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.64214,
+      "lng": 108.558421
     },
     {
       "date": "1 Oktober 2025",
@@ -4927,7 +5510,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.370807,
+      "lng": 108.543253
     },
     {
       "date": "2 Oktober 2025",
@@ -4944,7 +5529,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.233259,
+      "lng": 106.994914
     },
     {
       "date": "22 Oktober 2025",
@@ -4961,7 +5548,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.713011,
+      "lng": 108.562695
     },
     {
       "date": "4 November 2025",
@@ -4978,7 +5567,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.761943,
+      "lng": 108.457578
     },
     {
       "date": "10 Maret 2026",
@@ -4995,7 +5586,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.763311,
+      "lng": 108.453286
     },
     {
       "date": "17 November 2025",
@@ -5012,7 +5605,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.920628,
+      "lng": 106.928405
     },
     {
       "date": "4 Desember 2025",
@@ -5029,7 +5624,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -6.807303,
+      "lng": 108.280547
     },
     {
       "date": "25 Februari 2026",
@@ -5047,7 +5644,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.872741,
+      "lng": 107.542817
     },
     {
       "date": "25 Februari 2026",
@@ -5063,7 +5662,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.875086,
+      "lng": 107.54613
     },
     {
       "date": "25 Februari 2026",
@@ -5079,7 +5680,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.870196,
+      "lng": 107.5477
     },
     {
       "date": "25 Februari 2026",
@@ -5095,7 +5698,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.867597,
+      "lng": 107.54129
     },
     {
       "date": "25 Februari 2026",
@@ -5111,7 +5716,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.882535,
+      "lng": 107.551282
     },
     {
       "date": "16 Januari 2025",
@@ -5129,7 +5736,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.680903,
+      "lng": 110.869425
     },
     {
       "date": "14 April 2025",
@@ -5146,7 +5755,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.912012,
+      "lng": 109.71896
     },
     {
       "date": "14 April 2025",
@@ -5164,7 +5775,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.908996,
+      "lng": 109.718857
     },
     {
       "date": "31 Oktober 2025",
@@ -5181,7 +5794,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.911271,
+      "lng": 109.720076
     },
     {
       "date": "24 April 2025",
@@ -5198,7 +5813,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "sekolah"
+      "unit": "sekolah",
+      "lat": -7.61961,
+      "lng": 111.071543
     },
     {
       "date": "3 Oktober 2025",
@@ -5216,7 +5833,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.619049,
+      "lng": 111.072447
     },
     {
       "date": "9 Oktober 2025",
@@ -5235,7 +5854,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 21
+      "symptomatic_per_school": 21,
+      "lat": -7.616665,
+      "lng": 111.064582
     },
     {
       "date": "9 Oktober 2025",
@@ -5251,7 +5872,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 21
+      "symptomatic_per_school": 21,
+      "lat": -7.61377,
+      "lng": 111.073189
     },
     {
       "date": "9 Oktober 2025",
@@ -5267,7 +5890,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 21
+      "symptomatic_per_school": 21,
+      "lat": -7.619855,
+      "lng": 111.069507
     },
     {
       "date": "9 Oktober 2025",
@@ -5283,7 +5908,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 21
+      "symptomatic_per_school": 21,
+      "lat": -7.61499,
+      "lng": 111.062434
     },
     {
       "date": "9 Oktober 2025",
@@ -5299,7 +5926,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 21
+      "symptomatic_per_school": 21,
+      "lat": -7.62698,
+      "lng": 111.073265
     },
     {
       "date": "13 Oktober 2025",
@@ -5316,7 +5945,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.632387,
+      "lng": 111.080391
     },
     {
       "date": "15 Oktober 2025",
@@ -5333,7 +5964,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.602451,
+      "lng": 111.068651
     },
     {
       "date": "11 Agustus 2025",
@@ -5350,7 +5983,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.394427,
+      "lng": 110.954761
     },
     {
       "date": "11 Agustus 2025",
@@ -5365,7 +6000,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.389204,
+      "lng": 110.956528
     },
     {
       "date": "11 Agustus 2025",
@@ -5380,7 +6017,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.393569,
+      "lng": 110.947419
     },
     {
       "date": "11 Agustus 2025",
@@ -5395,7 +6034,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.398686,
+      "lng": 110.953829
     },
     {
       "date": "11 Agustus 2025",
@@ -5410,7 +6051,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.392552,
+      "lng": 110.957471
     },
     {
       "date": "11 Agustus 2025",
@@ -5425,7 +6068,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.399625,
+      "lng": 110.948414
     },
     {
       "date": "11 Agustus 2025",
@@ -5443,7 +6088,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": -7.395958,
+      "lng": 110.96309
     },
     {
       "date": "11 Agustus 2025",
@@ -5459,7 +6106,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": -7.400445,
+      "lng": 110.968247
     },
     {
       "date": "11 Agustus 2025",
@@ -5475,7 +6124,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": -7.400813,
+      "lng": 110.970374
     },
     {
       "date": "11 Agustus 2025",
@@ -5491,7 +6142,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": -7.382595,
+      "lng": 110.934435
     },
     {
       "date": "10 September 2025",
@@ -5508,7 +6161,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.674796,
+      "lng": 110.628506
     },
     {
       "date": "8 Oktober 2025",
@@ -5525,7 +6180,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.669251,
+      "lng": 110.632043
     },
     {
       "date": "8 April 2026",
@@ -5542,7 +6199,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.675784,
+      "lng": 110.631403
     },
     {
       "date": "10 April 2026",
@@ -5559,7 +6218,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.667067,
+      "lng": 110.621819
     },
     {
       "date": "28 April 2026",
@@ -5576,7 +6237,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -7.669675,
+      "lng": 110.618636
     },
     {
       "date": "11 September 2025",
@@ -5593,7 +6256,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.960546,
+      "lng": 110.957153
     },
     {
       "date": "12 September 2025",
@@ -5610,7 +6275,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.961973,
+      "lng": 110.959703
     },
     {
       "date": "30 September 2025",
@@ -5628,7 +6295,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 66
+      "symptomatic_per_school": 66,
+      "lat": -7.960794,
+      "lng": 110.959863
     },
     {
       "date": "30 September 2025",
@@ -5644,7 +6313,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 66
+      "symptomatic_per_school": 66,
+      "lat": -7.955844,
+      "lng": 110.950429
     },
     {
       "date": "12 Januari 2026",
@@ -5661,7 +6332,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.968438,
+      "lng": 110.947667
     },
     {
       "date": "6 Mei 2026",
@@ -5678,7 +6351,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -7.971886,
+      "lng": 110.954534
     },
     {
       "date": "22 September 2025",
@@ -5695,7 +6370,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.329746,
+      "lng": 110.499945
     },
     {
       "date": "3 Oktober 2025",
@@ -5712,7 +6389,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.33008,
+      "lng": 110.501437
     },
     {
       "date": "6 Oktober 2025",
@@ -5730,7 +6409,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.331666,
+      "lng": 110.502612
     },
     {
       "date": "23 September 2025",
@@ -5748,7 +6429,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.599077,
+      "lng": 110.784631
     },
     {
       "date": "23 September 2025",
@@ -5764,7 +6447,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.603466,
+      "lng": 110.785393
     },
     {
       "date": "23 September 2025",
@@ -5780,7 +6465,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.604068,
+      "lng": 110.785973
     },
     {
       "date": "23 September 2025",
@@ -5796,7 +6483,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -6.596594,
+      "lng": 110.786803
     },
     {
       "date": "24 September 2025",
@@ -5813,7 +6502,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.767922,
+      "lng": 111.454253
     },
     {
       "date": "21 April 2026",
@@ -5830,7 +6521,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.772893,
+      "lng": 111.457755
     },
     {
       "date": "22 September 2025",
@@ -5848,7 +6541,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 136
+      "symptomatic_per_school": 136,
+      "lat": -7.456673,
+      "lng": 109.116255
     },
     {
       "date": "22 September 2025",
@@ -5864,7 +6559,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 136
+      "symptomatic_per_school": 136,
+      "lat": -7.457783,
+      "lng": 109.113887
     },
     {
       "date": "22 September 2025",
@@ -5880,7 +6577,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 136
+      "symptomatic_per_school": 136,
+      "lat": -7.453726,
+      "lng": 109.122417
     },
     {
       "date": "29 September 2025",
@@ -5898,7 +6597,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -7.450766,
+      "lng": 109.11729
     },
     {
       "date": "29 September 2025",
@@ -5914,7 +6615,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -7.456173,
+      "lng": 109.110461
     },
     {
       "date": "29 September 2025",
@@ -5930,7 +6633,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -7.451219,
+      "lng": 109.11565
     },
     {
       "date": "29 September 2025",
@@ -5946,7 +6651,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -7.462545,
+      "lng": 109.104627
     },
     {
       "date": "25 September 2025",
@@ -5964,7 +6671,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 88
+      "symptomatic_per_school": 88,
+      "lat": -7.642855,
+      "lng": 109.607718
     },
     {
       "date": "25 September 2025",
@@ -5980,7 +6689,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 88
+      "symptomatic_per_school": 88,
+      "lat": -7.641822,
+      "lng": 109.610692
     },
     {
       "date": "30 September 2025",
@@ -5997,7 +6708,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.285922,
+      "lng": 110.403782
     },
     {
       "date": "30 September 2025",
@@ -6016,7 +6729,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 207
+      "symptomatic_per_school": 207,
+      "lat": -7.238438,
+      "lng": 110.122464
     },
     {
       "date": "30 September 2025",
@@ -6032,7 +6747,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 207
+      "symptomatic_per_school": 207,
+      "lat": -7.242315,
+      "lng": 110.122976
     },
     {
       "date": "3 Oktober 2025",
@@ -6050,7 +6767,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -7.706139,
+      "lng": 109.965521
     },
     {
       "date": "3 Oktober 2025",
@@ -6066,7 +6785,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -7.703374,
+      "lng": 109.966131
     },
     {
       "date": "18 November 2025",
@@ -6083,7 +6804,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -7.515346,
+      "lng": 110.215708
     },
     {
       "date": "26 November 2025",
@@ -6101,7 +6824,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 270
+      "symptomatic_per_school": 270,
+      "lat": -7.109234,
+      "lng": 111.422373
     },
     {
       "date": "26 November 2025",
@@ -6117,7 +6842,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 270
+      "symptomatic_per_school": 270,
+      "lat": -7.114425,
+      "lng": 111.421913
     },
     {
       "date": "26 November 2025",
@@ -6133,7 +6860,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 270
+      "symptomatic_per_school": 270,
+      "lat": -7.111454,
+      "lng": 111.414946
     },
     {
       "date": "26 November 2025",
@@ -6150,7 +6879,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.021073,
+      "lng": 110.136654
     },
     {
       "date": "11 Desember 2025",
@@ -6168,7 +6899,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -7.095761,
+      "lng": 110.895612
     },
     {
       "date": "10 Januari 2026",
@@ -6186,7 +6919,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 134
+      "symptomatic_per_school": 134,
+      "lat": -7.093843,
+      "lng": 110.895735
     },
     {
       "date": "10 Januari 2026",
@@ -6202,7 +6937,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 134
+      "symptomatic_per_school": 134,
+      "lat": -7.095631,
+      "lng": 110.891405
     },
     {
       "date": "10 Januari 2026",
@@ -6218,7 +6955,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 134
+      "symptomatic_per_school": 134,
+      "lat": -7.090125,
+      "lng": 110.8937
     },
     {
       "date": "10 Januari 2026",
@@ -6234,7 +6973,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 134
+      "symptomatic_per_school": 134,
+      "lat": -7.092791,
+      "lng": 110.885909
     },
     {
       "date": "10 Januari 2026",
@@ -6250,7 +6991,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 134
+      "symptomatic_per_school": 134,
+      "lat": -7.104146,
+      "lng": 110.889242
     },
     {
       "date": "10 Januari 2026",
@@ -6266,7 +7009,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 134
+      "symptomatic_per_school": 134,
+      "lat": -7.104256,
+      "lng": 110.892287
     },
     {
       "date": "30 Januari 2026",
@@ -6284,7 +7029,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.099801,
+      "lng": 110.885358
     },
     {
       "date": "30 Januari 2026",
@@ -6300,7 +7047,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 4
+      "symptomatic_per_school": 4,
+      "lat": -7.103707,
+      "lng": 110.879036
     },
     {
       "date": "8 Januari 2026",
@@ -6317,7 +7066,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.98974,
+      "lng": 110.42273
     },
     {
       "date": "13 Januari 2026",
@@ -6334,7 +7085,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.043203,
+      "lng": 109.619222
     },
     {
       "date": "22 Januari 2026",
@@ -6351,7 +7104,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -7.475238,
+      "lng": 110.22006
     },
     {
       "date": "29 Januari 2026",
@@ -6368,7 +7123,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.798647,
+      "lng": 110.866236
     },
     {
       "date": "6 Februari 2026",
@@ -6385,7 +7142,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.399708,
+      "lng": 109.919016
     },
     {
       "date": "9 Februari 2026",
@@ -6402,7 +7161,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.755353,
+      "lng": 111.039578
     },
     {
       "date": "23 Februari 2026",
@@ -6419,7 +7180,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.867966,
+      "lng": 109.137348
     },
     {
       "date": "12 Maret 2026",
@@ -6437,7 +7200,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.012737,
+      "lng": 109.390743
     },
     {
       "date": "18 April 2026",
@@ -6455,7 +7220,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -6.924957,
+      "lng": 110.629068
     },
     {
       "date": "18 April 2026",
@@ -6471,7 +7238,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -6.920676,
+      "lng": 110.630823
     },
     {
       "date": "18 April 2026",
@@ -6487,7 +7256,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -6.925105,
+      "lng": 110.624512
     },
     {
       "date": "18 April 2026",
@@ -6503,7 +7274,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -6.930795,
+      "lng": 110.62527
     },
     {
       "date": "18 April 2026",
@@ -6519,7 +7292,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -6.928289,
+      "lng": 110.61904
     },
     {
       "date": "18 April 2026",
@@ -6535,7 +7310,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "santri",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -6.912555,
+      "lng": 110.631762
     },
     {
       "date": "29 April 2026",
@@ -6552,7 +7329,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -7.460039,
+      "lng": 108.805314
     },
     {
       "date": "17 Juni 2025",
@@ -6569,7 +7348,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.812994,
+      "lng": 110.148727
     },
     {
       "date": "31 Juli 2025",
@@ -6587,7 +7368,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 124
+      "symptomatic_per_school": 124,
+      "lat": -7.813726,
+      "lng": 110.144921
     },
     {
       "date": "31 Juli 2025",
@@ -6603,7 +7386,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 124
+      "symptomatic_per_school": 124,
+      "lat": -7.807257,
+      "lng": 110.152983
     },
     {
       "date": "31 Juli 2025",
@@ -6619,7 +7404,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 124
+      "symptomatic_per_school": 124,
+      "lat": -7.806881,
+      "lng": 110.153861
     },
     {
       "date": "31 Juli 2025",
@@ -6635,7 +7422,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 124
+      "symptomatic_per_school": 124,
+      "lat": -7.80701,
+      "lng": 110.147447
     },
     {
       "date": "20 Januari 2025",
@@ -6653,7 +7442,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 35
+      "symptomatic_per_school": 35,
+      "lat": -7.807774,
+      "lng": 110.151387
     },
     {
       "date": "20 Januari 2025",
@@ -6669,7 +7460,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 35
+      "symptomatic_per_school": 35,
+      "lat": -7.819436,
+      "lng": 110.14777
     },
     {
       "date": "20 Januari 2025",
@@ -6685,7 +7478,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 35
+      "symptomatic_per_school": 35,
+      "lat": -7.810655,
+      "lng": 110.143354
     },
     {
       "date": "13 Agustus 2025",
@@ -6703,7 +7498,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 95
+      "symptomatic_per_school": 95,
+      "lat": -7.690947,
+      "lng": 110.379458
     },
     {
       "date": "13 Agustus 2025",
@@ -6719,7 +7516,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 95
+      "symptomatic_per_school": 95,
+      "lat": -7.691628,
+      "lng": 110.377912
     },
     {
       "date": "13 Agustus 2025",
@@ -6735,7 +7534,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 95
+      "symptomatic_per_school": 95,
+      "lat": -7.690041,
+      "lng": 110.377538
     },
     {
       "date": "13 Agustus 2025",
@@ -6751,7 +7552,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 95
+      "symptomatic_per_school": 95,
+      "lat": -7.683407,
+      "lng": 110.375699
     },
     {
       "date": "27 Agustus 2025",
@@ -6768,7 +7571,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -7.688949,
+      "lng": 110.379274
     },
     {
       "date": "24 Oktober 2025",
@@ -6786,7 +7591,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 100
+      "symptomatic_per_school": 100,
+      "lat": -7.682491,
+      "lng": 110.373172
     },
     {
       "date": "24 Oktober 2025",
@@ -6802,7 +7609,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 100
+      "symptomatic_per_school": 100,
+      "lat": -7.69783,
+      "lng": 110.381017
     },
     {
       "date": "24 Oktober 2025",
@@ -6818,7 +7627,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 100
+      "symptomatic_per_school": 100,
+      "lat": -7.704809,
+      "lng": 110.378928
     },
     {
       "date": "3 September 2025",
@@ -6835,7 +7646,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.994463,
+      "lng": 110.557912
     },
     {
       "date": "15 September 2025",
@@ -6853,7 +7666,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.996237,
+      "lng": 110.556071
     },
     {
       "date": "15 September 2025",
@@ -6869,7 +7684,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.990513,
+      "lng": 110.555822
     },
     {
       "date": "15 September 2025",
@@ -6885,7 +7702,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.99057,
+      "lng": 110.557152
     },
     {
       "date": "3 Oktober 2025",
@@ -6902,7 +7721,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.985933,
+      "lng": 110.557042
     },
     {
       "date": "28 Oktober 2025",
@@ -6920,7 +7741,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 348
+      "symptomatic_per_school": 348,
+      "lat": -7.99289,
+      "lng": 110.560263
     },
     {
       "date": "28 Oktober 2025",
@@ -6936,7 +7759,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 348
+      "symptomatic_per_school": 348,
+      "lat": -7.992834,
+      "lng": 110.545762
     },
     {
       "date": "29 Oktober 2025",
@@ -6954,7 +7779,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 20
+      "symptomatic_per_school": 20,
+      "lat": -7.98036,
+      "lng": 110.551611
     },
     {
       "date": "29 Oktober 2025",
@@ -6970,7 +7797,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 20
+      "symptomatic_per_school": 20,
+      "lat": -7.9925,
+      "lng": 110.575775
     },
     {
       "date": "29 Oktober 2025",
@@ -6986,7 +7815,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 20
+      "symptomatic_per_school": 20,
+      "lat": -7.982153,
+      "lng": 110.549405
     },
     {
       "date": "29 Oktober 2025",
@@ -7002,7 +7833,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 20
+      "symptomatic_per_school": 20,
+      "lat": -7.973444,
+      "lng": 110.556428
     },
     {
       "date": "29 Oktober 2025",
@@ -7018,7 +7851,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 20
+      "symptomatic_per_school": 20,
+      "lat": -8.01371,
+      "lng": 110.569787
     },
     {
       "date": "29 Oktober 2025",
@@ -7034,7 +7869,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 20
+      "symptomatic_per_school": 20,
+      "lat": -7.994981,
+      "lng": 110.578062
     },
     {
       "date": "3 November 2025",
@@ -7051,7 +7888,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.975029,
+      "lng": 110.539349
     },
     {
       "date": "23 Januari 2026",
@@ -7066,7 +7905,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "sekolah"
+      "unit": "sekolah",
+      "lat": -8.013244,
+      "lng": 110.579472
     },
     {
       "date": "15 Oktober 2025",
@@ -7083,7 +7924,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.800914,
+      "lng": 110.364691
     },
     {
       "date": "15 Oktober 2025",
@@ -7101,7 +7944,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.803916,
+      "lng": 110.364354
     },
     {
       "date": "31 Oktober 2025",
@@ -7119,7 +7964,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 47
+      "symptomatic_per_school": 47,
+      "lat": -7.898298,
+      "lng": 110.383791
     },
     {
       "date": "31 Oktober 2025",
@@ -7135,7 +7982,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 47
+      "symptomatic_per_school": 47,
+      "lat": -7.897525,
+      "lng": 110.389032
     },
     {
       "date": "31 Oktober 2025",
@@ -7151,7 +8000,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 47
+      "symptomatic_per_school": 47,
+      "lat": -7.893115,
+      "lng": 110.387228
     },
     {
       "date": "31 Oktober 2025",
@@ -7167,7 +8018,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 47
+      "symptomatic_per_school": 47,
+      "lat": -7.890394,
+      "lng": 110.387028
     },
     {
       "date": "31 Oktober 2025",
@@ -7183,7 +8036,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 47
+      "symptomatic_per_school": 47,
+      "lat": -7.8992,
+      "lng": 110.379559
     },
     {
       "date": "2 April 2026",
@@ -7201,7 +8056,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.908075,
+      "lng": 110.389312
     },
     {
       "date": "8 April 2026",
@@ -7220,7 +8077,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 10
+      "symptomatic_per_school": 10,
+      "lat": -7.90787,
+      "lng": 110.375927
     },
     {
       "date": "8 April 2026",
@@ -7236,7 +8095,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 10
+      "symptomatic_per_school": 10,
+      "lat": -7.898847,
+      "lng": 110.377767
     },
     {
       "date": "13 April 2026",
@@ -7254,7 +8115,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 40
+      "symptomatic_per_school": 40,
+      "lat": -7.886097,
+      "lng": 110.396607
     },
     {
       "date": "13 April 2026",
@@ -7270,7 +8133,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 40
+      "symptomatic_per_school": 40,
+      "lat": -7.914889,
+      "lng": 110.376697
     },
     {
       "date": "6 Mei 2026",
@@ -7287,7 +8152,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.917488,
+      "lng": 110.365522
     },
     {
       "date": "2 Oktober 2024",
@@ -7304,7 +8171,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.61439,
+      "lng": 111.948502
     },
     {
       "date": "7 April 2026",
@@ -7321,7 +8190,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.612682,
+      "lng": 111.944233
     },
     {
       "date": "4 September 2025",
@@ -7338,7 +8209,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.800476,
+      "lng": 114.263908
     },
     {
       "date": "9 September 2025",
@@ -7357,7 +8230,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": -7.071673,
+      "lng": 113.499545
     },
     {
       "date": "9 September 2025",
@@ -7373,7 +8248,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": -7.066983,
+      "lng": 113.496829
     },
     {
       "date": "17 September 2025",
@@ -7390,7 +8267,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.065112,
+      "lng": 113.505168
     },
     {
       "date": "15 Oktober 2025",
@@ -7407,7 +8286,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.070912,
+      "lng": 113.49747
     },
     {
       "date": "6 November 2025",
@@ -7424,7 +8305,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.069218,
+      "lng": 113.504069
     },
     {
       "date": "6 November 2025",
@@ -7439,7 +8322,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.082464,
+      "lng": 113.494532
     },
     {
       "date": "17 September 2025",
@@ -7456,7 +8341,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.121929,
+      "lng": 112.326479
     },
     {
       "date": "24 September 2025",
@@ -7473,7 +8360,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.229671,
+      "lng": 111.812837
     },
     {
       "date": "1 Oktober 2025",
@@ -7490,7 +8379,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.226615,
+      "lng": 111.813673
     },
     {
       "date": "2 Oktober 2025",
@@ -7507,7 +8398,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.230796,
+      "lng": 111.818036
     },
     {
       "date": "2 Oktober 2025",
@@ -7524,7 +8417,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.233441,
+      "lng": 111.808857
     },
     {
       "date": "28 November 2025",
@@ -7541,7 +8436,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -7.234468,
+      "lng": 111.823225
     },
     {
       "date": "15 April 2026",
@@ -7559,7 +8456,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.221885,
+      "lng": 111.825209
     },
     {
       "date": "15 April 2026",
@@ -7575,7 +8474,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.21439,
+      "lng": 111.809624
     },
     {
       "date": "15 April 2026",
@@ -7591,7 +8492,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.217267,
+      "lng": 111.827271
     },
     {
       "date": "24 September 2025",
@@ -7608,7 +8511,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.961486,
+      "lng": 111.892339
     },
     {
       "date": "14 Oktober 2025",
@@ -7625,7 +8530,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.958693,
+      "lng": 111.89669
     },
     {
       "date": "27 Januari 2026",
@@ -7640,7 +8547,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -6.957787,
+      "lng": 111.891044
     },
     {
       "date": "25 September 2025",
@@ -7658,7 +8567,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.872341,
+      "lng": 112.526735
     },
     {
       "date": "25 September 2025",
@@ -7674,7 +8585,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.872648,
+      "lng": 112.529685
     },
     {
       "date": "26 September 2025",
@@ -7691,7 +8604,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.265108,
+      "lng": 113.628765
     },
     {
       "date": "5 Februari 2026",
@@ -7708,7 +8623,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -8.267312,
+      "lng": 113.629986
     },
     {
       "date": "1 Oktober 2025",
@@ -7725,7 +8642,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.402839,
+      "lng": 111.447431
     },
     {
       "date": "1 Oktober 2025",
@@ -7742,7 +8661,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.403518,
+      "lng": 111.44535
     },
     {
       "date": "26 November 2025",
@@ -7760,7 +8681,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.400646,
+      "lng": 111.447266
     },
     {
       "date": "26 November 2025",
@@ -7776,7 +8699,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.398134,
+      "lng": 111.44356
     },
     {
       "date": "26 November 2025",
@@ -7792,7 +8717,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.395076,
+      "lng": 111.453763
     },
     {
       "date": "26 November 2025",
@@ -7808,7 +8735,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.392557,
+      "lng": 111.436896
     },
     {
       "date": "26 November 2025",
@@ -7824,7 +8753,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 17
+      "symptomatic_per_school": 17,
+      "lat": -7.403741,
+      "lng": 111.444436
     },
     {
       "date": "4 Desember 2025",
@@ -7842,7 +8773,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 37
+      "symptomatic_per_school": 37,
+      "lat": -7.398249,
+      "lng": 111.442551
     },
     {
       "date": "4 Desember 2025",
@@ -7858,7 +8791,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 37
+      "symptomatic_per_school": 37,
+      "lat": -7.40089,
+      "lng": 111.451409
     },
     {
       "date": "4 Desember 2025",
@@ -7874,7 +8809,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 37
+      "symptomatic_per_school": 37,
+      "lat": -7.415859,
+      "lng": 111.449248
     },
     {
       "date": "4 Desember 2025",
@@ -7890,7 +8827,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 37
+      "symptomatic_per_school": 37,
+      "lat": -7.422719,
+      "lng": 111.437654
     },
     {
       "date": "4 Desember 2025",
@@ -7906,7 +8845,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 37
+      "symptomatic_per_school": 37,
+      "lat": -7.392448,
+      "lng": 111.427183
     },
     {
       "date": "4 Desember 2025",
@@ -7922,7 +8863,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 37
+      "symptomatic_per_school": 37,
+      "lat": -7.376037,
+      "lng": 111.469582
     },
     {
       "date": "13 Februari 2026",
@@ -7939,7 +8882,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -7.384439,
+      "lng": 111.458445
     },
     {
       "date": "13 Oktober 2025",
@@ -7957,7 +8902,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 34
+      "symptomatic_per_school": 34,
+      "lat": -8.069423,
+      "lng": 111.899724
     },
     {
       "date": "13 Oktober 2025",
@@ -7973,7 +8920,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 34
+      "symptomatic_per_school": 34,
+      "lat": -8.067388,
+      "lng": 111.902107
     },
     {
       "date": "20 Januari 2026",
@@ -7990,7 +8939,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.074683,
+      "lng": 111.903451
     },
     {
       "date": "22 Januari 2026",
@@ -8007,7 +8958,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.069878,
+      "lng": 111.902003
     },
     {
       "date": "10 Februari 2026",
@@ -8024,7 +8977,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.080107,
+      "lng": 111.900981
     },
     {
       "date": "17 Oktober 2025",
@@ -8042,7 +8997,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.654989,
+      "lng": 111.33506
     },
     {
       "date": "17 Oktober 2025",
@@ -8058,7 +9015,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -7.656175,
+      "lng": 111.339479
     },
     {
       "date": "23 Oktober 2025",
@@ -8075,7 +9034,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.208096,
+      "lng": 114.355598
     },
     {
       "date": "24 Oktober 2025",
@@ -8093,7 +9054,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 44
+      "symptomatic_per_school": 44,
+      "lat": -8.210972,
+      "lng": 114.353378
     },
     {
       "date": "24 Oktober 2025",
@@ -8109,7 +9072,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 44
+      "symptomatic_per_school": 44,
+      "lat": -8.205937,
+      "lng": 114.356147
     },
     {
       "date": "24 Oktober 2025",
@@ -8125,7 +9090,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 44
+      "symptomatic_per_school": 44,
+      "lat": -8.201849,
+      "lng": 114.360372
     },
     {
       "date": "23 Oktober 2025",
@@ -8142,7 +9109,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.105623,
+      "lng": 112.686277
     },
     {
       "date": "11 Februari 2026",
@@ -8159,7 +9128,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.107324,
+      "lng": 112.684812
     },
     {
       "date": "27 November 2025",
@@ -8177,7 +9148,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.611857,
+      "lng": 111.674234
     },
     {
       "date": "27 November 2025",
@@ -8193,7 +9166,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.608862,
+      "lng": 111.675289
     },
     {
       "date": "27 November 2025",
@@ -8209,7 +9184,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.606654,
+      "lng": 111.672729
     },
     {
       "date": "3 Desember 2025",
@@ -8227,7 +9204,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 19
+      "symptomatic_per_school": 19,
+      "lat": -7.944433,
+      "lng": 113.882793
     },
     {
       "date": "3 Desember 2025",
@@ -8243,7 +9222,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 19
+      "symptomatic_per_school": 19,
+      "lat": -7.948991,
+      "lng": 113.884592
     },
     {
       "date": "3 Desember 2025",
@@ -8259,7 +9240,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 19
+      "symptomatic_per_school": 19,
+      "lat": -7.947745,
+      "lng": 113.881502
     },
     {
       "date": "3 Desember 2025",
@@ -8275,7 +9258,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 19
+      "symptomatic_per_school": 19,
+      "lat": -7.949157,
+      "lng": 113.882486
     },
     {
       "date": "10 Januari 2026",
@@ -8293,7 +9278,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 260
+      "symptomatic_per_school": 260,
+      "lat": -7.539634,
+      "lng": 112.510538
     },
     {
       "date": "10 Januari 2026",
@@ -8309,7 +9296,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 260
+      "symptomatic_per_school": 260,
+      "lat": -7.540308,
+      "lng": 112.512061
     },
     {
       "date": "10 Januari 2026",
@@ -8325,7 +9314,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 260
+      "symptomatic_per_school": 260,
+      "lat": -7.544093,
+      "lng": 112.514734
     },
     {
       "date": "9 April 2026",
@@ -8343,7 +9334,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.536541,
+      "lng": 112.50405
     },
     {
       "date": "9 April 2026",
@@ -8359,7 +9352,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.536289,
+      "lng": 112.505749
     },
     {
       "date": "9 April 2026",
@@ -8375,7 +9370,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.546496,
+      "lng": 112.513481
     },
     {
       "date": "9 April 2026",
@@ -8391,7 +9388,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.554713,
+      "lng": 112.521234
     },
     {
       "date": "9 April 2026",
@@ -8407,7 +9406,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.552778,
+      "lng": 112.506417
     },
     {
       "date": "15 Januari 2026",
@@ -8424,7 +9425,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -7.464515,
+      "lng": 112.433282
     },
     {
       "date": "15 Januari 2026",
@@ -8439,7 +9442,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -7.464212,
+      "lng": 112.434017
     },
     {
       "date": "15 Januari 2026",
@@ -8454,7 +9459,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -7.462809,
+      "lng": 112.437866
     },
     {
       "date": "2 Februari 2026",
@@ -8472,7 +9479,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.247019,
+      "lng": 112.737221
     },
     {
       "date": "11 Mei 2026",
@@ -8491,7 +9500,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.248741,
+      "lng": 112.738966
     },
     {
       "date": "11 Mei 2026",
@@ -8507,7 +9518,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.248856,
+      "lng": 112.740262
     },
     {
       "date": "11 Mei 2026",
@@ -8523,7 +9536,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.239771,
+      "lng": 112.744722
     },
     {
       "date": "11 Mei 2026",
@@ -8539,7 +9554,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.240119,
+      "lng": 112.742297
     },
     {
       "date": "11 Mei 2026",
@@ -8555,7 +9572,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.252503,
+      "lng": 112.737761
     },
     {
       "date": "11 Mei 2026",
@@ -8571,7 +9590,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.240021,
+      "lng": 112.744862
     },
     {
       "date": "11 Mei 2026",
@@ -8587,7 +9608,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.259032,
+      "lng": 112.725065
     },
     {
       "date": "11 Mei 2026",
@@ -8603,7 +9626,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.233167,
+      "lng": 112.74232
     },
     {
       "date": "11 Mei 2026",
@@ -8619,7 +9644,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.241565,
+      "lng": 112.723459
     },
     {
       "date": "11 Mei 2026",
@@ -8635,7 +9662,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.242299,
+      "lng": 112.727247
     },
     {
       "date": "11 Mei 2026",
@@ -8651,7 +9680,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.243896,
+      "lng": 112.761599
     },
     {
       "date": "11 Mei 2026",
@@ -8667,7 +9698,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.263016,
+      "lng": 112.715883
     },
     {
       "date": "11 Mei 2026",
@@ -8683,7 +9716,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 16
+      "symptomatic_per_school": 16,
+      "lat": -7.250125,
+      "lng": 112.75655
     },
     {
       "date": "Awal Februari 2026",
@@ -8701,7 +9736,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 78
+      "symptomatic_per_school": 78,
+      "lat": -8.135565,
+      "lng": 111.638705
     },
     {
       "date": "Awal Februari 2026",
@@ -8717,7 +9754,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 78
+      "symptomatic_per_school": 78,
+      "lat": -8.135421,
+      "lng": 111.643932
     },
     {
       "date": "5 Maret 2026",
@@ -8734,7 +9773,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -7.55978,
+      "lng": 112.239627
     },
     {
       "date": "9 April 2026",
@@ -8752,7 +9793,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 53
+      "symptomatic_per_school": 53,
+      "lat": -8.100111,
+      "lng": 111.143591
     },
     {
       "date": "9 April 2026",
@@ -8768,7 +9811,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 53
+      "symptomatic_per_school": 53,
+      "lat": -8.10264,
+      "lng": 111.144124
     },
     {
       "date": "9 April 2026",
@@ -8784,7 +9829,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 53
+      "symptomatic_per_school": 53,
+      "lat": -8.09867,
+      "lng": 111.148313
     },
     {
       "date": "16 April 2026",
@@ -8801,7 +9848,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.628585,
+      "lng": 111.518493
     },
     {
       "date": "20 April 2026",
@@ -8818,7 +9867,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": -7.044898,
+      "lng": 112.89706
     },
     {
       "date": "22 April 2026",
@@ -8836,7 +9887,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -7.813087,
+      "lng": 112.005604
     },
     {
       "date": "22 April 2026",
@@ -8852,7 +9905,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -7.808489,
+      "lng": 112.001805
     },
     {
       "date": "22 April 2026",
@@ -8868,7 +9923,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 24
+      "symptomatic_per_school": 24,
+      "lat": -7.805225,
+      "lng": 112.010019
     },
     {
       "date": "22 April 2026",
@@ -8885,7 +9942,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.059538,
+      "lng": 113.255558
     },
     {
       "date": "27 April 2026",
@@ -8903,7 +9962,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 3
+      "symptomatic_per_school": 3,
+      "lat": -7.801359,
+      "lng": 112.168828
     },
     {
       "date": "27 April 2026",
@@ -8919,7 +9980,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 3
+      "symptomatic_per_school": 3,
+      "lat": -7.805395,
+      "lng": 112.172462
     },
     {
       "date": "",
@@ -8934,7 +9997,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -8.225859,
+      "lng": 115.193704
     },
     {
       "date": "23 April 2025",
@@ -8951,7 +10016,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.704494,
+      "lng": 116.291445
     },
     {
       "date": "17 Januari 2026",
@@ -8969,7 +10036,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 19
+      "symptomatic_per_school": 19,
+      "lat": -8.702486,
+      "lng": 116.293798
     },
     {
       "date": "17 Januari 2026",
@@ -8985,7 +10054,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 19
+      "symptomatic_per_school": 19,
+      "lat": -8.706552,
+      "lng": 116.295864
     },
     {
       "date": "10 April 2026",
@@ -9004,7 +10075,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -8.699822,
+      "lng": 116.294
     },
     {
       "date": "10 April 2026",
@@ -9020,7 +10093,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -8.696754,
+      "lng": 116.285207
     },
     {
       "date": "19 Agustus 2025",
@@ -9037,7 +10112,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -8.632524,
+      "lng": 116.558633
     },
     {
       "date": "13 Oktober 2025",
@@ -9055,7 +10132,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -8.636505,
+      "lng": 116.557695
     },
     {
       "date": "17 Oktober 2025",
@@ -9072,7 +10151,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.630814,
+      "lng": 116.557394
     },
     {
       "date": "26 Januari 2026",
@@ -9089,7 +10170,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.637614,
+      "lng": 116.564729
     },
     {
       "date": "24 April 2026",
@@ -9106,7 +10189,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -8.635269,
+      "lng": 116.550523
     },
     {
       "date": "3 September 2025",
@@ -9123,7 +10208,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.670301,
+      "lng": 116.121635
     },
     {
       "date": "3 September 2025",
@@ -9140,7 +10227,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.673575,
+      "lng": 116.122822
     },
     {
       "date": "24 September 2025",
@@ -9157,7 +10246,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -8.673352,
+      "lng": 116.126298
     },
     {
       "date": "17 September 2025",
@@ -9174,7 +10265,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.735955,
+      "lng": 117.497835
     },
     {
       "date": "17 September 2025",
@@ -9189,7 +10282,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.730836,
+      "lng": 117.49249
     },
     {
       "date": "17 September 2025",
@@ -9204,7 +10299,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.734259,
+      "lng": 117.496157
     },
     {
       "date": "17 September 2025",
@@ -9219,7 +10316,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -8.735026,
+      "lng": 117.492793
     },
     {
       "date": "12 Oktober 2025",
@@ -9237,7 +10336,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -8.454205,
+      "lng": 118.727312
     },
     {
       "date": "12 Oktober 2025",
@@ -9253,7 +10354,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -8.455802,
+      "lng": 118.728791
     },
     {
       "date": "31 Oktober 2025",
@@ -9271,7 +10374,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 36
+      "symptomatic_per_school": 36,
+      "lat": -8.658098,
+      "lng": 116.914495
     },
     {
       "date": "31 Oktober 2025",
@@ -9287,7 +10392,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 36
+      "symptomatic_per_school": 36,
+      "lat": -8.659227,
+      "lng": 116.912947
     },
     {
       "date": "11 Februari 2026",
@@ -9305,7 +10412,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 15
+      "symptomatic_per_school": 15,
+      "lat": -8.357425,
+      "lng": 116.159926
     },
     {
       "date": "11 Februari 2026",
@@ -9321,7 +10430,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 15
+      "symptomatic_per_school": 15,
+      "lat": -8.358653,
+      "lng": 116.158871
     },
     {
       "date": "4 April 2026",
@@ -9339,7 +10450,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -8.563492,
+      "lng": 118.760525
     },
     {
       "date": "4 April 2026",
@@ -9355,7 +10468,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -8.564487,
+      "lng": 118.766159
     },
     {
       "date": "4 April 2026",
@@ -9371,7 +10486,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -8.56211,
+      "lng": 118.761169
     },
     {
       "date": "4 April 2026",
@@ -9387,7 +10504,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -8.559849,
+      "lng": 118.769296
     },
     {
       "date": "4 April 2026",
@@ -9403,7 +10522,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "orang",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -8.570658,
+      "lng": 118.760671
     },
     {
       "date": "18 Februari 2025",
@@ -9420,7 +10541,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.835007,
+      "lng": 120.20785
     },
     {
       "date": "22 Juli 2025",
@@ -9437,7 +10560,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -10.163767,
+      "lng": 123.601428
     },
     {
       "date": "23 Juli 2025",
@@ -9454,7 +10579,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -10.161292,
+      "lng": 123.602451
     },
     {
       "date": "24 September 2025",
@@ -9471,7 +10598,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -10.16447,
+      "lng": 123.603057
     },
     {
       "date": "23 Juli 2025",
@@ -9486,7 +10615,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.847897,
+      "lng": 123.878855
     },
     {
       "date": "13 Mei 2026",
@@ -9503,7 +10634,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.847318,
+      "lng": 123.878192
     },
     {
       "date": "23 Juli 2025",
@@ -9520,7 +10653,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.536492,
+      "lng": 119.16296
     },
     {
       "date": "23 Juli 2025",
@@ -9535,7 +10670,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.535855,
+      "lng": 119.158349
     },
     {
       "date": "23 Juli 2025",
@@ -9550,7 +10687,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.533388,
+      "lng": 119.159988
     },
     {
       "date": "10 November 2025",
@@ -9568,7 +10707,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 126
+      "symptomatic_per_school": 126,
+      "lat": -9.540303,
+      "lng": 119.158938
     },
     {
       "date": "10 November 2025",
@@ -9584,7 +10725,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 126
+      "symptomatic_per_school": 126,
+      "lat": -9.541831,
+      "lng": 119.171188
     },
     {
       "date": "3 Oktober 2025",
@@ -9603,7 +10746,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.82271,
+      "lng": 124.434271
     },
     {
       "date": "3 Oktober 2025",
@@ -9619,7 +10764,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.823839,
+      "lng": 124.432347
     },
     {
       "date": "3 Oktober 2025",
@@ -9635,7 +10782,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.824882,
+      "lng": 124.431306
     },
     {
       "date": "3 Oktober 2025",
@@ -9651,7 +10800,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.820899,
+      "lng": 124.440308
     },
     {
       "date": "3 Oktober 2025",
@@ -9667,7 +10818,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.829233,
+      "lng": 124.430218
     },
     {
       "date": "3 Oktober 2025",
@@ -9683,7 +10836,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.82369,
+      "lng": 124.428103
     },
     {
       "date": "3 Oktober 2025",
@@ -9699,7 +10854,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.824117,
+      "lng": 124.436835
     },
     {
       "date": "3 Oktober 2025",
@@ -9715,7 +10872,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.809436,
+      "lng": 124.446123
     },
     {
       "date": "3 Oktober 2025",
@@ -9731,7 +10890,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.828355,
+      "lng": 124.452229
     },
     {
       "date": "3 Oktober 2025",
@@ -9747,7 +10908,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.805977,
+      "lng": 124.427809
     },
     {
       "date": "3 Oktober 2025",
@@ -9763,7 +10926,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.803141,
+      "lng": 124.425302
     },
     {
       "date": "3 Oktober 2025",
@@ -9779,7 +10944,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 32
+      "symptomatic_per_school": 32,
+      "lat": -9.843418,
+      "lng": 124.424367
     },
     {
       "date": "29 April 2026",
@@ -9797,7 +10964,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "guru",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -9.846144,
+      "lng": 124.421743
     },
     {
       "date": "29 April 2026",
@@ -9813,7 +10982,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "guru",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -9.844361,
+      "lng": 124.460357
     },
     {
       "date": "29 April 2026",
@@ -9829,7 +11000,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "guru",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -9.81812,
+      "lng": 124.415946
     },
     {
       "date": "26 November 2025",
@@ -9847,7 +11020,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -8.648593,
+      "lng": 120.986074
     },
     {
       "date": "26 November 2025",
@@ -9863,7 +11038,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -8.651967,
+      "lng": 120.984652
     },
     {
       "date": "26 November 2025",
@@ -9879,7 +11056,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 67
+      "symptomatic_per_school": 67,
+      "lat": -8.645665,
+      "lng": 120.988363
     },
     {
       "date": "3 Maret 2026",
@@ -9897,7 +11076,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -8.642146,
+      "lng": 120.987171
     },
     {
       "date": "27 November 2025",
@@ -9915,7 +11096,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 3
+      "symptomatic_per_school": 3,
+      "lat": -9.410055,
+      "lng": 124.468108
     },
     {
       "date": "27 November 2025",
@@ -9931,7 +11114,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 3
+      "symptomatic_per_school": 3,
+      "lat": -9.411895,
+      "lng": 124.46647
     },
     {
       "date": "27 November 2025",
@@ -9947,7 +11132,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 3
+      "symptomatic_per_school": 3,
+      "lat": -9.406041,
+      "lng": 124.472431
     },
     {
       "date": "27 November 2025",
@@ -9963,7 +11150,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 3
+      "symptomatic_per_school": 3,
+      "lat": -9.40906,
+      "lng": 124.471488
     },
     {
       "date": "4 Maret 2026",
@@ -9981,7 +11170,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.402954,
+      "lng": 124.465055
     },
     {
       "date": "29 Januari 2026",
@@ -9999,7 +11190,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 26
+      "symptomatic_per_school": 26,
+      "lat": -8.573871,
+      "lng": 120.060199
     },
     {
       "date": "29 Januari 2026",
@@ -10015,7 +11208,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 26
+      "symptomatic_per_school": 26,
+      "lat": -8.574874,
+      "lng": 120.06212
     },
     {
       "date": "29 Januari 2026",
@@ -10031,7 +11226,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 26
+      "symptomatic_per_school": 26,
+      "lat": -8.569469,
+      "lng": 120.060201
     },
     {
       "date": "29 Januari 2026",
@@ -10047,7 +11244,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 26
+      "symptomatic_per_school": 26,
+      "lat": -8.567435,
+      "lng": 120.054451
     },
     {
       "date": "29 Januari 2026",
@@ -10063,7 +11262,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 26
+      "symptomatic_per_school": 26,
+      "lat": -8.5727,
+      "lng": 120.065015
     },
     {
       "date": "11 Februari 2026",
@@ -10080,7 +11281,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -8.547631,
+      "lng": 120.439922
     },
     {
       "date": "30 April 2026",
@@ -10097,7 +11300,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -9.59439,
+      "lng": 119.66588
     },
     {
       "date": "7 Oktober 2025",
@@ -10114,7 +11319,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.537076,
+      "lng": 123.061488
     },
     {
       "date": "27 November 2025",
@@ -10131,7 +11338,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "guru"
+      "unit": "guru",
+      "lat": 1.517471,
+      "lng": 125.001015
     },
     {
       "date": "26 Januari 2026",
@@ -10149,7 +11358,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 49
+      "symptomatic_per_school": 49,
+      "lat": 1.327421,
+      "lng": 124.837127
     },
     {
       "date": "26 Januari 2026",
@@ -10165,7 +11376,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 49
+      "symptomatic_per_school": 49,
+      "lat": 1.329186,
+      "lng": 124.842261
     },
     {
       "date": "26 Januari 2026",
@@ -10181,7 +11394,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 49
+      "symptomatic_per_school": 49,
+      "lat": 1.327028,
+      "lng": 124.838747
     },
     {
       "date": "26 Januari 2026",
@@ -10197,7 +11412,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 49
+      "symptomatic_per_school": 49,
+      "lat": 1.331144,
+      "lng": 124.841774
     },
     {
       "date": "24 September 2025",
@@ -10215,7 +11432,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -2.537717,
+      "lng": 119.390487
     },
     {
       "date": "24 September 2025",
@@ -10231,7 +11450,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 12
+      "symptomatic_per_school": 12,
+      "lat": -2.537036,
+      "lng": 119.392139
     },
     {
       "date": "21 Oktober 2025",
@@ -10248,7 +11469,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "balita"
+      "unit": "balita",
+      "lat": -2.536482,
+      "lng": 119.385413
     },
     {
       "date": "12 Januari 2026",
@@ -10266,7 +11489,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -3.244586,
+      "lng": 118.873927
     },
     {
       "date": "12 Januari 2026",
@@ -10282,7 +11507,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -3.246559,
+      "lng": 118.869578
     },
     {
       "date": "12 Januari 2026",
@@ -10298,7 +11525,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -3.244922,
+      "lng": 118.870028
     },
     {
       "date": "12 Januari 2026",
@@ -10314,7 +11543,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -3.247936,
+      "lng": 118.868698
     },
     {
       "date": "12 Januari 2026",
@@ -10330,7 +11561,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -3.243705,
+      "lng": 118.881245
     },
     {
       "date": "12 Januari 2026",
@@ -10346,7 +11579,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -3.253904,
+      "lng": 118.871909
     },
     {
       "date": "12 Januari 2026",
@@ -10362,7 +11597,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "warga",
-      "symptomatic_per_school": 9
+      "symptomatic_per_school": 9,
+      "lat": -3.253192,
+      "lng": 118.880013
     },
     {
       "date": "14 Februari 2026",
@@ -10379,7 +11616,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -3.303781,
+      "lng": 119.143077
     },
     {
       "date": "27 Agustus 2025",
@@ -10396,7 +11635,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.903889,
+      "lng": 119.871091
     },
     {
       "date": "27 Agustus 2025",
@@ -10411,7 +11652,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.904936,
+      "lng": 119.869149
     },
     {
       "date": "16 September 2025",
@@ -10428,7 +11671,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.905924,
+      "lng": 119.870726
     },
     {
       "date": "16 September 2025",
@@ -10445,7 +11690,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.239831,
+      "lng": 119.959286
     },
     {
       "date": "25 September 2025",
@@ -10462,7 +11709,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.240085,
+      "lng": 119.963069
     },
     {
       "date": "17 September 2025",
@@ -10481,7 +11730,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 48
+      "symptomatic_per_school": 48,
+      "lat": -1.351115,
+      "lng": 123.180225
     },
     {
       "date": "17 September 2025",
@@ -10497,7 +11748,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 48
+      "symptomatic_per_school": 48,
+      "lat": -1.354079,
+      "lng": 123.179617
     },
     {
       "date": "17 September 2025",
@@ -10513,7 +11766,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 48
+      "symptomatic_per_school": 48,
+      "lat": -1.350569,
+      "lng": 123.182733
     },
     {
       "date": "17 September 2025",
@@ -10529,7 +11784,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 48
+      "symptomatic_per_school": 48,
+      "lat": -1.359692,
+      "lng": 123.176433
     },
     {
       "date": "17 September 2025",
@@ -10545,7 +11802,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 48
+      "symptomatic_per_school": 48,
+      "lat": -1.34232,
+      "lng": 123.186845
     },
     {
       "date": "17 September 2025",
@@ -10561,7 +11820,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 48
+      "symptomatic_per_school": 48,
+      "lat": -1.358821,
+      "lng": 123.181569
     },
     {
       "date": "17 September 2025",
@@ -10577,7 +11838,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 48
+      "symptomatic_per_school": 48,
+      "lat": -1.34339,
+      "lng": 123.169858
     },
     {
       "date": "2 Maret 2026",
@@ -10595,7 +11858,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -1.366469,
+      "lng": 123.192882
     },
     {
       "date": "2 Maret 2026",
@@ -10611,7 +11876,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -1.353812,
+      "lng": 123.184402
     },
     {
       "date": "11 Oktober 2025",
@@ -10628,7 +11895,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.920204,
+      "lng": 122.695945
     },
     {
       "date": "11 Desember 2025",
@@ -10645,7 +11914,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -1.214524,
+      "lng": 121.618492
     },
     {
       "date": "28 Januari 2026",
@@ -10663,7 +11934,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": 1.01106,
+      "lng": 121.31259
     },
     {
       "date": "28 Januari 2026",
@@ -10679,7 +11952,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": 1.011915,
+      "lng": 121.315064
     },
     {
       "date": "28 Januari 2026",
@@ -10695,7 +11970,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": 1.010995,
+      "lng": 121.31182
     },
     {
       "date": "28 Januari 2026",
@@ -10711,7 +11988,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": 1.010069,
+      "lng": 121.319452
     },
     {
       "date": "28 Januari 2026",
@@ -10727,7 +12006,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 28
+      "symptomatic_per_school": 28,
+      "lat": 1.017944,
+      "lng": 121.315974
     },
     {
       "date": "26 Februari 2025",
@@ -10744,7 +12025,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.405423,
+      "lng": 119.536673
     },
     {
       "date": "26 Februari 2025",
@@ -10759,7 +12042,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.409286,
+      "lng": 119.537034
     },
     {
       "date": "26 Februari 2025",
@@ -10774,7 +12059,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.404507,
+      "lng": 119.541283
     },
     {
       "date": "8 Desember 2025",
@@ -10792,7 +12079,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 25
+      "symptomatic_per_school": 25,
+      "lat": -4.753898,
+      "lng": 119.588622
     },
     {
       "date": "8 Desember 2025",
@@ -10808,7 +12097,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 25
+      "symptomatic_per_school": 25,
+      "lat": -4.753836,
+      "lng": 119.59042
     },
     {
       "date": "8 Desember 2025",
@@ -10824,7 +12115,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 25
+      "symptomatic_per_school": 25,
+      "lat": -4.75578,
+      "lng": 119.588588
     },
     {
       "date": "29 Januari 2026",
@@ -10841,7 +12134,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "santri"
+      "unit": "santri",
+      "lat": -3.794002,
+      "lng": 119.653335
     },
     {
       "date": "31 Maret 2026",
@@ -10859,7 +12154,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -3.488118,
+      "lng": 119.86668
     },
     {
       "date": "31 Maret 2026",
@@ -10875,7 +12172,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -3.485535,
+      "lng": 119.86326
     },
     {
       "date": "1 April 2026",
@@ -10893,7 +12192,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 25
+      "symptomatic_per_school": 25,
+      "lat": -5.469494,
+      "lng": 119.988388
     },
     {
       "date": "1 April 2026",
@@ -10909,7 +12210,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 25
+      "symptomatic_per_school": 25,
+      "lat": -5.472929,
+      "lng": 119.983854
     },
     {
       "date": "23 April 2026",
@@ -10926,7 +12229,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.001043,
+      "lng": 120.00043
     },
     {
       "date": "23 April 2025",
@@ -10943,7 +12248,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.637613,
+      "lng": 121.757844
     },
     {
       "date": "11 September 2025",
@@ -10960,7 +12267,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.354139,
+      "lng": 122.949675
     },
     {
       "date": "16 September 2025",
@@ -10978,7 +12287,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": -5.461051,
+      "lng": 122.604448
     },
     {
       "date": "16 September 2025",
@@ -10994,7 +12305,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 18
+      "symptomatic_per_school": 18,
+      "lat": -5.459945,
+      "lng": 122.601835
     },
     {
       "date": "26 September 2025",
@@ -11012,7 +12325,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -3.512489,
+      "lng": 121.651528
     },
     {
       "date": "26 September 2025",
@@ -11028,7 +12343,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 8
+      "symptomatic_per_school": 8,
+      "lat": -3.509119,
+      "lng": 121.652148
     },
     {
       "date": "16 Desember 2025",
@@ -11045,7 +12362,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "orang"
+      "unit": "orang",
+      "lat": -5.291699,
+      "lng": 122.38886
     },
     {
       "date": "Januari 2026",
@@ -11063,7 +12382,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "anak"
+      "unit": "anak",
+      "lat": -3.993485,
+      "lng": 122.516306
     },
     {
       "date": "9 Mei 2026",
@@ -11080,7 +12401,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -4.122926,
+      "lng": 121.694603
     },
     {
       "date": "22 Juli 2025",
@@ -11097,7 +12420,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.786157,
+      "lng": 127.383433
     },
     {
       "date": "6 November 2025",
@@ -11114,7 +12439,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.789079,
+      "lng": 127.381109
     },
     {
       "date": "6 November 2025",
@@ -11131,7 +12458,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": 0.7839,
+      "lng": 127.378706
     },
     {
       "date": "11 September 2025",
@@ -11148,7 +12477,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -7.784947,
+      "lng": 126.244506
     },
     {
       "date": "18 September 2025",
@@ -11165,7 +12496,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -5.540077,
+      "lng": 132.720108
     },
     {
       "date": "19 September 2025",
@@ -11182,7 +12515,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -3.695331,
+      "lng": 128.179852
     },
     {
       "date": "20 Oktober 2025",
@@ -11200,7 +12535,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 59
+      "symptomatic_per_school": 59,
+      "lat": -3.163786,
+      "lng": 128.483619
     },
     {
       "date": "20 Oktober 2025",
@@ -11216,7 +12553,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 59
+      "symptomatic_per_school": 59,
+      "lat": -3.165194,
+      "lng": 128.487199
     },
     {
       "date": "20 Oktober 2025",
@@ -11232,7 +12571,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 59
+      "symptomatic_per_school": 59,
+      "lat": -3.165085,
+      "lng": 128.488462
     },
     {
       "date": "21 Oktober 2025",
@@ -11248,7 +12589,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 59
+      "symptomatic_per_school": 59,
+      "lat": -3.162388,
+      "lng": 128.484124
     },
     {
       "date": "1 Desember 2025",
@@ -11266,7 +12609,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 14
+      "symptomatic_per_school": 14,
+      "lat": -0.712943,
+      "lng": 130.301656
     },
     {
       "date": "1 Desember 2025",
@@ -11282,7 +12627,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 14
+      "symptomatic_per_school": 14,
+      "lat": -0.716164,
+      "lng": 130.307109
     },
     {
       "date": "1 Desember 2025",
@@ -11298,7 +12645,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 14
+      "symptomatic_per_school": 14,
+      "lat": -0.713595,
+      "lng": 130.297893
     },
     {
       "date": "1 Desember 2025",
@@ -11314,7 +12663,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 14
+      "symptomatic_per_school": 14,
+      "lat": -0.708434,
+      "lng": 130.30215
     },
     {
       "date": "1 Desember 2025",
@@ -11330,7 +12681,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 14
+      "symptomatic_per_school": 14,
+      "lat": -0.703701,
+      "lng": 130.306901
     },
     {
       "date": "1 Desember 2025",
@@ -11346,7 +12699,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 14
+      "symptomatic_per_school": 14,
+      "lat": -0.719246,
+      "lng": 130.296873
     },
     {
       "date": "30 Juli 2025",
@@ -11364,7 +12719,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -0.977687,
+      "lng": 133.754958
     },
     {
       "date": "30 Juli 2025",
@@ -11380,7 +12737,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 6
+      "symptomatic_per_school": 6,
+      "lat": -0.978598,
+      "lng": 133.756928
     },
     {
       "date": "24 November 2025",
@@ -11397,7 +12756,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -0.974796,
+      "lng": 133.758665
     },
     {
       "date": "",
@@ -11412,7 +12773,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -2.473646,
+      "lng": 138.085193
     },
     {
       "date": "13 Maret 2026",
@@ -11430,7 +12793,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 2
+      "symptomatic_per_school": 2,
+      "lat": -3.345234,
+      "lng": 135.949271
     },
     {
       "date": "13 Maret 2026",
@@ -11446,7 +12811,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 2
+      "symptomatic_per_school": 2,
+      "lat": -3.34565,
+      "lng": 135.953488
     },
     {
       "date": "13 Maret 2026",
@@ -11462,7 +12829,9 @@
       "deaths_count": null,
       "symptomatic_approximate": true,
       "unit": "siswa",
-      "symptomatic_per_school": 2
+      "symptomatic_per_school": 2,
+      "lat": -3.352413,
+      "lng": 135.948453
     },
     {
       "date": "16 April 2026",
@@ -11479,7 +12848,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": "siswa"
+      "unit": "siswa",
+      "lat": -3.344552,
+      "lng": 135.951699
     },
     {
       "date": "",
@@ -11494,7 +12865,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -4.24658,
+      "lng": 139.37267
     },
     {
       "date": "",
@@ -11509,7 +12882,9 @@
       ],
       "deaths_count": null,
       "symptomatic_approximate": false,
-      "unit": ""
+      "unit": "",
+      "lat": -6.500532,
+      "lng": 139.383929
     }
   ]
 }

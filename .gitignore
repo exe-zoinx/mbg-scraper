@@ -1,0 +1,14 @@
+# Output data
+data/mbg_cases.json
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# System
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

@@ -1,0 +1,1 @@
+# no dependencies — uses only Python stdlib + curl/wget

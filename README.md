@@ -1,53 +1,61 @@
 # 🥘 MBG Case Tracker — Indonesia
 
-Mass food-poisoning incidents from Indonesia's **Makan Bergizi Gratis** (Free Nutritious Meal) program, scraped from [Wikipedia](https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis).
+Mass food-poisoning incidents from Indonesia's **Makan Bergizi Gratis** program, scraped from [Wikipedia](https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis).
 
-**35 provinces · 689 incidents · 2 with deaths**
+## Totals
+
+| Metric | Value |
+|---|---|
+| School venues affected | **687** |
+| Provinces | **38** |
+| Total symptomatic victims | **216,596** |
+| Fatalities | **3** |
+| Approximate (rowspan-divided) entries | 420 |
+| Cases with SPPG flag | 27 |
 
 ## Data
 
 ```bash
-python scraper.py
+python scraper.py             # regenerate data/mbg_cases.json
 ```
 
-Output: `data/mbg_cases.json` — zero deps (stdlib + curl/wget).
+Zero deps — stdlib + curl/wget.
 
-### Structure
+### Entry format
 
 ```jsonc
 {
-  "metadata": {
-    "title": "Kasus keracunan massal program Makan Bergizi Gratis",
-    "source": "https://id.wikipedia.org/wiki/...",
-    "scraped_at": "2026-05-16T14:00:00Z",
-    "license": "CC-BY-SA 3.0 (via Wikipedia)",
-    "stats": {
-      "total_incidents": 689,
-      "provinces_affected": 35,
-      "incidents_by_province": { "Jawa Barat": 123, ... },
-      "incidents_with_deaths": 2
-    }
-  },
-  "cases": [
-    {
-      "date": "29 September 2025",
-      "province": "Nanggroe Aceh Darussalam",
-      "regency": "Kabupaten Aceh Utara",
-      "school": "SDN 6 Matangkuli",
-      "symptomatic": "3 Siswa",
-      "deaths": "",
-      "references": ["https://..."]
-    }
-  ]
+  "date": "29 September 2025",
+  "province": "Nanggroe Aceh Darussalam",
+  "regency": "Kabupaten Aceh Utara",
+  "school": "SDN 6 Matangkuli",
+  "symptomatic": "3 Siswa",              // numeric count + unit
+  "deaths": "",                           // filled if fatalities occurred
+  "references": ["https://..."],
+  "tags": ["keracunan"],                  // categories
+  "deaths_count": null,                   // numeric parse of deaths, if any
+  "symptomatic_approximate": false        // true = divided from rowspan group
 }
+```
+
+### Tags
+
+| Tag | Meaning | Count |
+|---|---|---|
+| `keracunan` | Poisoning incident (default) | 687 |
+| `deaths` | Incident involved fatalities | 3 |
+| `sppg` | SPPG/BGN-related news | 27 |
+
+> `kecelakaan` (accidents outside poisoning) not available from this Wikipedia table.
+
+### Rowspan division
+
+When Wikipedia groups a single incident across multiple schools with one shared victim count (`rowspan`), the count is **divided equally** and marked `symptomatic_approximate: true`:
+
+```
+"5 Mei 2025" → 174 Siswa ÷ 14 schools → "12.4 Siswa" each
 ```
 
 ## Schedule
 
-Weekly refresh via GitHub Actions (Sunday 06:00 UTC). Also triggerable manually.
-
-## Caveats
-
-- **Rowspan clustering:** A single incident covering 4 schools shows the same `symptomatic` count for each — they're 4 venues under one event, not separate victims.
-- **TBA / tidak disebutkan** = Wikipedia didn't have the data.
-- **References** only appear on the first row of a rowspan group.
+Weekly via GitHub Actions (Sunday 06:00 UTC) + manual trigger.

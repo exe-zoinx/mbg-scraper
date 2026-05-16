@@ -2,11 +2,11 @@
   "metadata": {
     "title": "Kasus keracunan massal program Makan Bergizi Gratis",
     "source": "https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis",
-    "scraped_at": "2026-05-16T15:08:39.101891+00:00",
+    "scraped_at": "2026-05-16T15:10:03.924896+00:00",
     "license": "CC-BY-SA 3.0 (via Wikipedia)",
     "stats": {
-      "total_incidents": 689,
-      "provinces_affected": 35,
+      "total_incidents": 687,
+      "provinces_affected": 38,
       "incidents_by_province": {
         "Jawa Barat": 123,
         "Jawa Timur": 98,
@@ -32,7 +32,6 @@
         "Kalimantan Utara": 7,
         "Kalimantan Selatan": 7,
         "Maluku": 7,
-        "Tidak diketahui": 6,
         "Papua Barat Daya": 6,
         "Jambi": 5,
         "Sulawesi Utara": 5,
@@ -42,21 +41,16 @@
         "Maluku Utara": 3,
         "Papua Barat": 3,
         "Kalimantan Tengah": 2,
-        "Gorontalo": 1
+        "Bali": 1,
+        "Gorontalo": 1,
+        "Papua": 1,
+        "Papua Pegunungan": 1,
+        "Papua Selatan": 1
       },
-      "incidents_with_deaths": 2
+      "incidents_with_deaths": 3
     }
   },
   "cases": [
-    {
-      "date": "+",
-      "province": "",
-      "regency": "",
-      "school": "",
-      "symptomatic": "",
-      "deaths": "",
-      "references": []
-    },
     {
       "date": "29 September 2025",
       "province": "Nanggroe Aceh Darussalam",
@@ -848,9 +842,9 @@
       "date": "26 Februari 2026",
       "province": "Bengkulu",
       "regency": "Kabupaten Bengkulu Utara",
-      "school": "1 Siswa",
+      "school": "",
       "symptomatic": "",
-      "deaths": "",
+      "deaths": "1 Siswa",
       "references": [
         "https://daerahpost.com/polhukam/diduga-keracunan-burger-mbg-siswa-min-2-ketahun-tutup-usia-di-rs-bhayangkara-bengkulu/"
       ]
@@ -5384,8 +5378,8 @@
       "references": []
     },
     {
-      "date": "Bali",
-      "province": "",
+      "date": "",
+      "province": "Bali",
       "regency": "",
       "school": "",
       "symptomatic": "",
@@ -6868,8 +6862,8 @@
       ]
     },
     {
-      "date": "Papua",
-      "province": "",
+      "date": "",
+      "province": "Papua",
       "regency": "",
       "school": "",
       "symptomatic": "",
@@ -6917,8 +6911,8 @@
       ]
     },
     {
-      "date": "Papua Pegunungan",
-      "province": "",
+      "date": "",
+      "province": "Papua Pegunungan",
       "regency": "",
       "school": "",
       "symptomatic": "",
@@ -6926,18 +6920,9 @@
       "references": []
     },
     {
-      "date": "Papua Selatan",
-      "province": "",
+      "date": "",
+      "province": "Papua Selatan",
       "regency": "",
-      "school": "",
-      "symptomatic": "",
-      "deaths": "",
-      "references": []
-    },
-    {
-      "date": "TOTAL",
-      "province": "",
-      "regency": "± 11.390",
       "school": "",
       "symptomatic": "",
       "deaths": "",

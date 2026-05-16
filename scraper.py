@@ -76,9 +76,8 @@ def parse_table_rows(body: str) -> tuple[list[list[str]], list[str]]:
             line = line.strip()
             if not line.startswith("|") or line.startswith("|-|+|!") or line.startswith("|!"):
                 continue
-            c = re.sub(r"^\|+", "", line).strip()
-            if c:
-                cells.append(c)
+            cell = re.sub(r"^\|+", "", line).strip()
+            cells.append(cell)
 
         row: list[str] = []
         col = 0
@@ -131,6 +130,8 @@ def extract_mbg_table(wikitext: str) -> list[dict]:
         for j, col in enumerate(COLUMNS):
             e[col] = row[j] if j < len(row) else ""
         if e["date"].startswith("Tanggal") or e["province"].startswith("Provinsi"):
+            continue
+        if e["date"] in ("+", "TOTAL"):
             continue
         if all(not e[c] for c in COLUMNS):
             continue

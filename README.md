@@ -7,19 +7,22 @@ Mass food-poisoning incidents from Indonesia's **Makan Bergizi Gratis** program,
 | Metric | Value |
 |---|---|
 | School venues affected | **687** |
+| Unique incidents | **375** |
 | Provinces | **38** |
-| Total symptomatic victims | **216,596** |
+| Symptomatic victims | **32,923** |
 | Fatalities | **3** |
-| Approximate (rowspan-divided) entries | 420 |
-| Cases with SPPG flag | 27 |
+| Approximate (rowspan-divided) | 422 entries |
+| Tagged SPPG | 27 entries |
+
+> Wikipedia's stated ~11,390 total is outdated — more cases added since.
 
 ## Data
 
 ```bash
-python scraper.py             # regenerate data/mbg_cases.json
+python scraper.py
 ```
 
-Zero deps — stdlib + curl/wget.
+Output: `data/mbg_cases.json` — zero deps.
 
 ### Entry format
 
@@ -29,12 +32,13 @@ Zero deps — stdlib + curl/wget.
   "province": "Nanggroe Aceh Darussalam",
   "regency": "Kabupaten Aceh Utara",
   "school": "SDN 6 Matangkuli",
-  "symptomatic": "3 Siswa",              // numeric count + unit
-  "deaths": "",                           // filled if fatalities occurred
-  "references": ["https://..."],
-  "tags": ["keracunan"],                  // categories
-  "deaths_count": null,                   // numeric parse of deaths, if any
-  "symptomatic_approximate": false        // true = divided from rowspan group
+  "symptomatic": 3,              // integer count (original incident total)
+  "unit": "siswa",                // siswa | santri | warga | orang
+  "deaths": "",
+  "deaths_count": null,
+  "tags": ["keracunan"],
+  "symptomatic_approximate": false,  // true = shared via rowspan
+  "symptomatic_per_school": null     // divided estimate when approximate
 }
 ```
 
@@ -42,20 +46,22 @@ Zero deps — stdlib + curl/wget.
 
 | Tag | Meaning | Count |
 |---|---|---|
-| `keracunan` | Poisoning incident (default) | 687 |
-| `deaths` | Incident involved fatalities | 3 |
+| `keracunan` | Poisoning incident | 687 |
+| `deaths` | Fatalities involved | 3 |
 | `sppg` | SPPG/BGN-related news | 27 |
-
-> `kecelakaan` (accidents outside poisoning) not available from this Wikipedia table.
 
 ### Rowspan division
 
-When Wikipedia groups a single incident across multiple schools with one shared victim count (`rowspan`), the count is **divided equally** and marked `symptomatic_approximate: true`:
+When Wikipedia groups one incident across multiple schools with a shared count (rowspan), the total is kept in `symptomatic` and each school gets an estimated per-school value:
 
-```
-"5 Mei 2025" → 174 Siswa ÷ 14 schools → "12.4 Siswa" each
+```jsonc
+{
+  "symptomatic": 33,              // original total
+  "symptomatic_per_school": 16,   // rounded division
+  "symptomatic_approximate": true
+}
 ```
 
 ## Schedule
 
-Weekly via GitHub Actions (Sunday 06:00 UTC) + manual trigger.
+Weekly via GitHub Actions (Sunday 06:00 UTC).

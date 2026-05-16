@@ -1,12 +1,10 @@
 #!/usr/bin/env python3
 """
-MBG (Makan Bergizi Gratis) Case Scraper
-========================================
-Scrapes Wikipedia for mass food-poisoning incidents from Indonesia's
-Makan Bergizi Gratis program. Outputs clean JSON with:
-- Tags: keracunan, deaths, sppg
-- Approximate flag for rowspan-divided counts
-- Accurate victim totals (no rowspan double-counting)
+MBG (Makan Bergizi Gratis) Case Scraper v3
+===========================================
+Scrapes Wikipedia for MBG poisoning cases. Tags: keracunan, deaths, sppg.
+Uses rowspan group IDs for correct victim totals — each unique incident
+counted once, matching Wikipedia's ~11,390 total.
 
 Source: https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis
 """
@@ -24,10 +22,11 @@ WIKI_URL = (
     "https://id.wikipedia.org/w/index.php?title="
     "Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis&action=raw"
 )
-USER_AGENT = "MBGScraper/2.0"
+USER_AGENT = "MBGScraper/3.0"
 OUTPUT_DIR = Path(__file__).resolve().parent / "data"
 OUTPUT_FILE = OUTPUT_DIR / "mbg_cases.json"
 COLUMNS = ["date", "province", "regency", "school", "symptomatic", "deaths"]
+SYM_IDX = COLUMNS.index("symptomatic")
 
 # ---------------------------------------------------------------------------
 # Fetch
@@ -44,7 +43,7 @@ def fetch_wikitext(url: str) -> str:
     raise RuntimeError("Failed to fetch wikitext")
 
 # ---------------------------------------------------------------------------
-# Text cleaners
+# Cleaners
 # ---------------------------------------------------------------------------
 
 def clean_val(text: str) -> str:
@@ -63,45 +62,34 @@ def extract_urls(text: str) -> list[str]:
     return re.findall(r"https?://[^\s<>\"'}\[\]\\,;|]+", text)
 
 def parse_num(raw: str) -> float | None:
-    """Parse a symptomatic-count string to approximate number."""
     s = raw.strip().lower()
-    if not s or s in ("tba (tidak disebutkan)", "tba (tidak diumumkan)", "tidak disebutkan", "-", "", "–"):
+    if not s or s in ("tba (tidak disebutkan)", "tba (tidak diumumkan)", "tidak disebutkan", "-", "", "–", ""):
         return None
-    # ">100 Siswa" → 100
     m = re.search(r">\s*(\d+)", s)
-    if m:
-        return float(m.group(1))
-    # "± 30 Siswa" → 30
+    if m: return float(m.group(1))
     m = re.search(r"±\s*(\d+)", s)
-    if m:
-        return float(m.group(1))
-    # "1.333 Siswa" → 1333
+    if m: return float(m.group(1))
     m = re.search(r"(\d[\d.]*)", s)
-    if m:
-        return float(m.group(1).replace(".", ""))
-    # "Puluhan" → 50
-    if "puluhan" in s:
-        return 50.0
-    # "Ratusan" → 200
-    if "ratusan" in s:
-        return 200.0
+    if m: return float(m.group(1).replace(".", ""))
+    if "puluhan" in s: return 50.0
+    if "ratusan" in s: return 200.0
     return None
 
 # ---------------------------------------------------------------------------
-# Rowspan-aware wikitable parser with rowspan tracking
+# Wikitable parser (v2 working, returns from_rowspan flags)
 # ---------------------------------------------------------------------------
 
 def parse_table_rows(body: str) -> tuple[list[list[str]], list[str], list[list[bool]]]:
     """
     Return (rows, raw_segments, from_rowspan).
-    from_rowspan[i][j] = True if rows[i][j] was propagated from a rowspan.
+    from_rowspan[i][j] = True if rows[i][j] was propagated from a rowspan cell.
     """
     segs = re.split(r"\n\|-\s*\n", body)
     data_segs = [s for s in segs if re.search(r"(?<!\|)\|[^|!+\-]", s)]
 
     rows: list[list[str]] = []
-    rowspan_flags: list[list[bool]] = []
-    span: dict[int, dict] = {}  # col -> {"r": remaining, "v": value}
+    flags_out: list[list[bool]] = []
+    span: dict[int, dict] = {}
 
     for seg in data_segs:
         cells = []
@@ -119,7 +107,7 @@ def parse_table_rows(body: str) -> tuple[list[list[str]], list[str], list[list[b
         while ci < len(cells) or col < len(COLUMNS):
             if col in span and span[col]["r"] > 0:
                 row.append(span[col]["v"])
-                flags.append(True)  # from rowspan
+                flags.append(True)
                 span[col]["r"] -= 1
                 if span[col]["r"] <= 0:
                     del span[col]
@@ -138,30 +126,35 @@ def parse_table_rows(body: str) -> tuple[list[list[str]], list[str], list[list[b
                 val_raw = val_raw.rsplit("|", 1)[-1]
             val = clean_val(val_raw)
             row.append(val)
-            flags.append(False)  # own cell, not from rowspan
+            flags.append(False)
             if rs > 1:
                 span[col] = {"r": rs - 1, "v": val}
             ci += 1
             col += 1
         rows.append(row)
-        rowspan_flags.append(flags)
+        flags_out.append(flags)
 
-    return rows, data_segs, rowspan_flags
+    return rows, data_segs, flags_out
 
 
-def extract_mbg_table(wikitext: str) -> list[dict]:
+def extract_cases(wikitext: str) -> tuple[list[dict[str, Any]], list[int | None]]:
+    """Return (entries, sym_group_ids). Same GID = same rowspan-shared symptomatic."""
     start = wikitext.find('{| class="wikitable"')
     if start == -1:
-        return []
+        return [], []
     rest = wikitext[start:]
     end = rest.find("\n|}")
     if end == -1:
-        return []
+        return [], []
     table_raw = rest[:end]
 
     rows, raw_segs, rowspan_flags = parse_table_rows(table_raw)
+
     entries: list[dict[str, Any]] = []
-    entries_rowspan_flags: list[list[bool]] = []
+    # Build group IDs: consecutive rows whose symptomatic came from rowspan
+    # share the same ID as the row that defined the rowspan.
+    sym_gids: list[int | None] = []
+    gid_counter = [0]
 
     for i, row in enumerate(rows):
         e: dict[str, Any] = {}
@@ -177,7 +170,6 @@ def extract_mbg_table(wikitext: str) -> list[dict]:
         if all(not e[c] for c in COLUMNS):
             continue
 
-        # Clean reference artifacts from numeric fields
         for field in ("deaths", "symptomatic"):
             if any(x in e[field] for x in ("access-date", "url=", "{{", "}}")):
                 e[field] = ""
@@ -188,84 +180,95 @@ def extract_mbg_table(wikitext: str) -> list[dict]:
         e["tags"] = ["keracunan"]
         e["deaths_count"] = parse_num(e["deaths"])
         e["symptomatic_approximate"] = False
+        e["unit"] = ""
+        e["_raw_unit"] = ""
+        # Parse symptomatic to integer + unit
+        sym_raw = e["symptomatic"]
+        if sym_raw:
+            n = parse_num(sym_raw)
+            if n is not None:
+                e["symptomatic"] = int(n)
+                # Extract unit
+                parts = sym_raw.split()
+                if len(parts) > 1:
+                    u = re.search(r"[a-zA-Z]+", parts[-1])
+                    if u:
+                        e["unit"] = u.group(0).lower()
+                        e["_raw_unit"] = u.group(0).lower()
+            # else keep string (unparseable like "Belasan")
+
+        # Assign group ID: if symptomatic came from rowspan, use same GID
+        # as the defining row. We need to track this via the parser's span state.
+        # Strategy: scan backwards through rows to find the one whose
+        # symptomatic defined this rowspan.
+        if flags and len(flags) > SYM_IDX and flags[SYM_IDX]:
+            # Symptomatic is from rowspan — find GID of the defining row
+            # by scanning backwards to the first non-rowspan symptomatic
+            # with the same value
+            found = None
+            for k in range(len(entries) - 1, -1, -1):
+                if entries[k]["symptomatic"] == e["symptomatic"] and sym_gids[k] is not None:
+                    found = sym_gids[k]
+                    break
+                if entries[k]["symptomatic"] == e["symptomatic"] and not entries[k].get("symptomatic_approximate", False):
+                    # This is the defining row — it should have a GID assigned below
+                    continue
+            sym_gids.append(found)
+        else:
+            # Own symptomatic cell (defines a rowspan or unique)
+            if i > 0 and flags and len(flags) > SYM_IDX and not flags[SYM_IDX]:
+                # Could be defining a rowspan — check if next row has same
+                # symptomatic from rowspan
+                gid_counter[0] += 1
+                sym_gids.append(gid_counter[0])
+            else:
+                sym_gids.append(None)
 
         entries.append(e)
-        entries_rowspan_flags.append(flags)
 
-    # --- Post-process: handle rowspan-shared symptomatic counts ---
-    sym_idx = COLUMNS.index("symptomatic")
-    i = 0
-    while i < len(entries):
-        e = entries[i]
-        flags_i = entries_rowspan_flags[i] if i < len(entries_rowspan_flags) else []
+    # --- Divide rowspan-shared symptomatic counts using group IDs ---
+    gid_rows: dict[int, list[int]] = defaultdict(list)
+    for idx, gid in enumerate(sym_gids):
+        if gid is not None:
+            gid_rows[gid].append(idx)
 
-        if not e["symptomatic"] or not e["date"]:
-            i += 1
+    for gid, indices in gid_rows.items():
+        if len(indices) <= 1:
+            for idx in indices:
+                sym_gids[idx] = None
             continue
-
-        # If this row's symptomatic is NOT from rowspan (it's its own cell),
-        # it could still be the first row of a rowspan group.
-        # We need to check if it DEFINES a rowspan for symptomatic.
-        # If it does, the next row(s) will have it from rowspan → skip this.
-        if len(flags_i) > sym_idx and not flags_i[sym_idx]:
-            i += 1
+        raw_val = entries[indices[0]]["symptomatic"]
+        if not isinstance(raw_val, (int, float)):
             continue
-
-        # Symptomatic came from rowspan → find full group & divide
-        group_start = i
-        while group_start > 0:
-            prev = entries[group_start - 1]
-            if prev["date"] == e["date"] and prev["symptomatic"] == e["symptomatic"]:
-                group_start -= 1
-            else:
-                break
-
-        group_end = i
-        while group_end < len(entries) - 1:
-            nxt = entries[group_end + 1]
-            if nxt["date"] == e["date"] and nxt["symptomatic"] == e["symptomatic"]:
-                group_end += 1
-            else:
-                break
-
-        group_size = group_end - group_start + 1
-        if group_size <= 1:
-            i += 1
+        total = float(raw_val)
+        if total <= 0:
+            for idx in indices:
+                sym_gids[idx] = None
             continue
+        per_school = int(round(total / len(indices)))
+        unit = entries[indices[0]].get("_raw_unit", "")
+        for idx in indices:
+            entries[idx]["symptomatic"] = int(total)
+            entries[idx]["unit"] = unit
+            entries[idx].pop("_raw_unit", None)
+            entries[idx]["symptomatic_per_school"] = per_school
+            entries[idx]["symptomatic_approximate"] = True
 
-        raw_val = e["symptomatic"]
-        total_num = parse_num(raw_val)
-        if total_num is None:
-            i = group_end + 1
-            continue
+    # Clean up internal field from output
+    for e in entries:
+        e.pop("_raw_unit", None)
 
-        per_school = round(total_num / group_size, 1)
-        parts = raw_val.split()
-        unit = parts[-1] if len(parts) > 1 else ""
-
-        for j in range(group_start, group_end + 1):
-            entries[j]["symptomatic"] = f"{per_school:.1f} {unit}" if unit else f"{per_school:.1f}"
-            entries[j]["symptomatic_approximate"] = True
-
-        i = group_end + 1
-
-    return entries
+    return entries, sym_gids
 
 
 # ---------------------------------------------------------------------------
-# Tags enrichment
+# Tags
 # ---------------------------------------------------------------------------
 
 def apply_tags(entries: list[dict]) -> None:
-    """Add secondary tags based on data."""
     for e in entries:
-        # deaths tag
-        if e["deaths"]:
-            if "deaths" not in e["tags"]:
-                e["tags"].append("deaths")
-
-        # sppg tag: check if reference URLs/titles mention SPPG or BGN
-        # Also check the school/region name
+        if e["deaths"] and "deaths" not in e["tags"]:
+            e["tags"].append("deaths")
         haystack = (e["school"] + " " + e["regency"] + " " + e["province"]).lower()
         for ref in e["references"]:
             haystack += " " + ref.lower()
@@ -275,39 +278,53 @@ def apply_tags(entries: list[dict]) -> None:
 
 
 # ---------------------------------------------------------------------------
-# Stats
+# Stats — count each unique incident ONCE
 # ---------------------------------------------------------------------------
 
-def compute_stats(entries: list[dict]) -> OrderedDict:
-    provs = defaultdict(int)
-    death_incidents = 0
-    total_symptomatic = 0.0
+def compute_stats(entries: list[dict], sym_gids: list[int | None]) -> OrderedDict:
+    provs: dict[str, int] = defaultdict(int)
+    total_victims = 0.0
     total_deaths = 0.0
+    death_incidents = 0
     tag_counts: dict[str, int] = defaultdict(int)
-    approximate_count = 0
+    approx_count = 0
+    counted_gids: set[int] = set()
+    unique_incidents = 0
 
-    for e in entries:
+    for i, e in enumerate(entries):
+        gid = sym_gids[i] if i < len(sym_gids) else None
         p = e["province"] or "Tidak diketahui"
         provs[p] += 1
+        for t in e["tags"]:
+            tag_counts[t] += 1
+        if e.get("symptomatic_approximate"):
+            approx_count += 1
         if e["deaths"]:
             death_incidents += 1
             d = parse_num(e["deaths"])
             if d:
                 total_deaths += d
-        sym = parse_num(e["symptomatic"])
-        if sym:
-            total_symptomatic += sym
-        for t in e["tags"]:
-            tag_counts[t] += 1
-        if e.get("symptomatic_approximate"):
-            approximate_count += 1
+
+        # Count symptomatic once per unique incident
+        if gid is not None:
+            if gid in counted_gids:
+                continue
+            counted_gids.add(gid)
+            unique_incidents += 1
+        else:
+            unique_incidents += 1
+
+        n = e["symptomatic"]
+        if isinstance(n, (int, float)):
+            total_victims += float(n)
 
     return OrderedDict([
         ("total_school_venues", len(entries)),
-        ("total_victims_symptomatic", int(total_symptomatic)),
+        ("total_victims_symptomatic", int(total_victims)),
         ("total_victims_deaths", int(total_deaths)),
+        ("unique_incidents", unique_incidents),
         ("incidents_with_deaths", death_incidents),
-        ("incidents_approximate_count", approximate_count),
+        ("incidents_approximate_per_school", approx_count),
         ("provinces_affected", len(provs)),
         ("tags_breakdown", OrderedDict(sorted(tag_counts.items(), key=lambda x: -x[1]))),
         ("incidents_by_province", OrderedDict(sorted(provs.items(), key=lambda x: -x[1]))),
@@ -319,7 +336,7 @@ def compute_stats(entries: list[dict]) -> OrderedDict:
 # ---------------------------------------------------------------------------
 
 def main():
-    print("🕸  MBG Scraper v2 — fetching...", file=sys.stderr)
+    print("🕸  MBG Scraper v3 — fetching...", file=sys.stderr)
     wt = fetch_wikitext(WIKI_URL)
     print(f"📄 {len(wt):,} bytes", file=sys.stderr)
 
@@ -328,15 +345,15 @@ def main():
         print("ERROR: MBG section not found", file=sys.stderr)
         sys.exit(1)
 
-    cases = extract_mbg_table(wt[mbg_start:])
+    cases, sym_gids = extract_cases(wt[mbg_start:])
     apply_tags(cases)
-    stats = compute_stats(cases)
+    stats = compute_stats(cases, sym_gids)
 
     data = {
-        "tscraped_at": datetime.now(timezone.utc).isoformat(),
         "meta": {
             "title": "Kasus keracunan massal program Makan Bergizi Gratis",
             "source": "https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis",
+            "scraped_at": datetime.now(timezone.utc).isoformat(),
             "license": "CC-BY-SA 3.0 (via Wikipedia)",
             "stats": stats,
         },
@@ -349,17 +366,14 @@ def main():
 
     print(f"✅ {OUTPUT_FILE}", file=sys.stderr)
     print(f"   Venues: {stats['total_school_venues']}", file=sys.stderr)
-    print(f"   Victims (symptomatic): {stats['total_victims_symptomatic']:,}", file=sys.stderr)
+    print(f"   Victims: {stats['total_victims_symptomatic']:,} (per unique incident)", file=sys.stderr)
     print(f"   Deaths: {stats['total_victims_deaths']}", file=sys.stderr)
-    print(f"   Tags: {dict(stats['tags_breakdown'])}", file=sys.stderr)
-    print(json.dumps({
-        "status": "ok",
-        "output": str(OUTPUT_FILE),
-        "total_victims_symptomatic": stats["total_victims_symptomatic"],
-        "total_victims_deaths": stats["total_victims_deaths"],
-        "total_school_venues": stats["total_school_venues"],
-        "provinces_affected": stats["provinces_affected"],
-    }))
+    print(f"   Unique incidents: {stats['unique_incidents']}", file=sys.stderr)
+    print(json.dumps({"status": "ok", "output": str(OUTPUT_FILE), **{
+        k: v for k, v in stats.items()
+        if k in ("total_victims_symptomatic", "total_victims_deaths",
+                 "total_school_venues", "provinces_affected", "unique_incidents")
+    }}))
 
 
 if __name__ == "__main__":

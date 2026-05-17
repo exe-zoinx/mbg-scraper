@@ -1,8 +1,18 @@
-# 🥘 MBG Monitor — Indonesia
+# 🥘 EMBEGE — Indonesia
 
 Mass food-poisoning incidents from Indonesia's **Makan Bergizi Gratis** program, scraped from [Wikipedia](https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis).
 
 **Live dashboard:** https://exe-zoinx.github.io/mbg-monitor
+
+## Features
+
+- 🗺️ **Interactive map** — 687 geocoded incidents across 38 provinces
+- 🔍 **Search & Filter** — by school, regency, province, year, tag
+- 🌐 **Dual language** — Indonesian / English
+- 🎨 **4 themes** — Dark, White, Paper, Sepia
+- 🔥 **Heatmap overlay** — severity visualization
+- 📱 **Responsive** — mobile-first design
+- 💾 **Offline persistence** — settings saved to localStorage
 
 ## Quick start
 

@@ -1,6 +1,8 @@
-# 🥘 MBG Case Tracker — Indonesia
+# 🥘 MBG Monitor — Indonesia
 
 Mass food-poisoning incidents from Indonesia's **Makan Bergizi Gratis** program, scraped from [Wikipedia](https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis).
+
+**Live dashboard:** https://exe-zoinx.github.io/mbg-monitor
 
 ## Quick start
 
@@ -21,13 +23,13 @@ Zero external deps — stdlib + curl/wget.
   "province": "Nanggroe Aceh Darussalam",
   "regency": "Kabupaten Aceh Utara",
   "school": "SDN 6 Matangkuli",
-  "symptomatic": 3,                    // int, original incident total
+  "symptomatic": 3,                    // int, Wikipedia cell value
   "unit": "siswa",                      // siswa | santri | warga | orang
   "deaths": "",
   "deaths_count": null,
   "tags": ["keracunan"],               // keracunan | deaths | sppg
   "symptomatic_approximate": false,    // true = shared via rowspan
-  "symptomatic_per_school": null,      // divided estimate when approximate
+  "symptomatic_per_school": null,      // divided value when approximate
   "lat": 4.991569,                     // regency centroid + jitter
   "lng": 97.157298                     // ~200m spread to prevent overlap
 }
@@ -43,6 +45,8 @@ Zero external deps — stdlib + curl/wget.
 | Symptomatic victims | **32,923** |
 | Fatalities | **3** |
 | Geocoded entries | **687/687** |
+
+*Dashboard uses `symptomatic_per_school` for accurate totals — Wikipedia rowspan values are divided equally to avoid double-counting.*
 
 ### Geocoding
 
@@ -78,3 +82,7 @@ Shared incident counts divided equally per school:
 
 Weekly refresh via GitHub Actions (Sunday 06:00 UTC).
 Geocode step included — data always shipped with coordinates.
+
+## Source
+
+All data from [Wikipedia Indonesia](https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis) — CC-BY-SA 3.0.

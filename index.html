@@ -547,72 +547,119 @@ a:hover { text-decoration: underline; }
 .prov-bar-fill { height: 100%; background: var(--c-death); border-radius: 3px; transition: width 0.4s; }
 .prov-count { font-size: 9px; color: var(--text3); float: right; }
 
-/* ── Responsive: Mobile ──────────────────────────────── */
-@media (max-width: 767px) {
+/* ── Mobile-first (default) ─────────────────────────── */
+#stats-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  padding: 6px 0;
+  min-height: auto;
+  align-items: stretch;
+}
+#stats-bar .stat-chip {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  padding: 4px 2px;
+  border-right: none;
+  border-bottom: 1px solid var(--border);
+}
+#stats-bar .stat-chip:nth-child(n+4) {
+  border-bottom: none;
+}
+#stats-bar .stat-chip:nth-child(3n) {
+  border-right: none;
+}
+#stats-bar .stat-chip:nth-child(3n-2),
+#stats-bar .stat-chip:nth-child(3n-1) {
+  border-right: 1px solid var(--border);
+}
+#stats-bar .stat-ico { display: none; }
+#stats-bar .stat-num { font-size: 14px; }
+#stats-bar .stat-lbl { font-size: 8px; }
+#filter-badge {
+  justify-content: center;
+  border-right: none;
+  grid-column: 1 / -1;
+  padding: 2px 0;
+}
+
+#panel {
+  top: auto; left: 0; right: 0; bottom: 0;
+  width: 100%; max-height: 70vh;
+  border-left: none; border-top: 1px solid var(--border);
+  border-radius: var(--r2) var(--r2) 0 0;
+  transform: translateY(100%);
+}
+#panel.open { transform: translateY(0); }
+#map { right: 0 !important; }
+#map-controls { bottom: 20px; right: 10px; }
+#legend { left: 8px; bottom: 20px; }
+#chart-panel { width: 160px; left: 8px; }
+#panel-header { border-radius: var(--r2) var(--r2) 0 0; }
+.panel-drawer-bar {
+  display: block;
+  width: 32px; height: 3px; border-radius: 2px;
+  background: var(--border2);
+  margin: 0 auto 4px;
+}
+#panel-header::before {
+  content: '';
+  position: absolute; top: 8px; left: 50%;
+  transform: translateX(-50%);
+  width: 32px; height: 3px; border-radius: 2px;
+  background: var(--border2);
+}
+#panel-header { position: relative; height: 50px; cursor: pointer; }
+
+/* ── Desktop ──────────────────────────────────────────── */
+@media (min-width: 768px) {
   #stats-bar {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0;
-    padding: 6px 0;
-    min-height: auto;
-    align-items: stretch;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px 0;
+    min-height: var(--stats);
+    align-items: center;
   }
   #stats-bar .stat-chip {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1px;
-    padding: 4px 2px;
-    border-right: none;
-    border-bottom: 1px solid var(--border);
-  }
-  #stats-bar .stat-chip:nth-child(n+4) {
+    flex-direction: row;
+    gap: 3px;
+    padding: 0 8px;
+    border-right: 1px solid var(--border);
     border-bottom: none;
   }
-  #stats-bar .stat-chip:nth-child(3n) {
-    border-right: none;
-  }
+  #stats-bar .stat-chip:nth-child(n+4) { border-bottom: none; }
+  #stats-bar .stat-chip:nth-child(3n) { border-right: 1px solid var(--border); }
   #stats-bar .stat-chip:nth-child(3n-2),
-  #stats-bar .stat-chip:nth-child(3n-1) {
-    border-right: 1px solid var(--border);
-  }
-  #stats-bar .stat-ico { display: none; }
-  #stats-bar .stat-num { font-size: 14px; }
-  #stats-bar .stat-lbl { font-size: 8px; }
+  #stats-bar .stat-chip:nth-child(3n-1) { border-right: 1px solid var(--border); }
+  #stats-bar .stat-ico { display: flex; }
+  #stats-bar .stat-num { font-size: 11px; }
+  #stats-bar .stat-lbl { font-size: 9px; }
   #filter-badge {
-    justify-content: center;
-    border-right: none;
-    grid-column: 1 / -1;
-    padding: 2px 0;
+    justify-content: flex-start;
+    border-right: 1px solid var(--border);
+    grid-column: auto;
+    padding: 0 12px;
   }
 
   #panel {
-    top: auto; left: 0; right: 0; bottom: 0;
-    width: 100%; max-height: 70vh;
-    border-left: none; border-top: 1px solid var(--border);
-    border-radius: var(--r2) var(--r2) 0 0;
-    transform: translateY(100%);
+    top: calc(var(--hdr) + var(--stats));
+    left: auto; right: 0; bottom: 0;
+    width: 340px; max-height: none;
+    border-left: 1px solid var(--border); border-top: none;
+    border-radius: 0;
+    transform: translateX(100%);
   }
-  #panel.open { transform: translateY(0); }
-  #map { right: 0 !important; }
-  #map-controls { bottom: 20px; right: 10px; }
-  #legend { left: 8px; bottom: 20px; }
-  #chart-panel { width: 160px; left: 8px; }
-  #panel-header { border-radius: var(--r2) var(--r2) 0 0; }
-  .panel-drawer-bar {
-    display: block;
-    width: 32px; height: 3px; border-radius: 2px;
-    background: var(--border2);
-    margin: 0 auto 4px;
-  }
-  #panel-header::before {
-    content: '';
-    position: absolute; top: 8px; left: 50%;
-    transform: translateX(-50%);
-    width: 32px; height: 3px; border-radius: 2px;
-    background: var(--border2);
-  }
-  #panel-header { position: relative; height: 50px; cursor: pointer; }
+  #panel.open { transform: translateX(0); }
+  #map { right: 0; transition: right 0.3s cubic-bezier(0.4,0,0.2,1); }
+  #map.panel-open { right: 340px; }
+  #map-controls { bottom: 80px; right: 12px; }
+  #legend { left: 10px; bottom: 80px; }
+  #chart-panel { width: 200px; left: 10px; }
+  #panel-header { border-radius: 0; height: 44px; }
+  .panel-drawer-bar { display: none; }
+  #panel-header::before { display: none; }
 }
 
 /* ── Transitions & Animations ────────────────────────── */
@@ -998,16 +1045,31 @@ function updateLangUI(){
 }
 
 // ── Theme ──────────────────────────────────────────────
+const TILE_URLS = {
+  dark:  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  sepia: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  white: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+  paper: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+};
+let tileLayerRef = null;
+
 function applyTheme(t) {
   theme = t;
-  document.documentElement.setAttribute('data-theme', theme === 'dark' ? '' : theme);
+  const val = theme === 'dark' ? '' : theme;
+  document.documentElement.setAttribute('data-theme', val);
   localStorage.setItem(LS_THEME, theme);
   // Update config modal theme options
   document.querySelectorAll('#cfg-theme-options .config-opt').forEach(el => {
     el.classList.toggle('active', el.dataset.themeVal === theme);
   });
-  // Fix map tiles for light themes (switch to light tile layer if white/paper)
-  // For now, dark tiles work fine with all themes — just repaint UI via CSS vars
+  // Swap map tiles
+  if (tileLayerRef && map) {
+    map.removeLayer(tileLayerRef);
+    tileLayerRef = L.tileLayer(TILE_URLS[theme] || TILE_URLS.dark, {
+      subdomains: 'abcd', maxZoom: 19,
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/">OSM</a> | <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia</a> CC-BY-SA 3.0 | <a href="https://github.com/exe-zoinx/mbg-monitor/blob/main/data/mbg_cases.json" target="_blank">JSON Data</a>'
+    }).addTo(map);
+  }
 }
 
 // ── State ──────────────────────────────────────────────
@@ -1132,7 +1194,7 @@ function initMap() {
     preferCanvas: true
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  tileLayerRef = L.tileLayer(TILE_URLS[theme] || TILE_URLS.dark, {
     subdomains: 'abcd',
     maxZoom: 19,
     attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/">OSM</a> | <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia</a> CC-BY-SA 3.0 | <a href="https://github.com/exe-zoinx/mbg-monitor/blob/main/data/mbg_cases.json" target="_blank">JSON Data</a>'

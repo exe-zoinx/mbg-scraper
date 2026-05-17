@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+<title>MBG Monitor – Pemantau Keracunan Program Makan Bergizi Gratis</title>
+<meta name="description" content="Peta interaktif kasus keracunan massal program Makan Bergizi Gratis (MBG) di seluruh Indonesia"/>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<!-- MarkerCluster CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css"/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css"/>
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet"/>
+
+<style>
+/* ── Variables ───────────────────────────────────────── */
+:root {
+  --bg:      #09090b;
+  --bg2:     #111113;
+  --bg3:     #1c1c1f;
+  --bg4:     #27272a;
+  --border:  #3f3f46;
+  --border2: #52525b;
+  --text:    #fafafa;
+  --text2:   #a1a1aa;
+  --text3:   #71717a;
+  --text4:   #52525b;
+  --c-death: #ef4444;
+  --c-high:  #f97316;
+  --c-med:   #f59e0b;
+  --c-low:   #eab308;
+  --c-min:   #4ade80;
+  --c-blue:  #60a5fa;
+  --c-sppg:  #c084fc;
+  --hdr:     52px;
+  --stats:   40px;
+  --r:       6px;
+  --r2:      10px;
+}
+
+/* ── Reset ───────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+}
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+select { font-family: inherit; }
+input  { font-family: inherit; }
+a { color: var(--c-blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* ── Loading ─────────────────────────────────────────── */
+#loading {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 20px;
+}
+.load-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px; font-weight: 800;
+  letter-spacing: -1px;
+}
+.load-logo span { color: var(--c-death); }
+.load-bar-wrap {
+  width: 200px; height: 2px;
+  background: var(--bg4); border-radius: 1px; overflow: hidden;
+}
+.load-bar {
+  height: 100%; background: var(--c-death);
+  border-radius: 1px;
+  animation: loadpulse 1.4s ease-in-out infinite;
+}
+@keyframes loadpulse {
+  0%   { width: 0%; margin-left: 0%; }
+  50%  { width: 60%; margin-left: 20%; }
+  100% { width: 0%; margin-left: 100%; }
+}
+.load-msg { font-size: 11px; color: var(--text3); }
+
+/* ── Header ──────────────────────────────────────────── */
+#header {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--hdr);
+  background: rgba(9,9,11,0.95);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center;
+  padding: 0 10px; gap: 8px;
+  z-index: 1000;
+  backdrop-filter: blur(12px);
+}
+
+#logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 17px; font-weight: 800;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  display: flex; align-items: center; gap: 6px;
+  flex-shrink: 0;
+}
+.pulse-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--c-death);
+  position: relative;
+}
+.pulse-dot::after {
+  content: '';
+  position: absolute; inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid var(--c-death);
+  opacity: 0;
+  animation: ripple 2s ease-out infinite;
+}
+@keyframes ripple {
+  0%   { transform: scale(0.5); opacity: 0.6; }
+  100% { transform: scale(2.0); opacity: 0; }
+}
+
+#search-wrap {
+  position: relative; flex: 1; display: flex; align-items: center;
+  min-width: 0;
+}
+#search-ico {
+  position: absolute; left: 9px;
+  color: var(--text3); pointer-events: none;
+  display: flex; align-items: center;
+}
+#search-input {
+  width: 100%; height: 34px;
+  padding: 0 30px 0 32px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text); font-size: 12px; outline: none;
+  transition: border-color 0.15s;
+}
+#search-input:focus { border-color: var(--border2); }
+#search-input::placeholder { color: var(--text4); }
+#search-clear {
+  position: absolute; right: 8px;
+  color: var(--text3); cursor: pointer; display: none;
+  background: none; padding: 0;
+  display: none; align-items: center;
+}
+#search-clear.show { display: flex; }
+
+.hdr-btn {
+  width: 34px; height: 34px; flex-shrink: 0;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text2);
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.15s;
+}
+.hdr-btn:hover  { background: var(--bg4); color: var(--text); }
+.hdr-btn.active { background: var(--bg4); border-color: var(--border2); color: var(--text); }
+
+/* ── Stats bar ───────────────────────────────────────── */
+#stats-bar {
+  position: fixed;
+  top: var(--hdr); left: 0; right: 0;
+  height: var(--stats);
+  background: rgba(9,9,11,0.9);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: stretch;
+  overflow-x: auto; scrollbar-width: none;
+  z-index: 999;
+  backdrop-filter: blur(8px);
+}
+#stats-bar::-webkit-scrollbar { display: none; }
+
+.stat-chip {
+  display: flex; align-items: center; gap: 5px;
+  padding: 0 14px;
+  border-right: 1px solid var(--border);
+  white-space: nowrap; flex-shrink: 0;
+}
+.stat-chip:last-child { border-right: none; }
+.stat-ico { color: var(--text4); display: flex; }
+.stat-num {
+  font-size: 13px; font-weight: 500; color: var(--text);
+  transition: color 0.3s;
+}
+.stat-num.hi  { color: var(--c-high); }
+.stat-num.red { color: var(--c-death); }
+.stat-lbl { font-size: 10px; color: var(--text3); }
+
+#filter-badge {
+  display: none; align-items: center; gap: 6px;
+  padding: 0 12px; cursor: pointer;
+  color: var(--c-med); font-size: 11px;
+  border-right: 1px solid var(--border);
+  flex-shrink: 0;
+}
+#filter-badge.show { display: flex; }
+#filter-badge:hover { color: var(--text); }
+
+/* ── Map ─────────────────────────────────────────────── */
+#map {
+  position: fixed;
+  top: calc(var(--hdr) + var(--stats));
+  left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  transition: right 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+#map.panel-open { right: 340px; }
+
+/* Leaflet overrides */
+.leaflet-control-zoom a {
+  background: var(--bg3) !important;
+  color: var(--text2) !important;
+  border-color: var(--border) !important;
+  font-family: 'DM Mono', monospace !important;
+}
+.leaflet-control-zoom a:hover {
+  background: var(--bg4) !important;
+  color: var(--text) !important;
+}
+.leaflet-control-attribution {
+  background: rgba(9,9,11,0.6) !important;
+  color: var(--text4) !important;
+  font-size: 9px !important;
+}
+.leaflet-control-attribution a { color: var(--text3) !important; }
+
+/* Cluster markers */
+.marker-cluster-small  div,
+.marker-cluster-medium div,
+.marker-cluster-large  div {
+  background: rgba(239,68,68,0.85) !important;
+  color: #fff !important;
+  font-family: 'DM Mono', monospace !important;
+  font-size: 11px !important; font-weight: 500 !important;
+}
+.marker-cluster-small,
+.marker-cluster-medium,
+.marker-cluster-large {
+  background: rgba(239,68,68,0.25) !important;
+}
+
+/* ── Popup ───────────────────────────────────────────── */
+.mbg-popup .leaflet-popup-content-wrapper {
+  background: var(--bg3) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--r2) !important;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6) !important;
+  padding: 0 !important; color: var(--text) !important;
+}
+.mbg-popup .leaflet-popup-tip { background: var(--bg3) !important; }
+.mbg-popup .leaflet-popup-content { margin: 0 !important; width: auto !important; }
+.mbg-popup .leaflet-popup-close-button {
+  color: var(--text3) !important; top: 8px !important; right: 10px !important;
+}
+.popup-body { padding: 14px; min-width: 230px; max-width: 290px; }
+.popup-school {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 700;
+  line-height: 1.3; margin-bottom: 3px; padding-right: 16px;
+}
+.popup-loc { font-size: 10px; color: var(--text3); margin-bottom: 10px; }
+.popup-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 8px; }
+.popup-tag {
+  font-size: 9px; font-weight: 500; padding: 2px 6px;
+  border-radius: 3px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.popup-row {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 11px; color: var(--text2); margin-bottom: 5px;
+}
+.popup-row:last-of-type { margin-bottom: 0; }
+.popup-refs {
+  margin-top: 10px; padding-top: 10px;
+  border-top: 1px solid var(--border);
+}
+.popup-ref-title { font-size: 9px; color: var(--text4); margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.5px; }
+.popup-ref-link {
+  display: block; font-size: 10px; color: var(--c-blue);
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  margin-bottom: 3px;
+}
+.popup-ref-link:last-child { margin-bottom: 0; }
+
+/* ── Floating controls ───────────────────────────────── */
+#map-controls {
+  position: fixed;
+  right: 12px;
+  bottom: 80px;
+  z-index: 900;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.map-btn {
+  width: 36px; height: 36px;
+  background: rgba(9,9,11,0.92);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text2);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.15s;
+  backdrop-filter: blur(8px);
+}
+.map-btn:hover  { border-color: var(--border2); color: var(--text); }
+.map-btn.active { border-color: var(--c-death); color: var(--c-death); background: rgba(239,68,68,0.1); }
+
+/* ── Legend ──────────────────────────────────────────── */
+#legend {
+  position: fixed;
+  left: 10px; bottom: 80px;
+  z-index: 900;
+  background: rgba(9,9,11,0.92);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 10px 12px;
+  backdrop-filter: blur(8px);
+  min-width: 130px;
+}
+.leg-head {
+  font-size: 9px; font-weight: 600; letter-spacing: 1px;
+  text-transform: uppercase; color: var(--text4);
+  margin-bottom: 8px;
+}
+.leg-row {
+  display: flex; align-items: center; gap: 7px;
+  margin-bottom: 5px; font-size: 10px; color: var(--text2);
+}
+.leg-row:last-child { margin-bottom: 0; }
+.leg-dot {
+  width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0;
+}
+.leg-dot.death { box-shadow: 0 0 6px var(--c-death); }
+.heat-grad {
+  height: 6px; border-radius: 3px; flex: 1;
+  background: linear-gradient(to right, #0000ff55, #00ff0099, #ffff00bb, #ff8000dd, #ff0000);
+}
+
+/* ── Panel (right side) ──────────────────────────────── */
+#panel {
+  position: fixed;
+  top: calc(var(--hdr) + var(--stats));
+  right: 0; bottom: 0;
+  width: 340px;
+  background: var(--bg2);
+  border-left: 1px solid var(--border);
+  z-index: 800;
+  display: flex; flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+#panel.open { transform: translateX(0); }
+
+#panel-header {
+  height: 44px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 14px;
+  border-bottom: 1px solid var(--border);
+}
+.panel-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 700;
+  display: flex; align-items: center; gap: 7px;
+}
+#panel-count {
+  font-size: 11px; color: var(--text3);
+  padding: 2px 7px; background: var(--bg4);
+  border-radius: 20px; border: 1px solid var(--border);
+}
+
+/* Filters */
+#panel-filters {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex; flex-direction: column; gap: 8px;
+  flex-shrink: 0;
+}
+.filter-row { display: flex; gap: 6px; flex-wrap: wrap; }
+.filter-sel {
+  flex: 1; min-width: 0;
+  height: 30px; padding: 0 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text); font-size: 11px;
+  cursor: pointer; outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2371717a'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  padding-right: 24px;
+}
+.filter-sel:focus { border-color: var(--border2); }
+.sort-sel {
+  height: 30px; padding: 0 24px 0 8px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text); font-size: 11px;
+  cursor: pointer; outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%2371717a'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  flex-shrink: 0;
+}
+.tag-chips { display: flex; gap: 5px; flex-wrap: wrap; }
+.tag-chip {
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  color: var(--text3); font-size: 10px;
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+  user-select: none;
+}
+.tag-chip:hover { border-color: var(--border2); color: var(--text2); }
+.tag-chip.active { border-color: var(--c-death); background: rgba(239,68,68,0.15); color: var(--c-death); }
+.tag-chip.sppg.active { border-color: var(--c-sppg); background: rgba(192,132,252,0.15); color: var(--c-sppg); }
+.tag-chip.deaths.active { border-color: var(--c-death); background: rgba(239,68,68,0.15); color: var(--c-death); }
+
+/* Incident list */
+#incident-list { flex: 1; overflow-y: auto; }
+.inc-item {
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--bg4);
+  cursor: pointer; transition: background 0.1s;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 2px 8px;
+}
+.inc-item:hover { background: var(--bg3); }
+.inc-item:active { background: var(--bg4); }
+.inc-school {
+  font-size: 12px; color: var(--text); line-height: 1.3;
+  grid-column: 1; grid-row: 1;
+  overflow: hidden; text-overflow: ellipsis;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+}
+.inc-loc {
+  font-size: 10px; color: var(--text3);
+  grid-column: 1; grid-row: 2;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.inc-right {
+  grid-column: 2; grid-row: 1 / 3;
+  display: flex; flex-direction: column; align-items: flex-end;
+  gap: 4px; justify-content: center;
+}
+.inc-date { font-size: 9px; color: var(--text4); white-space: nowrap; }
+.inc-badge {
+  font-size: 10px; font-weight: 500;
+  padding: 2px 6px; border-radius: 4px;
+  border: 1px solid transparent; white-space: nowrap;
+}
+#list-footer {
+  padding: 12px; text-align: center;
+  font-size: 10px; color: var(--text4);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0; display: none;
+}
+
+/* ── Mobile bottom drawer ────────────────────────────── */
+#drawer {
+  display: none;
+}
+
+/* Province chart */
+#chart-panel {
+  position: fixed;
+  top: calc(var(--hdr) + var(--stats));
+  left: 10px;
+  z-index: 800;
+  background: rgba(9,9,11,0.92);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 12px;
+  width: 200px;
+  backdrop-filter: blur(8px);
+  display: none;
+  max-height: 320px;
+  overflow-y: auto;
+}
+#chart-panel.show { display: block; }
+.chart-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px; font-weight: 700;
+  letter-spacing: 1px; text-transform: uppercase;
+  color: var(--text3); margin-bottom: 10px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.prov-bar-row { margin-bottom: 7px; cursor: pointer; }
+.prov-bar-row:hover .prov-bar-fill { filter: brightness(1.3); }
+.prov-name { font-size: 9px; color: var(--text2); margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.prov-bar-track { height: 5px; background: var(--bg4); border-radius: 3px; overflow: hidden; }
+.prov-bar-fill { height: 100%; background: var(--c-death); border-radius: 3px; transition: width 0.4s; }
+.prov-count { font-size: 9px; color: var(--text3); float: right; }
+
+/* ── Responsive: Mobile ──────────────────────────────── */
+@media (max-width: 767px) {
+  #panel {
+    top: auto; left: 0; right: 0; bottom: 0;
+    width: 100%; max-height: 70vh;
+    border-left: none; border-top: 1px solid var(--border);
+    border-radius: var(--r2) var(--r2) 0 0;
+    transform: translateY(100%);
+  }
+  #panel.open { transform: translateY(0); }
+  #map { right: 0 !important; }
+  #map-controls { bottom: 20px; right: 10px; }
+  #legend { left: 8px; bottom: 20px; }
+  #chart-panel { width: 160px; left: 8px; }
+  #panel-header { border-radius: var(--r2) var(--r2) 0 0; }
+  .panel-drawer-bar {
+    display: block;
+    width: 32px; height: 3px; border-radius: 2px;
+    background: var(--border2);
+    margin: 0 auto 4px;
+  }
+  #panel-header::before {
+    content: '';
+    position: absolute; top: 8px; left: 50%;
+    transform: translateX(-50%);
+    width: 32px; height: 3px; border-radius: 2px;
+    background: var(--border2);
+  }
+  #panel-header { position: relative; height: 50px; cursor: pointer; }
+}
+
+/* ── Transitions & Animations ────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Tooltip ─────────────────────────────────────────── */
+[title] { cursor: default; }
+</style>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading">
+  <div class="load-logo">MBG<span>.</span>Monitor</div>
+  <div class="load-bar-wrap"><div class="load-bar"></div></div>
+  <div class="load-msg" id="load-msg">Menginisialisasi peta…</div>
+</div>
+
+<!-- ── Header ──────────────────────────────────────── -->
+<header id="header">
+  <div id="logo">
+    <div class="pulse-dot"></div>
+    <span>MBG<span style="color:var(--c-death)">.</span>Monitor</span>
+  </div>
+
+  <div id="search-wrap">
+    <span id="search-ico">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    </span>
+    <input id="search-input" type="search" placeholder="Cari sekolah, kabupaten, provinsi…" autocomplete="off"/>
+    <button id="search-clear" title="Hapus pencarian">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <button class="hdr-btn" id="btn-chart" title="Statistik Provinsi">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="18" y="3" width="4" height="18"/><rect x="10" y="8" width="4" height="13"/><rect x="2" y="13" width="4" height="8"/></svg>
+  </button>
+
+  <button class="hdr-btn" id="btn-list" title="Daftar Insiden">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+  </button>
+</header>
+
+<!-- ── Stats Bar ────────────────────────────────────── -->
+<div id="stats-bar">
+  <div class="stat-chip">
+    <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+    <span class="stat-num" id="s-incidents">–</span>
+    <span class="stat-lbl">insiden</span>
+  </div>
+  <div class="stat-chip">
+    <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+    <span class="stat-num hi" id="s-victims">–</span>
+    <span class="stat-lbl">korban</span>
+  </div>
+  <div class="stat-chip">
+    <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><path d="M10 13v8"/><path d="M14 13v8"/><path d="M10 17h4"/></svg></span>
+    <span class="stat-num red" id="s-deaths">–</span>
+    <span class="stat-lbl">meninggal</span>
+  </div>
+  <div class="stat-chip">
+    <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m3 11 19-9-9 19-2-8-8-2z"/></svg></span>
+    <span class="stat-num" id="s-provinces">–</span>
+    <span class="stat-lbl">provinsi</span>
+  </div>
+  <div class="stat-chip">
+    <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+    <span class="stat-num" id="s-schools">–</span>
+    <span class="stat-lbl">sekolah</span>
+  </div>
+  <div id="filter-badge">
+    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+    <span id="filter-badge-text"></span>
+    <span style="color:var(--text3)">×</span>
+  </div>
+</div>
+
+<!-- ── Map ──────────────────────────────────────────── -->
+<div id="map"></div>
+
+<!-- ── Province chart ────────────────────────────────── -->
+<div id="chart-panel">
+  <div class="chart-title">
+    <span>Insiden / Provinsi</span>
+    <button onclick="document.getElementById('chart-panel').classList.remove('show');document.getElementById('btn-chart').classList.remove('active')" style="color:var(--text4);cursor:pointer;display:flex">
+      <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div id="prov-chart"></div>
+</div>
+
+<!-- ── Floating Map Controls ─────────────────────────── -->
+<div id="map-controls">
+  <button class="map-btn" id="btn-heatmap" title="Toggle Heatmap">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
+  </button>
+  <button class="map-btn active" id="btn-cluster" title="Toggle Kluster Marker">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+  </button>
+  <button class="map-btn" id="btn-home" title="Reset Tampilan Peta">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  </button>
+</div>
+
+<!-- ── Legend ─────────────────────────────────────────── -->
+<div id="legend">
+  <div class="leg-head">Keparahan</div>
+  <div class="leg-row">
+    <div class="leg-dot death" style="background:var(--c-death)"></div>
+    <span>Korban jiwa</span>
+  </div>
+  <div class="leg-row">
+    <div class="leg-dot" style="background:var(--c-high)"></div>
+    <span>≥ 200 korban</span>
+  </div>
+  <div class="leg-row">
+    <div class="leg-dot" style="background:var(--c-med)"></div>
+    <span>≥ 50 korban</span>
+  </div>
+  <div class="leg-row">
+    <div class="leg-dot" style="background:var(--c-low)"></div>
+    <span>≥ 10 korban</span>
+  </div>
+  <div class="leg-row">
+    <div class="leg-dot" style="background:var(--c-min)"></div>
+    <span>&lt; 10 korban</span>
+  </div>
+  <div id="heat-legend" style="display:none;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
+    <div class="leg-head" style="margin-bottom:5px">Heatmap</div>
+    <div style="display:flex;align-items:center;gap:5px">
+      <span style="font-size:9px;color:var(--text4)">Rendah</span>
+      <div class="heat-grad" style="flex:1;height:6px"></div>
+      <span style="font-size:9px;color:var(--text4)">Tinggi</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── Right Panel ─────────────────────────────────── -->
+<div id="panel">
+  <div id="panel-header">
+    <div class="panel-title">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      Daftar Insiden
+    </div>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span id="panel-count">0</span>
+      <button class="hdr-btn" id="btn-close-panel" style="width:28px;height:28px;" title="Tutup Panel">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div id="panel-filters">
+    <div class="filter-row">
+      <select id="filter-province" class="filter-sel">
+        <option value="">Semua Provinsi</option>
+      </select>
+      <select id="filter-year" class="filter-sel">
+        <option value="">Semua Tahun</option>
+        <option value="2025">2025</option>
+        <option value="2026">2026</option>
+      </select>
+    </div>
+    <div class="filter-row">
+      <select id="filter-sort" class="sort-sel">
+        <option value="date-desc">Terbaru</option>
+        <option value="date-asc">Terlama</option>
+        <option value="victims-desc">Korban Terbanyak</option>
+        <option value="province">Provinsi A–Z</option>
+      </select>
+      <div class="tag-chips" id="tag-chips">
+        <span class="tag-chip active" data-tag="all">Semua</span>
+        <span class="tag-chip sppg" data-tag="sppg">SPPG</span>
+        <span class="tag-chip deaths" data-tag="deaths">Jiwa</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="incident-list"></div>
+  <div id="list-footer"></div>
+</div>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+<script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
+
+<script>
+'use strict';
+// ── Constants ──────────────────────────────────────────
+const DATA_URL = 'https://raw.githubusercontent.com/exe-zoinx/mbg-scraper/main/data/mbg_cases.json';
+const INDONESIA_CENTER = [-2.5, 118];
+const INDONESIA_ZOOM   = 5;
+const MAX_LIST         = 300;
+
+// ── Inline SVG icons ───────────────────────────────────
+const ico = {
+  alertTriangle: `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`,
+  users:         `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  calendar:      `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+  pin:           `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
+  skull:         `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M16 20a2 2 0 0 0 1.956-2.4l-1.2-5.6a6 6 0 1 0-9.512 0l-1.2 5.6A2 2 0 0 0 8 20Z"/></svg>`,
+  link:          `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
+};
+
+// ── State ──────────────────────────────────────────────
+let allCases     = [];
+let filteredCases = [];
+let map, cluster, heat;
+let heatActive    = false;
+let clusterActive = true;
+let panelOpen     = false;
+
+const filters = { search: '', province: '', year: '', tag: 'all', sort: 'date-desc' };
+
+// ── Helpers ────────────────────────────────────────────
+function getSympNum(c) {
+  if (typeof c.symptomatic === 'number') return c.symptomatic;
+  if (typeof c.symptomatic === 'string') { const n = parseInt(c.symptomatic); return isNaN(n) ? 0 : n; }
+  return 0;
+}
+
+function getSympText(c) {
+  if (c.deaths_count) return c.deaths || `${c.deaths_count} meninggal`;
+  if (typeof c.symptomatic === 'number') return `${c.symptomatic} ${c.unit || 'korban'}`;
+  if (typeof c.symptomatic === 'string' && c.symptomatic.toLowerCase().includes('tba')) return 'TBA';
+  if (typeof c.symptomatic === 'string') return c.symptomatic + (c.unit ? ' ' + c.unit : '');
+  return '–';
+}
+
+function getColor(c) {
+  if (c.deaths_count) return '#ef4444';
+  const s = getSympNum(c);
+  if (s >= 200) return '#f97316';
+  if (s >= 50)  return '#f59e0b';
+  if (s >= 10)  return '#eab308';
+  return '#4ade80';
+}
+
+function parseDate(dateStr) {
+  if (!dateStr || dateStr.startsWith('Tidak') || dateStr === 'Agustus 2025') return new Date(0);
+  const months = {
+    'Januari':1,'Februari':2,'Maret':3,'April':4,'Mei':5,'Juni':6,
+    'Juli':7,'Agustus':8,'September':9,'Oktober':10,'November':11,'Desember':12
+  };
+  const parts = dateStr.trim().split(' ');
+  if (parts.length === 3) {
+    const d = parseInt(parts[0]), m = months[parts[1]] || 1, y = parseInt(parts[2]);
+    if (!isNaN(d) && !isNaN(y)) return new Date(y, m-1, d);
+  }
+  if (parts.length === 2) {
+    const m = months[parts[0]] || 1, y = parseInt(parts[1]);
+    if (!isNaN(y)) return new Date(y, m-1, 1);
+  }
+  return new Date(0);
+}
+
+function escHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ── Marker icon ────────────────────────────────────────
+function makeIcon(color, isDeath) {
+  const R = isDeath ? 7 : 5;
+  const S = isDeath ? 44 : 22;
+  const pulse = isDeath ? `
+    <circle cx="${S/2}" cy="${S/2}" r="${R+3}" fill="${color}" opacity="0">
+      <animate attributeName="r" values="${R};${R+10};${R}" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0;0.4" dur="2.5s" repeatCount="indefinite"/>
+    </circle>` : '';
+  return L.divIcon({
+    className: '',
+    html: `<svg width="${S}" height="${S}" xmlns="http://www.w3.org/2000/svg">
+      ${pulse}
+      <circle cx="${S/2}" cy="${S/2}" r="${R}" fill="${color}" stroke="rgba(0,0,0,0.6)" stroke-width="1.5"/>
+    </svg>`,
+    iconSize:   [S, S],
+    iconAnchor: [S/2, S/2],
+    popupAnchor:[0, -(R+6)]
+  });
+}
+
+// ── Popup HTML ─────────────────────────────────────────
+function buildPopup(c) {
+  const color    = getColor(c);
+  const isDeath  = !!(c.deaths_count);
+  const isSppg   = c.tags && c.tags.includes('sppg');
+  const isApprox = c.symptomatic_approximate;
+  const sympText = getSympText(c);
+  const refs     = (c.references || []).filter(r => r && r.startsWith('http')).slice(0, 4);
+
+  let tags = '';
+  if (isDeath) tags += `<span class="popup-tag" style="background:rgba(239,68,68,0.2);color:#ef4444;border:1px solid rgba(239,68,68,0.4)">${ico.skull} KORBAN JIWA</span>`;
+  if (isSppg)  tags += `<span class="popup-tag" style="background:rgba(192,132,252,0.15);color:#c084fc;border:1px solid rgba(192,132,252,0.3)">SPPG</span>`;
+  if (isApprox)tags += `<span class="popup-tag" style="background:rgba(113,113,122,0.2);color:#71717a;border:1px solid rgba(113,113,122,0.3)">~ estimasi</span>`;
+
+  const refsHtml = refs.length ? `<div class="popup-refs">
+    <div class="popup-ref-title">Referensi</div>
+    ${refs.map(r => {
+      const domain = r.replace(/^https?:\/\//, '').split('/')[0];
+      return `<a class="popup-ref-link" href="${escHtml(r)}" target="_blank" rel="noopener noreferrer">${ico.link} ${escHtml(domain)}</a>`;
+    }).join('')}
+  </div>` : '';
+
+  return `<div class="popup-body">
+    <div class="popup-school">${escHtml(c.school || '–')}</div>
+    <div class="popup-loc">${escHtml(c.regency || '')}${c.regency && c.province ? ' · ' : ''}${escHtml(c.province || '')}</div>
+    ${tags ? `<div class="popup-tags">${tags}</div>` : ''}
+    <div class="popup-row" style="color:${color}">${ico.users} ${escHtml(sympText)}</div>
+    <div class="popup-row">${ico.calendar} ${escHtml(c.date || 'Tidak disebutkan')}</div>
+    ${refsHtml}
+  </div>`;
+}
+
+// ── Map init ───────────────────────────────────────────
+function initMap() {
+  map = L.map('map', {
+    center: INDONESIA_CENTER,
+    zoom:   INDONESIA_ZOOM,
+    zoomControl: false,
+    attributionControl: false,
+    preferCanvas: true
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    subdomains: 'abcd',
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/">OSM</a> | Data: <a href="https://id.wikipedia.org/" target="_blank">Wikipedia</a> CC-BY-SA 3.0'
+  }).addTo(map);
+
+  L.control.attribution({ position: 'bottomright', prefix: '' }).addTo(map);
+  L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+  cluster = L.markerClusterGroup({
+    maxClusterRadius: 60,
+    disableClusteringAtZoom: 11,
+    chunkedLoading: true,
+    chunkDelay: 50
+  });
+  map.addLayer(cluster);
+}
+
+// ── Rebuild markers ────────────────────────────────────
+function rebuildMarkers(cases) {
+  cluster.clearLayers();
+  const layers = cases.filter(c => c.lat && c.lng).map(c => {
+    const m = L.marker([c.lat, c.lng], { icon: makeIcon(getColor(c), !!(c.deaths_count)) });
+    m.bindPopup(buildPopup(c), { className: 'mbg-popup', maxWidth: 320 });
+    return m;
+  });
+  cluster.addLayers(layers);
+}
+
+// ── Rebuild heatmap ────────────────────────────────────
+function rebuildHeatmap(cases) {
+  if (heat) { map.removeLayer(heat); heat = null; }
+  const pts = cases.filter(c => c.lat && c.lng).map(c => {
+    const s = getSympNum(c);
+    const w = s > 0 ? Math.min(1, s / 400) : 0.05;
+    return [c.lat, c.lng, w];
+  });
+  heat = L.heatLayer(pts, {
+    radius: 28, blur: 22, maxZoom: 10,
+    gradient: { 0.0: '#1a237e', 0.2: '#0288d1', 0.5: '#66bb6a', 0.75: '#ffb300', 1.0: '#e53935' }
+  });
+  if (heatActive) map.addLayer(heat);
+}
+
+// ── Province chart ─────────────────────────────────────
+function renderChart(cases) {
+  const counts = {};
+  const victims = {};
+  cases.forEach(c => {
+    if (!c.province) return;
+    counts[c.province] = (counts[c.province] || 0) + 1;
+    victims[c.province] = (victims[c.province] || 0) + getSympNum(c);
+  });
+  const sorted = Object.entries(counts).sort((a,b) => b[1]-a[1]).slice(0, 20);
+  const max = sorted[0] ? sorted[0][1] : 1;
+
+  const el = document.getElementById('prov-chart');
+  el.innerHTML = sorted.map(([prov, cnt]) => {
+    const pct = Math.round(cnt / max * 100);
+    return `<div class="prov-bar-row" data-province="${escHtml(prov)}" title="${escHtml(prov)}: ${cnt} insiden, ${(victims[prov]||0).toLocaleString('id')} korban">
+      <div class="prov-name"><span class="prov-count">${cnt}</span>${escHtml(prov.replace('Nanggroe Aceh Darussalam','Aceh').replace('Daerah Istimewa Yogyakarta','D.I. Yogyakarta').replace('DKI Jakarta','Jakarta'))}</div>
+      <div class="prov-bar-track"><div class="prov-bar-fill" style="width:${pct}%"></div></div>
+    </div>`;
+  }).join('');
+
+  el.querySelectorAll('.prov-bar-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const prov = row.dataset.province;
+      document.getElementById('filter-province').value = prov;
+      filters.province = prov;
+      applyFilters();
+      document.getElementById('chart-panel').classList.remove('show');
+      document.getElementById('btn-chart').classList.remove('active');
+    });
+  });
+}
+
+// ── Stats ──────────────────────────────────────────────
+function updateStats(cases) {
+  let victims = 0, deaths = 0, schools = new Set(), provinces = new Set();
+  cases.forEach(c => {
+    victims += getSympNum(c);
+    deaths  += c.deaths_count || 0;
+    if (c.school && !c.school.startsWith('TBA') && !c.school.startsWith('TK (') && !c.school.startsWith('SD (')) schools.add(c.school);
+    provinces.add(c.province);
+  });
+  document.getElementById('s-incidents').textContent = cases.length.toLocaleString('id');
+  document.getElementById('s-victims').textContent   = victims.toLocaleString('id');
+  document.getElementById('s-deaths').textContent    = deaths;
+  document.getElementById('s-provinces').textContent = provinces.size;
+  document.getElementById('s-schools').textContent   = schools.size.toLocaleString('id');
+
+  const badge = document.getElementById('filter-badge');
+  const isActive = filters.search || filters.province || filters.year || filters.tag !== 'all';
+  if (isActive) {
+    badge.classList.add('show');
+    const parts = [];
+    if (filters.province) parts.push(filters.province.split(' ').slice(-1)[0]);
+    if (filters.year) parts.push(filters.year);
+    if (filters.tag !== 'all') parts.push(filters.tag.toUpperCase());
+    if (filters.search) parts.push(`"${filters.search}"`);
+    document.getElementById('filter-badge-text').textContent = parts.join(' · ') + ` (${cases.length})`;
+  } else {
+    badge.classList.remove('show');
+  }
+}
+
+// ── Render list ────────────────────────────────────────
+function renderList(cases) {
+  const list   = document.getElementById('incident-list');
+  const footer = document.getElementById('list-footer');
+  document.getElementById('panel-count').textContent = cases.length.toLocaleString('id');
+
+  if (!cases.length) {
+    list.innerHTML = `<div style="padding:32px 16px;text-align:center;color:var(--text3);font-size:12px">
+      ${ico.alertTriangle}<br/><br/>Tidak ada insiden sesuai filter
+    </div>`;
+    footer.style.display = 'none';
+    return;
+  }
+
+  const shown = cases.slice(0, MAX_LIST);
+  list.innerHTML = shown.map(c => {
+    const color    = getColor(c);
+    const isDeath  = !!(c.deaths_count);
+    const sympText = getSympText(c);
+    const isSppg   = c.tags && c.tags.includes('sppg');
+
+    let badgeStyle = `background:${color}1a;color:${color};border-color:${color}44`;
+    if (isDeath) badgeStyle = `background:rgba(239,68,68,0.15);color:#ef4444;border-color:rgba(239,68,68,0.4)`;
+
+    const sppgTag = isSppg ? `<span style="font-size:9px;color:var(--c-sppg);margin-left:4px">SPPG</span>` : '';
+
+    return `<div class="inc-item" data-lat="${c.lat||''}" data-lng="${c.lng||''}" data-idx="${c._idx||0}">
+      <div class="inc-school">${escHtml(c.school || '–')} ${sppgTag}</div>
+      <div class="inc-loc">${ico.pin} ${escHtml(c.regency || '')} · ${escHtml(c.province || '')}</div>
+      <div class="inc-right">
+        <div class="inc-date">${escHtml(c.date || '–')}</div>
+        <div class="inc-badge" style="${badgeStyle}">
+          ${isDeath ? ico.skull : ico.users} ${escHtml(sympText)}
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+
+  if (cases.length > MAX_LIST) {
+    footer.style.display = 'block';
+    footer.textContent = `+ ${(cases.length - MAX_LIST).toLocaleString('id')} insiden lainnya. Gunakan filter untuk mempersempit.`;
+  } else {
+    footer.style.display = 'none';
+  }
+
+  list.querySelectorAll('.inc-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const lat = parseFloat(item.dataset.lat);
+      const lng = parseFloat(item.dataset.lng);
+      if (!isNaN(lat) && !isNaN(lng)) {
+        map.flyTo([lat, lng], 14, { duration: 1.2, easeLinearity: 0.25 });
+        if (window.innerWidth < 768) setPanel(false);
+      }
+    });
+  });
+}
+
+// ── Sort ───────────────────────────────────────────────
+function sortCases(cases, sortKey) {
+  const arr = [...cases];
+  switch (sortKey) {
+    case 'date-desc':    return arr.sort((a,b) => parseDate(b.date) - parseDate(a.date));
+    case 'date-asc':     return arr.sort((a,b) => parseDate(a.date) - parseDate(b.date));
+    case 'victims-desc': return arr.sort((a,b) => getSympNum(b) - getSympNum(a));
+    case 'province':     return arr.sort((a,b) => (a.province||'').localeCompare(b.province||''));
+    default:             return arr;
+  }
+}
+
+// ── Apply filters ──────────────────────────────────────
+function applyFilters() {
+  const q = filters.search.toLowerCase().trim();
+
+  let result = allCases.filter(c => {
+    // Search
+    if (q) {
+      const hay = [c.school, c.regency, c.province].filter(Boolean).join(' ').toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    // Province
+    if (filters.province && c.province !== filters.province) return false;
+    // Year
+    if (filters.year && !(c.date || '').includes(filters.year)) return false;
+    // Tag
+    if (filters.tag === 'sppg'   && !(c.tags && c.tags.includes('sppg')))   return false;
+    if (filters.tag === 'deaths' && !c.deaths_count)                          return false;
+    return true;
+  });
+
+  // Sort
+  result = sortCases(result, filters.sort);
+  filteredCases = result;
+
+  rebuildMarkers(result);
+  rebuildHeatmap(result);
+  renderList(result);
+  updateStats(result);
+  renderChart(result);
+}
+
+// ── Populate province dropdown ─────────────────────────
+function populateProvinces() {
+  const provinces = [...new Set(allCases.map(c => c.province).filter(Boolean))].sort();
+  const sel = document.getElementById('filter-province');
+  provinces.forEach(p => {
+    const o = document.createElement('option');
+    o.value = p; o.textContent = p;
+    sel.appendChild(o);
+  });
+}
+
+// ── Panel toggle ───────────────────────────────────────
+function setPanel(open) {
+  panelOpen = open;
+  document.getElementById('panel').classList.toggle('open', open);
+  document.getElementById('btn-list').classList.toggle('active', open);
+  if (window.innerWidth >= 768) {
+    document.getElementById('map').classList.toggle('panel-open', open);
+    if (open) setTimeout(() => map.invalidateSize(), 310);
+  }
+}
+
+// ── Events ─────────────────────────────────────────────
+function setupEvents() {
+  // Search
+  let st;
+  const si = document.getElementById('search-input');
+  const sc = document.getElementById('search-clear');
+  si.addEventListener('input', e => {
+    clearTimeout(st);
+    filters.search = e.target.value;
+    sc.classList.toggle('show', !!e.target.value);
+    st = setTimeout(applyFilters, 280);
+  });
+  sc.addEventListener('click', () => {
+    si.value = '';
+    filters.search = '';
+    sc.classList.remove('show');
+    applyFilters();
+    si.focus();
+  });
+
+  // Province
+  document.getElementById('filter-province').addEventListener('change', e => {
+    filters.province = e.target.value;
+    applyFilters();
+  });
+
+  // Year
+  document.getElementById('filter-year').addEventListener('change', e => {
+    filters.year = e.target.value;
+    applyFilters();
+  });
+
+  // Sort
+  document.getElementById('filter-sort').addEventListener('change', e => {
+    filters.sort = e.target.value;
+    applyFilters();
+  });
+
+  // Tag chips
+  document.querySelectorAll('#tag-chips .tag-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      document.querySelectorAll('#tag-chips .tag-chip').forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+      filters.tag = chip.dataset.tag;
+      applyFilters();
+    });
+  });
+
+  // List panel
+  document.getElementById('btn-list').addEventListener('click', () => setPanel(!panelOpen));
+  document.getElementById('btn-close-panel').addEventListener('click', () => setPanel(false));
+
+  // Mobile: tap header to toggle
+  if (window.innerWidth < 768) {
+    document.getElementById('panel-header').addEventListener('click', () => setPanel(!panelOpen));
+  }
+
+  // Heatmap
+  document.getElementById('btn-heatmap').addEventListener('click', () => {
+    heatActive = !heatActive;
+    document.getElementById('btn-heatmap').classList.toggle('active', heatActive);
+    document.getElementById('heat-legend').style.display = heatActive ? 'block' : 'none';
+    if (heatActive) { if (heat) map.addLayer(heat); }
+    else            { if (heat) map.removeLayer(heat); }
+  });
+
+  // Cluster toggle
+  document.getElementById('btn-cluster').addEventListener('click', () => {
+    clusterActive = !clusterActive;
+    document.getElementById('btn-cluster').classList.toggle('active', clusterActive);
+    if (clusterActive) map.addLayer(cluster);
+    else               map.removeLayer(cluster);
+  });
+
+  // Home
+  document.getElementById('btn-home').addEventListener('click', () => {
+    map.flyTo(INDONESIA_CENTER, INDONESIA_ZOOM, { duration: 1.5 });
+  });
+
+  // Province chart button
+  document.getElementById('btn-chart').addEventListener('click', () => {
+    const panel = document.getElementById('chart-panel');
+    const active = panel.classList.toggle('show');
+    document.getElementById('btn-chart').classList.toggle('active', active);
+  });
+
+  // Filter badge: click to reset filters
+  document.getElementById('filter-badge').addEventListener('click', () => {
+    filters.search = ''; filters.province = ''; filters.year = ''; filters.tag = 'all';
+    document.getElementById('search-input').value = '';
+    document.getElementById('filter-province').value = '';
+    document.getElementById('filter-year').value = '';
+    document.getElementById('search-clear').classList.remove('show');
+    document.querySelectorAll('#tag-chips .tag-chip').forEach(c => c.classList.remove('active'));
+    document.querySelector('#tag-chips .tag-chip[data-tag="all"]').classList.add('active');
+    applyFilters();
+  });
+
+  // Keyboard shortcut: Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+      setPanel(false);
+      document.getElementById('chart-panel').classList.remove('show');
+      document.getElementById('btn-chart').classList.remove('active');
+    }
+    if ((e.key === 'f' || e.key === 'F') && !e.ctrlKey && !e.metaKey) {
+      document.getElementById('search-input').focus();
+    }
+  });
+
+  // Map click: close chart panel
+  map.on('click', () => {
+    document.getElementById('chart-panel').classList.remove('show');
+    document.getElementById('btn-chart').classList.remove('active');
+  });
+}
+
+// ── Bootstrap ──────────────────────────────────────────
+async function boot() {
+  const msg = document.getElementById('load-msg');
+  try {
+    msg.textContent = 'Mengambil data dari server…';
+    const res = await fetch(DATA_URL);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+    msg.textContent = 'Memproses 688 titik lokasi…';
+    const json = await res.json();
+    allCases = (json.cases || []).map((c, i) => ({ ...c, _idx: i }));
+
+    msg.textContent = 'Menginisialisasi peta…';
+    initMap();
+
+    msg.textContent = 'Membangun marker…';
+    populateProvinces();
+    applyFilters();
+
+    msg.textContent = 'Siap!';
+    await new Promise(r => setTimeout(r, 200));
+    document.getElementById('loading').style.display = 'none';
+
+    setupEvents();
+
+    // Open panel on desktop by default
+    if (window.innerWidth >= 768) {
+      setTimeout(() => setPanel(true), 400);
+    }
+
+  } catch (err) {
+    document.getElementById('loading').innerHTML = `
+      <div style="color:var(--c-death);font-family:'Syne',sans-serif;font-size:22px;font-weight:800">Gagal memuat data</div>
+      <div style="color:var(--text3);font-size:12px;margin-top:8px;max-width:300px;text-align:center">${escHtml(err.message)}</div>
+      <button onclick="location.reload()" style="margin-top:20px;padding:8px 20px;background:var(--c-death);color:#fff;border-radius:6px;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:12px">Coba Lagi</button>
+    `;
+  }
+}
+
+boot();
+</script>
+</body>
+</html>

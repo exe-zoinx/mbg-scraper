@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<!-- Cache bust -->
+<!-- Cache bust v3 -->
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
 <meta http-equiv="Pragma" content="no-cache"/>
 <meta http-equiv="Expires" content="0"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'unsafe-inline'; script-src 'unsafe-inline' 'unsafe-eval' 'self' https://*.githubusercontent.com https://unpkg.com; img-src 'self' data: https:; connect-src https://raw.githubusercontent.com; font-src 'self' data:;"/>
 <title>MBG Monitor – Pemantau Keracunan Program Makan Bergizi Gratis</title>
 <meta name="description" content="Peta interaktif kasus keracunan massal program Makan Bergizi Gratis (MBG) di seluruh Indonesia"/>
 
@@ -778,7 +779,7 @@ a:hover { text-decoration: underline; }
 <script>
 'use strict';
 // ── Constants ──────────────────────────────────────────
-const DATA_URL = 'https://raw.githubusercontent.com/exe-zoinx/mbg-monitor/main/data/mbg_cases.json?v=2';
+const DATA_URL = 'https://raw.githubusercontent.com/exe-zoinx/mbg-monitor/main/data/mbg_cases.json?v=3';
 const INDONESIA_CENTER = [-2.5, 118];
 const INDONESIA_ZOOM   = 5;
 const MAX_LIST         = 300;

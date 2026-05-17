@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-<!-- Cache bust v5 -->
+<!-- Cache bust v6 -->
 <title>EMBEGE – Pemantau Keracunan Makanan Program Makan Bergizi Gratis</title>
 <meta name="description" content="Peta interaktif kasus keracunan massal makanan program Makan Bergizi Gratis (MBG) di seluruh Indonesia"/>
 
@@ -56,41 +56,7 @@
   --text4:   #a3a3a3;
 }
 
-/* ── Theme: Paper ────────────────────────────────────── */
-[data-theme="paper"] {
-  --bg:      #f8f4e6;
-  --bg2:     #fdfcf0;
-  --bg3:     #f0ece0;
-  --bg4:     #e4dfd0;
-  --border:  #c8c0a8;
-  --border2: #a8a088;
-  --text:    #3c3024;
-  --text2:   #6b5d4b;
-  --text3:   #958b78;
-  --text4:   #b0a898;
-}
-
-/* ── Theme: Sepia ────────────────────────────────────── */
-[data-theme="sepia"] {
-  --bg:      #2b2418;
-  --bg2:     #362e20;
-  --bg3:     #403828;
-  --bg4:     #4c4230;
-  --border:  #5c5240;
-  --border2: #6c6250;
-  --text:    #e8dbc8;
-  --text2:   #c8b898;
-  --text3:   #a89878;
-  --text4:   #887858;
-}
-
-/* ── Tile tint filters per theme ─────────────────────── */
-[data-theme="sepia"] .leaflet-tile-pane {
-  filter: sepia(0.45) hue-rotate(-10deg) saturate(0.85) brightness(0.7) contrast(1.1);
-}
-[data-theme="paper"] .leaflet-tile-pane {
-  filter: sepia(0.25) saturate(0.75) brightness(1.0) contrast(0.95);
-}
+/* ── Tile tint filter ────────────────────────────────── */
 [data-theme="white"] .leaflet-tile-pane {
   filter: none;
 }
@@ -141,6 +107,53 @@ a:hover { text-decoration: underline; }
   100% { width: 0%; margin-left: 100%; }
 }
 .load-msg { font-size: 11px; color: var(--text3); }
+
+/* ── Notice Modal ────────────────────────────────────── */
+#notice-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0,0,0,0.7);
+  display: none; align-items: center; justify-content: center;
+  backdrop-filter: blur(6px);
+}
+#notice-overlay.show { display: flex; }
+.notice-modal {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r2);
+  padding: 28px 24px 20px;
+  width: 340px;
+  max-width: 90vw;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  text-align: center;
+}
+.notice-modal .notice-ico { font-size: 28px; margin-bottom: 12px; }
+.notice-modal h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 16px; font-weight: 800; margin-bottom: 14px;
+  line-height: 1.3;
+}
+.notice-modal p {
+  font-size: 11px; color: var(--text2); line-height: 1.6;
+  margin-bottom: 12px; text-align: left;
+}
+.notice-modal .notice-em {
+  color: var(--c-death); font-weight: 500;
+}
+.notice-modal .notice-contact {
+  font-size: 11px; color: var(--text3); margin-bottom: 18px;
+}
+.notice-modal .notice-contact a {
+  color: var(--c-blue);
+}
+.notice-btn {
+  width: 100%; height: 38px;
+  background: var(--c-death); color: #fff;
+  border: none; border-radius: var(--r);
+  font-family: 'Syne', sans-serif;
+  font-size: 13px; font-weight: 700; cursor: pointer;
+  transition: opacity 0.15s;
+}
+.notice-btn:hover { opacity: 0.85; }
 
 /* ── Header ──────────────────────────────────────────── */
 #header {
@@ -753,6 +766,27 @@ a:hover { text-decoration: underline; }
   <div class="load-msg" id="load-msg" data-i18n="load-init">Menginisialisasi peta…</div>
 </div>
 
+<!-- ── First-visit Notice ──────────────────────────── -->
+<div id="notice-overlay">
+  <div class="notice-modal">
+    <div class="notice-ico">⚠️</div>
+    <h2>Transparansi Data<br/>Makan Bergizi Gratis</h2>
+    <p>
+      Situs ini menyajikan data <strong>kasus keracunan massal</strong> yang terjadi dalam program <strong>Makan Bergizi Gratis (MBG)</strong> di Indonesia.
+    </p>
+    <p>
+      Seluruh data bersumber dari pemberitaan media dan <strong><a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia Indonesia</a></strong>. Hak cipta tetap milik <span class="notice-em">media dan kontributor Wikipedia</span> masing-masing.
+    </p>
+    <p>
+      Situs ini <strong>hanya menampilkan data</strong> — tidak melakukan analisis, opini, atau investigasi. Digunakan untuk <span class="notice-em">tujuan riset dan referensi</span> semata.
+    </p>
+    <div class="notice-contact">
+      Masukan &amp; pertanyaan: <a href="mailto:muwanicrot@proton.me">muwanicrot@proton.me</a>
+    </div>
+    <button class="notice-btn" id="notice-close">Saya Mengerti, Lanjutkan</button>
+  </div>
+</div>
+
 <!-- ── Header ──────────────────────────────────────── -->
 <header id="header">
   <div id="logo">
@@ -909,8 +943,6 @@ a:hover { text-decoration: underline; }
       <div class="config-options" id="cfg-theme-options">
         <div class="config-opt active" data-theme-val="dark"><span class="opt-icon">🌙</span>Dark</div>
         <div class="config-opt" data-theme-val="white"><span class="opt-icon">☀️</span>White</div>
-        <div class="config-opt" data-theme-val="paper"><span class="opt-icon">📄</span>Paper</div>
-        <div class="config-opt" data-theme-val="sepia"><span class="opt-icon">🟫</span>Sepia</div>
       </div>
     </div>
   </div>
@@ -976,7 +1008,8 @@ const MAX_LIST         = 300;
 
 const LS_LANG  = 'mbg-lang';
 const LS_THEME = 'mbg-theme';
-const THEMES   = ['dark','white','paper','sepia'];
+const LS_NOTICE = 'mbg-notice';
+const THEMES   = ['dark','white'];
 let theme = THEMES.includes(localStorage.getItem(LS_THEME)) ? localStorage.getItem(LS_THEME) : 'dark';
 
 // ── Inline SVG icons ───────────────────────────────────
@@ -1058,9 +1091,7 @@ function updateLangUI(){
 // ── Theme ──────────────────────────────────────────────
 const TILE_URLS = {
   dark:  'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-  sepia: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
   white: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
-  paper: 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
 };
 let tileLayerRef = null;
 
@@ -1139,7 +1170,7 @@ function parseDate(dateStr) {
 }
 
 function escHtml(s) {
-  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/\"/g,'&quot;');
 }
 
 // ── Marker icon ────────────────────────────────────────
@@ -1601,6 +1632,16 @@ async function boot() {
     el.classList.toggle('active', el.dataset.lang === lang);
   });
   updateLangUI();
+
+  // First-visit notice
+  if (!localStorage.getItem(LS_NOTICE)) {
+    document.getElementById('notice-overlay').classList.add('show');
+    document.getElementById('notice-close').addEventListener('click', () => {
+      localStorage.setItem(LS_NOTICE, '1');
+      document.getElementById('notice-overlay').classList.remove('show');
+    });
+  }
+
   try {
     msg.textContent = t('load-fetch');
     const res = await fetch(DATA_URL);

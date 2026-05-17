@@ -527,7 +527,7 @@ a:hover { text-decoration: underline; }
     border-right: none;
     border-bottom: 1px solid var(--border);
   }
-  #stats-bar .stat-chip:nth-last-child(-n+3) {
+  #stats-bar .stat-chip:nth-child(n+4) {
     border-bottom: none;
   }
   #stats-bar .stat-chip:nth-child(3n) {
@@ -592,7 +592,7 @@ a:hover { text-decoration: underline; }
 <div id="loading">
   <div class="load-logo">MBG<span>.</span>Monitor</div>
   <div class="load-bar-wrap"><div class="load-bar"></div></div>
-  <div class="load-msg" id="load-msg">Menginisialisasi peta…</div>
+  <div class="load-msg" id="load-msg" data-i18n="load-init">Menginisialisasi peta…</div>
 </div>
 
 <!-- ── Header ──────────────────────────────────────── -->
@@ -606,21 +606,21 @@ a:hover { text-decoration: underline; }
     <span id="search-ico">
       <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
     </span>
-    <input id="search-input" type="search" placeholder="Cari sekolah, kabupaten, provinsi…" autocomplete="off"/>
+    <input id="search-input" type="search" data-i18n="search-plh" placeholder="Cari sekolah, kabupaten, provinsi…" autocomplete="off"/>
     <button id="search-clear" title="Hapus pencarian">
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
   </div>
 
-  <button class="hdr-btn" id="btn-chart" title="Statistik Provinsi">
+  <button class="hdr-btn" id="btn-chart" data-i18n="btn-chart" data-i18n-attr="title" title="Statistik Provinsi">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="18" y="3" width="4" height="18"/><rect x="10" y="8" width="4" height="13"/><rect x="2" y="13" width="4" height="8"/></svg>
   </button>
 
-  <button class="hdr-btn" id="btn-list" title="Daftar Insiden">
+  <button class="hdr-btn" id="btn-list" data-i18n="btn-list" data-i18n-attr="title" title="Daftar Insiden">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
   </button>
 
-  <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank" class="hdr-btn" title="Sumber: Wikipedia Indonesia" style="text-decoration:none;font-size:10px;font-weight:500;letter-spacing:0.5px;padding:0 8px;width:auto">Sumber Data</a>
+  <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank" class="hdr-btn" title="Sumber: Wikipedia Indonesia" style="text-decoration:none;font-size:10px;font-weight:500;letter-spacing:0.5px;padding:0 8px;width:auto">Data</a>
 </header>
 
 <!-- ── Stats Bar ────────────────────────────────────── -->
@@ -628,32 +628,32 @@ a:hover { text-decoration: underline; }
   <div class="stat-chip">
     <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
     <span class="stat-num" id="s-incidents">–</span>
-    <span class="stat-lbl">insiden</span>
+    <span class="stat-lbl" data-i18n="s-incidents-lbl">insiden</span>
   </div>
   <div class="stat-chip">
     <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
     <span class="stat-num hi" id="s-victims">–</span>
-    <span class="stat-lbl">korban</span>
+    <span class="stat-lbl" data-i18n="s-victims-lbl">korban</span>
   </div>
   <div class="stat-chip">
     <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="8" r="5"/><path d="M10 13v8"/><path d="M14 13v8"/><path d="M10 17h4"/></svg></span>
     <span class="stat-num red" id="s-deaths">–</span>
-    <span class="stat-lbl">meninggal</span>
+    <span class="stat-lbl" data-i18n="s-deaths-lbl">meninggal</span>
   </div>
   <div class="stat-chip">
     <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="m3 11 19-9-9 19-2-8-8-2z"/></svg></span>
     <span class="stat-num" id="s-provinces">–</span>
-    <span class="stat-lbl">provinsi</span>
+    <span class="stat-lbl" data-i18n="s-provinces-lbl">provinsi</span>
   </div>
   <div class="stat-chip">
     <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
     <span class="stat-num" id="s-schools">–</span>
-    <span class="stat-lbl">sekolah</span>
+    <span class="stat-lbl" data-i18n="s-schools-lbl">sekolah</span>
   </div>
   <div class="stat-chip" title="Perbandingan korban dengan jumlah penduduk Indonesia">
     <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
     <span class="stat-num" id="s-pct">–</span>
-    <span class="stat-lbl">% populasi</span>
+    <span class="stat-lbl" data-i18n="s-pct-lbl">% populasi</span>
   </div>
   <div id="filter-badge">
     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
@@ -668,7 +668,7 @@ a:hover { text-decoration: underline; }
 <!-- ── Province chart ────────────────────────────────── -->
 <div id="chart-panel">
   <div class="chart-title">
-    <span>Insiden / Provinsi</span>
+    <span data-i18n="chart-title">Insiden / Provinsi</span>
     <button onclick="document.getElementById('chart-panel').classList.remove('show');document.getElementById('btn-chart').classList.remove('active')" style="color:var(--text4);cursor:pointer;display:flex">
       <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
     </button>
@@ -678,46 +678,49 @@ a:hover { text-decoration: underline; }
 
 <!-- ── Floating Map Controls ─────────────────────────── -->
 <div id="map-controls">
-  <button class="map-btn" id="btn-heatmap" title="Toggle Heatmap">
+  <button class="map-btn" id="btn-heatmap" data-i18n="btn-heat" data-i18n-attr="title" title="Toggle Heatmap">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
   </button>
-  <button class="map-btn active" id="btn-cluster" title="Tampilkan/Sembunyikan Marker">
+  <button class="map-btn active" id="btn-cluster" data-i18n="btn-cluster" data-i18n-attr="title" title="Tampilkan/Sembunyikan Marker">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="5" r="3"/><circle cx="5" cy="19" r="3"/><circle cx="19" cy="19" r="3"/></svg>
   </button>
-  <button class="map-btn" id="btn-home" title="Reset Tampilan Peta">
+  <button class="map-btn" id="btn-home" data-i18n="btn-home" data-i18n-attr="title" title="Reset Tampilan Peta">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+  </button>
+  <button class="map-btn" id="btn-lang" data-i18n="btn-lang" data-i18n-attr="title" title="Ganti Bahasa">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
   </button>
 </div>
 
 <!-- ── Legend ─────────────────────────────────────────── -->
 <div id="legend">
-  <div class="leg-head">Keparahan</div>
+  <div class="leg-head" data-i18n="leg-head">Keparahan</div>
   <div class="leg-row">
     <div class="leg-dot death" style="background:var(--c-death)"></div>
-    <span>Korban jiwa</span>
+    <span data-i18n="leg-death">Korban jiwa</span>
   </div>
   <div class="leg-row">
     <div class="leg-dot" style="background:var(--c-high)"></div>
-    <span>≥ 200 korban</span>
+    <span data-i18n="leg-200">≥ 200 korban</span>
   </div>
   <div class="leg-row">
     <div class="leg-dot" style="background:var(--c-med)"></div>
-    <span>≥ 50 korban</span>
+    <span data-i18n="leg-50">≥ 50 korban</span>
   </div>
   <div class="leg-row">
     <div class="leg-dot" style="background:var(--c-low)"></div>
-    <span>≥ 10 korban</span>
+    <span data-i18n="leg-10">≥ 10 korban</span>
   </div>
   <div class="leg-row">
     <div class="leg-dot" style="background:var(--c-min)"></div>
-    <span>&lt; 10 korban</span>
+    <span data-i18n="leg-min">&lt; 10 korban</span>
   </div>
   <div id="heat-legend" style="display:none;margin-top:8px;padding-top:8px;border-top:1px solid var(--border)">
-    <div class="leg-head" style="margin-bottom:5px">Heatmap</div>
+    <div class="leg-head" style="margin-bottom:5px" data-i18n="heat-high">Heatmap</div>
     <div style="display:flex;align-items:center;gap:5px">
-      <span style="font-size:9px;color:var(--text4)">Rendah</span>
+      <span style="font-size:9px;color:var(--text4)" data-i18n="heat-low">Rendah</span>
       <div class="heat-grad" style="flex:1;height:6px"></div>
-      <span style="font-size:9px;color:var(--text4)">Tinggi</span>
+      <span style="font-size:9px;color:var(--text4)" data-i18n="heat-high">Tinggi</span>
     </div>
   </div>
 </div>
@@ -725,13 +728,13 @@ a:hover { text-decoration: underline; }
 <!-- ── Right Panel ─────────────────────────────────── -->
 <div id="panel">
   <div id="panel-header">
-    <div class="panel-title">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
-      Daftar Insiden
+      <div class="panel-title">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        <span data-i18n="panel-title">Daftar Insiden</span>
     </div>
     <div style="display:flex;align-items:center;gap:6px">
       <span id="panel-count">0</span>
-      <button class="hdr-btn" id="btn-close-panel" style="width:28px;height:28px;" title="Tutup Panel">
+      <button class="hdr-btn" id="btn-close-panel" style="width:28px;height:28px;" data-i18n="panel-close" data-i18n-attr="title" title="Tutup Panel">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
       </button>
     </div>
@@ -740,25 +743,25 @@ a:hover { text-decoration: underline; }
   <div id="panel-filters">
     <div class="filter-row">
       <select id="filter-province" class="filter-sel">
-        <option value="">Semua Provinsi</option>
+        <option value="" data-i18n="f-prov">Semua Provinsi</option>
       </select>
       <select id="filter-year" class="filter-sel">
-        <option value="">Semua Tahun</option>
+        <option value="" data-i18n="f-year">Semua Tahun</option>
         <option value="2025">2025</option>
         <option value="2026">2026</option>
       </select>
     </div>
     <div class="filter-row">
       <select id="filter-sort" class="sort-sel">
-        <option value="date-desc">Terbaru</option>
-        <option value="date-asc">Terlama</option>
-        <option value="victims-desc">Korban Terbanyak</option>
-        <option value="province">Provinsi A–Z</option>
+        <option value="date-desc" data-i18n="s-newest">Terbaru</option>
+        <option value="date-asc" data-i18n="s-oldest">Terlama</option>
+        <option value="victims-desc" data-i18n="s-victims">Korban Terbanyak</option>
+        <option value="province" data-i18n="s-prov">Provinsi A–Z</option>
       </select>
       <div class="tag-chips" id="tag-chips">
-        <span class="tag-chip active" data-tag="all">Semua</span>
-        <span class="tag-chip sppg" data-tag="sppg">SPPG</span>
-        <span class="tag-chip deaths" data-tag="deaths">Jiwa</span>
+        <span class="tag-chip active" data-tag="all" data-i18n="tag-all">Semua</span>
+        <span class="tag-chip sppg" data-tag="sppg" data-i18n="tag-sppg">SPPG</span>
+        <span class="tag-chip deaths" data-tag="deaths" data-i18n="tag-deaths">Jiwa</span>
       </div>
     </div>
   </div>
@@ -788,7 +791,72 @@ const ico = {
   pin:           `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>`,
   skull:         `<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M16 20a2 2 0 0 0 1.956-2.4l-1.2-5.6a6 6 0 1 0-9.512 0l-1.2 5.6A2 2 0 0 0 8 20Z"/></svg>`,
   link:          `<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`,
+  globe:         `<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>`,
 };
+
+// ── i18n ──────────────────────────────────────────
+const LS_LANG = 'mbg-lang';
+const LANG = ['id','en'];
+let lang = LANG.includes(localStorage.getItem(LS_LANG)) ? localStorage.getItem(LS_LANG) : 'id';
+const __ = {
+  id:{
+    's-incidents-lbl':'insiden','s-victims-lbl':'korban','s-deaths-lbl':'meninggal',
+    's-provinces-lbl':'provinsi','s-schools-lbl':'sekolah','s-pct-lbl':'% populasi',
+    'search-plh':'Cari sekolah, kabupaten, provinsi…',
+    'btn-chart':'Statistik Provinsi','btn-list':'Daftar Insiden',
+    'btn-heat':'Toggle Heatmap','btn-cluster':'Tampilkan/Sembunyikan Marker','btn-home':'Reset Tampilan Peta','btn-lang':'Ganti Bahasa',
+    'leg-head':'KEPARAHAN','leg-death':'Korban jiwa','leg-200':'≥ 200 korban','leg-50':'≥ 50 korban','leg-10':'≥ 10 korban','leg-min':'< 10 korban',
+    'f-prov':'Semua Provinsi','f-year':'Semua Tahun',
+    's-newest':'Terbaru','s-oldest':'Terlama','s-victims':'Korban Terbanyak','s-prov':'Provinsi A–Z',
+    'tag-all':'Semua','tag-sppg':'SPPG','tag-deaths':'Korban Jiwa',
+    'panel-title':'Daftar Insiden','panel-close':'Tutup Panel',
+    'load-fetch':'Mengambil data dari server…','load-proc':'Memproses 688 titik lokasi…',
+    'load-init':'Menginisialisasi peta…','load-build':'Membangun marker…','load-ready':'Siap!',
+    'load-fail':'Gagal memuat data','load-retry':'Coba Lagi',
+    'heat-low':'Rendah','heat-high':'Tinggi',
+    'chart-title':'Insiden / Provinsi',
+    'no-filter':'Tidak ada insiden sesuai filter',
+    'more-res':'insiden lainnya. Gunakan filter untuk mempersempit.',
+    'clear-filt':'Hapus filter',
+  },
+  en:{
+    's-incidents-lbl':'incidents','s-victims-lbl':'victims','s-deaths-lbl':'deaths',
+    's-provinces-lbl':'provinces','s-schools-lbl':'schools','s-pct-lbl':'% population',
+    'search-plh':'Search school, regency, province…',
+    'btn-chart':'Province Stats','btn-list':'Incident List',
+    'btn-heat':'Toggle Heatmap','btn-cluster':'Show/Hide Markers','btn-home':'Reset Map','btn-lang':'Switch Language',
+    'leg-head':'SEVERITY','leg-death':'Fatalities','leg-200':'≥ 200 victims','leg-50':'≥ 50 victims','leg-10':'≥ 10 victims','leg-min':'< 10 victims',
+    'f-prov':'All Provinces','f-year':'All Years',
+    's-newest':'Newest','s-oldest':'Oldest','s-victims':'Most Victims','s-prov':'Province A–Z',
+    'tag-all':'All','tag-sppg':'SPPG','tag-deaths':'Deaths',
+    'panel-title':'Incident List','panel-close':'Close Panel',
+    'load-fetch':'Fetching data from server…','load-proc':'Processing 688 locations…',
+    'load-init':'Initializing map…','load-build':'Building markers…','load-ready':'Ready!',
+    'load-fail':'Failed to load data','load-retry':'Retry',
+    'heat-low':'Low','heat-high':'High',
+    'chart-title':'Incidents / Province',
+    'no-filter':'No incidents match your filters',
+    'more-res':'more incidents. Narrow your filters.',
+    'clear-filt':'Clear filters',
+  }
+};
+function t(k){return __[lang]?.[k]||__['id']?.[k]||k;}
+function fmt(n){return n.toLocaleString(lang==='en'?'en':'id');}
+
+function updateLangUI(){
+  const els = document.querySelectorAll('[data-i18n]');
+  els.forEach(el=>{
+    const k = el.dataset.i18n;
+    if(el.tagName==='INPUT'||el.tagName==='TEXTAREA') el.placeholder = t(k);
+    else if(el.dataset.i18nAttr) el.setAttribute(el.dataset.i18nAttr, t(k));
+    else el.textContent = t(k);
+  });
+  // Dynamic elements
+  document.querySelectorAll('.tag-chip').forEach(el=>{
+    const k = el.dataset.i18n;
+    if(k) el.textContent = t(k);
+  });
+}
 
 // ── State ──────────────────────────────────────────────
 let allCases     = [];
@@ -971,7 +1039,7 @@ function renderChart(cases) {
   const el = document.getElementById('prov-chart');
   el.innerHTML = sorted.map(([prov, cnt]) => {
     const pct = Math.round(cnt / max * 100);
-    return `<div class="prov-bar-row" data-province="${escHtml(prov)}" title="${escHtml(prov)}: ${cnt} insiden, ${(victims[prov]||0).toLocaleString('id')} korban">
+    return `<div class="prov-bar-row" data-province="${escHtml(prov)}" title="${escHtml(prov)}: ${cnt} insiden, ${fmt(victims[prov]||0)} korban">
       <div class="prov-name"><span class="prov-count">${cnt}</span>${escHtml(prov.replace('Nanggroe Aceh Darussalam','Aceh').replace('Daerah Istimewa Yogyakarta','D.I. Yogyakarta').replace('DKI Jakarta','Jakarta'))}</div>
       <div class="prov-bar-track"><div class="prov-bar-fill" style="width:${pct}%"></div></div>
     </div>`;
@@ -998,11 +1066,11 @@ function updateStats(cases) {
     if (c.school && !c.school.startsWith('TBA') && !c.school.startsWith('TK (') && !c.school.startsWith('SD (')) schools.add(c.school);
     provinces.add(c.province);
   });
-  document.getElementById('s-incidents').textContent = cases.length.toLocaleString('id');
-  document.getElementById('s-victims').textContent   = victims.toLocaleString('id');
+  document.getElementById('s-incidents').textContent = fmt(cases.length);
+  document.getElementById('s-victims').textContent   = fmt(victims);
   document.getElementById('s-deaths').textContent    = deaths;
   document.getElementById('s-provinces').textContent = provinces.size;
-  document.getElementById('s-schools').textContent   = schools.size.toLocaleString('id');
+  document.getElementById('s-schools').textContent   = fmt(schools.size);
 
   // Percentage vs Indonesia population (~289M, Kemendagri 2025)
   const POP_IDN = 289_000_000;
@@ -1028,11 +1096,11 @@ function updateStats(cases) {
 function renderList(cases) {
   const list   = document.getElementById('incident-list');
   const footer = document.getElementById('list-footer');
-  document.getElementById('panel-count').textContent = cases.length.toLocaleString('id');
+  document.getElementById('panel-count').textContent = fmt(cases.length);
 
   if (!cases.length) {
     list.innerHTML = `<div style="padding:32px 16px;text-align:center;color:var(--text3);font-size:12px">
-      ${ico.alertTriangle}<br/><br/>Tidak ada insiden sesuai filter
+      ${ico.alertTriangle}<br/><br/>${t('no-filter')}
     </div>`;
     footer.style.display = 'none';
     return;
@@ -1064,7 +1132,7 @@ function renderList(cases) {
 
   if (cases.length > MAX_LIST) {
     footer.style.display = 'block';
-    footer.textContent = `+ ${(cases.length - MAX_LIST).toLocaleString('id')} insiden lainnya. Gunakan filter untuk mempersempit.`;
+    footer.textContent = `+ ${fmt(cases.length - MAX_LIST)} ${t('more-res')}`;
   } else {
     footer.style.display = 'none';
   }
@@ -1225,6 +1293,22 @@ function setupEvents() {
     map.flyTo(INDONESIA_CENTER, INDONESIA_ZOOM, { duration: 1.5 });
   });
 
+  // Language toggle
+  document.getElementById('btn-lang').addEventListener('click', () => {
+    lang = lang === 'id' ? 'en' : 'id';
+    localStorage.setItem(LS_LANG, lang);
+    // Update select option placeholders text
+    document.querySelectorAll('#filter-province option, #filter-year option, #filter-sort option').forEach(o => {
+      const k = o.dataset.i18n;
+      if(k) o.textContent = t(k);
+    });
+    // Also update province list (not translated, just keep)
+    updateLangUI();
+    // Re-render dynamic content with new language
+    applyFilters();
+    renderChart(filteredCases);
+  });
+
   // Province chart button
   document.getElementById('btn-chart').addEventListener('click', () => {
     const panel = document.getElementById('chart-panel');
@@ -1266,23 +1350,24 @@ function setupEvents() {
 // ── Bootstrap ──────────────────────────────────────────
 async function boot() {
   const msg = document.getElementById('load-msg');
+  updateLangUI();
   try {
-    msg.textContent = 'Mengambil data dari server…';
+    msg.textContent = t('load-fetch');
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
 
-    msg.textContent = 'Memproses 688 titik lokasi…';
+    msg.textContent = t('load-proc');
     const json = await res.json();
     allCases = (json.cases || []).map((c, i) => ({ ...c, _idx: i }));
 
-    msg.textContent = 'Menginisialisasi peta…';
+    msg.textContent = t('load-init');
     initMap();
 
-    msg.textContent = 'Membangun marker…';
+    msg.textContent = t('load-build');
     populateProvinces();
     applyFilters();
 
-    msg.textContent = 'Siap!';
+    msg.textContent = t('load-ready');
     await new Promise(r => setTimeout(r, 200));
     document.getElementById('loading').style.display = 'none';
 
@@ -1295,9 +1380,9 @@ async function boot() {
 
   } catch (err) {
     document.getElementById('loading').innerHTML = `
-      <div style="color:var(--c-death);font-family:'Syne',sans-serif;font-size:22px;font-weight:800">Gagal memuat data</div>
+      <div style="color:var(--c-death);font-family:'Syne',sans-serif;font-size:22px;font-weight:800">${t('load-fail')}</div>
       <div style="color:var(--text3);font-size:12px;margin-top:8px;max-width:300px;text-align:center">${escHtml(err.message)}</div>
-      <button onclick="location.reload()" style="margin-top:20px;padding:8px 20px;background:var(--c-death);color:#fff;border-radius:6px;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:12px">Coba Lagi</button>
+      <button onclick="location.reload()" style="margin-top:20px;padding:8px 20px;background:var(--c-death);color:#fff;border-radius:6px;border:none;cursor:pointer;font-family:'DM Mono',monospace;font-size:12px">${t('load-retry')}</button>
     `;
   }
 }

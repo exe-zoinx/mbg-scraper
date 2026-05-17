@@ -174,11 +174,11 @@ a:hover { text-decoration: underline; }
 #stats-bar {
   position: fixed;
   top: var(--hdr); left: 0; right: 0;
-  height: var(--stats);
+  min-height: var(--stats);
   background: rgba(9,9,11,0.9);
   border-bottom: 1px solid var(--border);
-  display: flex; align-items: stretch;
-  overflow-x: auto; scrollbar-width: none;
+  display: flex; align-items: center; flex-wrap: wrap;
+  padding: 2px 0;
   z-index: 999;
   backdrop-filter: blur(8px);
 }
@@ -355,7 +355,7 @@ a:hover { text-decoration: underline; }
   width: 340px;
   background: var(--bg2);
   border-left: 1px solid var(--border);
-  z-index: 800;
+  z-index: 1001;
   display: flex; flex-direction: column;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
@@ -482,7 +482,7 @@ a:hover { text-decoration: underline; }
   position: fixed;
   top: calc(var(--hdr) + var(--stats));
   left: 10px;
-  z-index: 800;
+  z-index: 1001;
   background: rgba(9,9,11,0.92);
   border: 1px solid var(--border);
   border-radius: var(--r2);
@@ -583,7 +583,7 @@ a:hover { text-decoration: underline; }
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
   </button>
 
-  <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank" class="hdr-btn" title="Sumber: Wikipedia Indonesia" style="text-decoration:none;font-size:11px;font-weight:500;letter-spacing:0.5px;padding:0 10px;width:auto">Wiki</a>
+  <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank" class="hdr-btn" title="Sumber: Wikipedia Indonesia" style="text-decoration:none;font-size:10px;font-weight:500;letter-spacing:0.5px;padding:0 8px;width:auto">Sumber Data</a>
 </header>
 
 <!-- ── Stats Bar ────────────────────────────────────── -->

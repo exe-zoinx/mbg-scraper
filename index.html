@@ -36,7 +36,7 @@
   --c-high:  #f97316;
   --c-med:   #f59e0b;
   --c-low:   #eab308;
-  --c-min:   #4ade80;
+  --c-min:   #facc15;
   --c-blue:  #60a5fa;
   --c-sppg:  #c084fc;
   --hdr:     52px;
@@ -613,6 +613,11 @@ a:hover { text-decoration: underline; }
     <span class="stat-num" id="s-schools">–</span>
     <span class="stat-lbl">sekolah</span>
   </div>
+  <div class="stat-chip" title="Perbandingan korban dengan jumlah penduduk Indonesia">
+    <span class="stat-ico"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+    <span class="stat-num" id="s-pct">–</span>
+    <span class="stat-lbl">% populasi</span>
+  </div>
   <div id="filter-badge">
     <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
     <span id="filter-badge-text"></span>
@@ -961,6 +966,11 @@ function updateStats(cases) {
   document.getElementById('s-deaths').textContent    = deaths;
   document.getElementById('s-provinces').textContent = provinces.size;
   document.getElementById('s-schools').textContent   = schools.size.toLocaleString('id');
+
+  // Percentage vs Indonesia population (~289M, Kemendagri 2025)
+  const POP_IDN = 289_000_000;
+  const pct = (victims / POP_IDN) * 100;
+  document.getElementById('s-pct').textContent = pct.toFixed(3);
 
   const badge = document.getElementById('filter-badge');
   const isActive = filters.search || filters.province || filters.year || filters.tag !== 'all';

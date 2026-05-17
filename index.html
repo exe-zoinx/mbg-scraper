@@ -772,13 +772,13 @@ a:hover { text-decoration: underline; }
     <div class="notice-ico">⚠️</div>
     <h2>Transparansi Data<br/>Makan Bergizi Gratis</h2>
     <p>
-      Situs ini menyajikan data <strong>kasus keracunan massal</strong> yang terjadi dalam program <strong>Makan Bergizi Gratis (MBG)</strong> di Indonesia.
+      Situs ini hanya <strong>menampilkan data</strong> — tidak melakukan analisis, opini, atau investigasi. Digunakan untuk <span class="notice-em">tujuan riset dan referensi</span> semata.
     </p>
     <p>
-      Seluruh data bersumber dari pemberitaan media dan <strong><a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia Indonesia</a></strong>. Hak cipta tetap milik <span class="notice-em">media dan kontributor Wikipedia</span> masing-masing.
+      Seluruh informasi yang ditampilkan <strong>sepenuhnya milik</strong> media pemberitaan dan <strong><a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia Indonesia</a></strong> sebagai sumber data. Hak cipta, akurasi, dan kredibilitas konten tetap berada pada <span class="notice-em">masing-masing sumber</span>.
     </p>
     <p>
-      Situs ini <strong>hanya menampilkan data</strong> — tidak melakukan analisis, opini, atau investigasi. Digunakan untuk <span class="notice-em">tujuan riset dan referensi</span> semata.
+      Situs ini <strong>tidak terafiliasi</strong> dengan pemerintah, program MBG, atau institusi mana pun. Data disajikan apa adanya untuk <span class="notice-em">transparansi publik</span>.
     </p>
     <div class="notice-contact">
       Masukan &amp; pertanyaan: <a href="mailto:muwanicrot@proton.me">muwanicrot@proton.me</a>
@@ -875,6 +875,9 @@ a:hover { text-decoration: underline; }
 
 <!-- ── Floating Map Controls ─────────────────────────── -->
 <div id="map-controls">
+  <button class="map-btn" id="btn-info" data-i18n="btn-info" data-i18n-attr="title" title="Informasi & Sumber Data">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+  </button>
   <button class="map-btn" id="btn-heatmap" data-i18n="btn-heat" data-i18n-attr="title" title="Toggle Heatmap">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></svg>
   </button>
@@ -1032,7 +1035,7 @@ const __ = {
     's-provinces-lbl':'provinsi','s-schools-lbl':'sekolah','s-pct-lbl':'% populasi',
     'search-plh':'Cari sekolah, kabupaten, provinsi…',
     'btn-chart':'Statistik Provinsi','btn-list':'Daftar Insiden',
-    'btn-heat':'Toggle Heatmap','btn-cluster':'Tampilkan/Sembunyikan Marker','btn-home':'Reset Tampilan Peta','btn-config':'Konfigurasi Tampilan',
+    'btn-heat':'Toggle Heatmap','btn-cluster':'Tampilkan/Sembunyikan Marker','btn-home':'Reset Tampilan Peta','btn-config':'Konfigurasi Tampilan','btn-info':'Informasi & Sumber Data',
     'leg-head':'KEPARAHAN','leg-death':'Korban jiwa','leg-200':'≥ 200 korban','leg-50':'≥ 50 korban','leg-10':'≥ 10 korban','leg-min':'< 10 korban',
     'f-prov':'Semua Provinsi','f-year':'Semua Tahun',
     's-newest':'Terbaru','s-oldest':'Terlama','s-victims':'Korban Terbanyak','s-prov':'Provinsi A–Z',
@@ -1053,7 +1056,7 @@ const __ = {
     's-provinces-lbl':'provinces','s-schools-lbl':'schools','s-pct-lbl':'% population',
     'search-plh':'Search school, regency, province…',
     'btn-chart':'Province Stats','btn-list':'Incident List',
-    'btn-heat':'Toggle Heatmap','btn-cluster':'Show/Hide Markers','btn-home':'Reset Map','btn-config':'Display Settings',
+    'btn-heat':'Toggle Heatmap','btn-cluster':'Show/Hide Markers','btn-home':'Reset Map','btn-config':'Display Settings','btn-info':'Info & Data Sources',
     'leg-head':'SEVERITY','leg-death':'Fatalities','leg-200':'≥ 200 victims','leg-50':'≥ 50 victims','leg-10':'≥ 10 victims','leg-min':'< 10 victims',
     'f-prov':'All Provinces','f-year':'All Years',
     's-newest':'Newest','s-oldest':'Oldest','s-victims':'Most Victims','s-prov':'Province A–Z',
@@ -1560,6 +1563,11 @@ function setupEvents() {
     if (e.target === e.currentTarget) document.getElementById('config-overlay').classList.remove('show');
   });
 
+  // Info button → show notice
+  document.getElementById('btn-info').addEventListener('click', () => {
+    document.getElementById('notice-overlay').classList.add('show');
+  });
+
   // Language options in config
   document.querySelectorAll('#cfg-lang-options .config-opt').forEach(el => {
     el.addEventListener('click', () => {
@@ -1633,13 +1641,16 @@ async function boot() {
   });
   updateLangUI();
 
-  // First-visit notice
+  // First-visit notice — always bind close
+  document.getElementById('notice-close').addEventListener('click', () => {
+    document.getElementById('notice-overlay').classList.remove('show');
+  });
+  document.getElementById('notice-overlay').addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) document.getElementById('notice-overlay').classList.remove('show');
+  });
   if (!localStorage.getItem(LS_NOTICE)) {
     document.getElementById('notice-overlay').classList.add('show');
-    document.getElementById('notice-close').addEventListener('click', () => {
-      localStorage.setItem(LS_NOTICE, '1');
-      document.getElementById('notice-overlay').classList.remove('show');
-    });
+    localStorage.setItem(LS_NOTICE, '1');
   }
 
   try {

@@ -2,14 +2,14 @@
 
 Mass food-poisoning incidents from Indonesia's **Makan Bergizi Gratis** program, scraped from [Wikipedia](https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis).
 
-**Live dashboard:** https://exe-zoinx.github.io/mbg-monitor
+**Live dashboard:** https://exe-zoinx.github.io/embege
 
 ## Features
 
 - 🗺️ **Interactive map** — 687 geocoded incidents across 38 provinces
 - 🔍 **Search & Filter** — by school, regency, province, year, tag
 - 🌐 **Dual language** — Indonesian / English
-- 🎨 **4 themes** — Dark, White, Paper, Sepia
+- 🎨 **2 themes** — Dark & White
 - 🔥 **Heatmap overlay** — severity visualization
 - 📱 **Responsive** — mobile-first design
 - 💾 **Offline persistence** — settings saved to localStorage

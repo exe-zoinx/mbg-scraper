@@ -1004,7 +1004,7 @@ a:hover { text-decoration: underline; }
 <script>
 'use strict';
 // ── Constants ──────────────────────────────────────────
-const DATA_URL = 'https://raw.githubusercontent.com/exe-zoinx/mbg-monitor/main/data/mbg_cases.json';
+const DATA_URL = 'https://raw.githubusercontent.com/exe-zoinx/embege/main/data/mbg_cases.json';
 const INDONESIA_CENTER = [-2.5, 118];
 const INDONESIA_ZOOM   = 5;
 const MAX_LIST         = 300;
@@ -1112,7 +1112,7 @@ function applyTheme(t) {
     map.removeLayer(tileLayerRef);
     tileLayerRef = L.tileLayer(TILE_URLS[theme] || TILE_URLS.dark, {
       subdomains: 'abcd', maxZoom: 19,
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/">OSM</a> | <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia</a> CC-BY-SA 3.0 | <a href="https://github.com/exe-zoinx/mbg-monitor/blob/main/data/mbg_cases.json" target="_blank">JSON Data</a>'
+      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/">OSM</a> | <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia</a> CC-BY-SA 3.0 | <a href="https://github.com/exe-zoinx/embege/blob/main/data/mbg_cases.json" target="_blank">JSON Data</a>'
     }).addTo(map);
   }
 }
@@ -1242,7 +1242,7 @@ function initMap() {
   tileLayerRef = L.tileLayer(TILE_URLS[theme] || TILE_URLS.dark, {
     subdomains: 'abcd',
     maxZoom: 19,
-    attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/">OSM</a> | <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia</a> CC-BY-SA 3.0 | <a href="https://github.com/exe-zoinx/mbg-monitor/blob/main/data/mbg_cases.json" target="_blank">JSON Data</a>'
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; <a href="https://www.openstreetmap.org/">OSM</a> | <a href="https://id.wikipedia.org/wiki/Daftar_kasus_keracunan_massal_program_Makan_Bergizi_Gratis" target="_blank">Wikipedia</a> CC-BY-SA 3.0 | <a href="https://github.com/exe-zoinx/embege/blob/main/data/mbg_cases.json" target="_blank">JSON Data</a>'
   }).addTo(map);
 
   L.control.attribution({ position: 'bottomright', prefix: '' }).addTo(map);
